@@ -1,6 +1,5 @@
 /*header-style*/
 .header-bg{
-  padding: 15px 0;
   background: linear-gradient(90.16deg, #5A2E98 0%, #4F268A 100%);
   width: 100%;
 }
@@ -27,12 +26,17 @@
 }
 .nav-menu{
    display: grid;
-    grid-gap: 30px;
+    grid-gap: 10px;
   align-items: center;
   grid-auto-flow: column;
   justify-content: center;
 }
 .nav-item{
+  padding: 15px;
+  &:hover{
+    background: rgba(140, 97, 199, 0.3);
+    cursor: pointer;
+  }
 
 }
 .nav-link{

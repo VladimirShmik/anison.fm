@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anison.fm</title>
+    <link rel="stylesheet" href="./scss/">
     <link rel="stylesheet" href="./scss/bootstrap.min.css">
     <link rel="stylesheet" href="./scss/main.css">
 </head>
@@ -86,14 +87,101 @@
                                 </a>
                                 <p class="logo-title__subtitle">Аниме-радио №1 во Вселенной</p>
                             </h1>
+                            <div class="player-wrapper">
+                                <div class="song-item">
+                                    <button class="song-start">
+                                        <svg class="song-start__icon">
+                                            <use xlink:href="./img/sprite.svg#play-icon"></use>
+                                        </svg>
+                                        <svg class="song-start__icon song-start__icon--stop song-like__icon--hide">
+                                            <use xlink:href="./img/sprite.svg#stop-icon"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="song-box">
+                                        <img src="./img/song/song-1.jpg" alt="" class="song-item__img">
+                                        <div class="d-flex flex-column">
+                                            <p class="song-box__title">Hagane no Renkinjutsushi</p>
+                                            <p class="song-box__subtitle">Rain</p>
+                                        </div>
+                                    </div>
+                                    <div class="song-group">
+                                        <p class="song-item__time">17:58</p>
+                                        <button class="song-sound">
+                                            <svg class="song-like__icon">
+                                                <use xlink:href="./img/sprite.svg#sound-icon"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="song-like">
+                                            <svg class="song-like__icon">
+                                                <use xlink:href="./img/sprite.svg#like-icon"></use>
+                                            </svg>
+                                            <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
+                                                <use xlink:href="./img/sprite.svg#like-fill-icon"></use>
+                                            </svg>
+                                        </button>
+
+                                        <a href="#" class="song-list">
+                                            <svg class="song-like__icon">
+                                                <use xlink:href="./img/sprite.svg#list-icon"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="main-img">
                             <img src="./img/backgrounds/main-girl.png" alt="" class="main-img__img">
                         </div>
+                        <div class="search-wrapper">
+                            <div class="search-links">
+                                <a href="#" class="search-link">#</a>
+                                <a href="#" class="search-link">1–9</a>
+                                <a href="#" class="search-link">A</a>
+                                <a href="#" class="search-link">B</a>
+                                <a href="#" class="search-link">C</a>
+                                <a href="#" class="search-link">D</a>
+                                <a href="#" class="search-link">F</a>
+                                <a href="#" class="search-link">G</a>
+                                <a href="#" class="search-link">H</a>
+                                <a href="#" class="search-link">I</a>
+                                <a href="#" class="search-link">J</a>
+                                <a href="#" class="search-link">K</a>
+                                <a href="#" class="search-link">L</a>
+                                <a href="#" class="search-link">M</a>
+                                <a href="#" class="search-link">N</a>
+                                <a href="#" class="search-link">O</a>
+                                <a href="#" class="search-link">P</a>
+                                <a href="#" class="search-link">R</a>
+                                <a href="#" class="search-link">S</a>
+                                <a href="#" class="search-link">T</a>
+                                <a href="#" class="search-link">U</a>
+                                <a href="#" class="search-link">V</a>
+                                <a href="#" class="search-link">W</a>
+                                <a href="#" class="search-link">X</a>
+                                <a href="#" class="search-link">Y</a>
+                                <a href="#" class="search-link">Z</a>
+                            </div>
+                            <fieldset class="search-form">
+                                <label  class="search-box">
+                                    <svg class="search-box__icon">
+                                        <use xlink:href="./img/sprite.svg#search-icon"></use>
+                                    </svg>
+                                    <input type="search" placeholder="Няшный поиск" class="search-box__input">
+                                </label>
+                               <div class="dropdown search-dropdown">
+                                <button class=" dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Аниме
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                            </fieldset>
+                        </div>
                     </div>
-                    <div class="search-wrapper">
 
-                    </div>
                 </div>
             </div>
         </div>
@@ -161,10 +249,12 @@
                             <h2 class="song-wrapper__title">Последние песни</h2>
                             <div class="song-grid">
                                 <div class="song-item">
-                                    <img src="./img/song/song-1.jpg" alt="" class="song-item__img">
                                     <div class="song-box">
-                                        <p class="song-box__title">Hagane no Renkinjutsushi</p>
-                                        <p class="song-box__subtitle">Rain</p>
+                                        <img src="./img/song/song-1.jpg" alt="" class="song-item__img">
+                                        <div class="d-flex flex-column">
+                                            <p class="song-box__title">Hagane no Renkinjutsushi</p>
+                                            <p class="song-box__subtitle">Rain</p>
+                                        </div>
                                     </div>
                                     <div class="song-group">
                                         <p class="song-item__time">17:58</p>
@@ -187,10 +277,12 @@
                                     </div>
                                 </div>
                                 <div class="song-item">
-                                    <img src="./img/song/song-2.jpg" alt="" class="song-item__img">
                                     <div class="song-box">
-                                        <p class="song-box__title">Dorohedoro</p>
-                                        <p class="song-box__subtitle">D.D.D.D.</p>
+                                        <img src="./img/song/song-2.jpg" alt="" class="song-item__img">
+                                        <div class="d-flex flex-column">
+                                            <p class="song-box__title">Dorohedoro</p>
+                                            <p class="song-box__subtitle">D.D.D.D.</p>
+                                        </div>
                                     </div>
                                     <div class="song-group">
                                         <p class="song-item__time">17:58</p>
@@ -213,10 +305,12 @@
                                     </div>
                                 </div>
                                 <div class="song-item">
-                                    <img src="./img/song/song-3.jpg" alt="" class="song-item__img">
                                     <div class="song-box">
-                                        <p class="song-box__title">Shigatsu wa kimi no uso</p>
-                                        <p class="song-box__subtitle">Orange</p>
+                                        <img src="./img/song/song-3.jpg" alt="" class="song-item__img">
+                                        <div class="d-flex flex-column">
+                                            <p class="song-box__title">Shigatsu wa kimi no uso</p>
+                                            <p class="song-box__subtitle">Orange</p>
+                                        </div>
                                     </div>
                                     <div class="song-group">
                                         <p class="song-item__time">17:58</p>
@@ -239,10 +333,13 @@
                                     </div>
                                 </div>
                                 <div class="song-item">
-                                    <img src="./img/song/song-5.jpg" alt="" class="song-item__img">
+
                                     <div class="song-box">
-                                        <p class="song-box__title">Build Divide</p>
-                                        <p class="song-box__subtitle">BANG!!!</p>
+                                        <img src="./img/song/song-5.jpg" alt="" class="song-item__img">
+                                        <div class="d-flex flex-column">
+                                            <p class="song-box__title">Build Divide</p>
+                                            <p class="song-box__subtitle">BANG!!!</p>
+                                        </div>
                                     </div>
                                     <div class="song-group">
                                         <p class="song-item__time">17:58</p>
@@ -265,10 +362,13 @@
                                     </div>
                                 </div>
                                 <div class="song-item">
-                                    <img src="./img/song/song-6.jpg" alt="" class="song-item__img">
+
                                     <div class="song-box">
-                                        <p class="song-box__title">Tian Guan Ci Fu</p>
-                                        <p class="song-box__subtitle">Jiu no Kuchizuke</p>
+                                        <img src="./img/song/song-6.jpg" alt="" class="song-item__img">
+                                        <div class="d-flex flex-column">
+                                            <p class="song-box__title">Tian Guan Ci Fu</p>
+                                            <p class="song-box__subtitle">Jiu no Kuchizuke</p>
+                                        </div>
                                     </div>
                                     <div class="song-group">
                                         <p class="song-item__time">17:58</p>
@@ -291,10 +391,12 @@
                                     </div>
                                 </div>
                                 <div class="song-item">
-                                    <img src="./img/song/song-7.jpg" alt="" class="song-item__img">
                                     <div class="song-box">
-                                        <p class="song-box__title">Kamisama Hajimemashita</p>
-                                        <p class="song-box__subtitle">Kamisamano Kamisama</p>
+                                        <img src="./img/song/song-7.jpg" alt="" class="song-item__img">
+                                        <div class="d-flex flex-column">
+                                            <p class="song-box__title">Kamisama Hajimemashita</p>
+                                            <p class="song-box__subtitle">Kamisamano Kamisama</p>
+                                        </div>
                                     </div>
                                     <div class="song-group">
                                         <p class="song-item__time">17:58</p>
@@ -317,10 +419,12 @@
                                     </div>
                                 </div>
                                 <div class="song-item">
-                                    <img src="./img/song/song-8.jpg" alt="" class="song-item__img">
                                     <div class="song-box">
-                                        <p class="song-box__title">Asobi ni Iku Yo</p>
-                                        <p class="song-box__subtitle">Now Loading... Sky!!</p>
+                                        <img src="./img/song/song-8.jpg" alt="" class="song-item__img">
+                                        <div class="d-flex flex-column">
+                                            <p class="song-box__title">Asobi ni Iku Yo</p>
+                                            <p class="song-box__subtitle">Now Loading... Sky!!</p>
+                                        </div>
                                     </div>
                                     <div class="song-group">
                                         <p class="song-item__time">17:58</p>
@@ -343,10 +447,12 @@
                                     </div>
                                 </div>
                                 <div class="song-item">
-                                    <img src="./img/song/song-9.jpg" alt="" class="song-item__img">
                                     <div class="song-box">
-                                        <p class="song-box__title">Hack Sign</p>
-                                        <p class="song-box__subtitle">Obsession</p>
+                                        <img src="./img/song/song-9.jpg" alt="" class="song-item__img">
+                                        <div class="d-flex flex-column">
+                                            <p class="song-box__title">Hack Sign</p>
+                                            <p class="song-box__subtitle">Obsession</p>
+                                        </div>
                                     </div>
                                     <div class="song-group">
                                         <p class="song-item__time">17:58</p>
@@ -369,10 +475,12 @@
                                     </div>
                                 </div>
                                 <div class="song-item">
-                                    <img src="./img/song/song-4.jpg" alt="" class="song-item__img">
                                     <div class="song-box">
-                                        <p class="song-box__title">Uchi no Ko no Tame Narabararar</p>
-                                        <p class="song-box__subtitle">Title Nante Jibun De Kangaenasai ...</p>
+                                        <img src="./img/song/song-4.jpg" alt="" class="song-item__img">
+                                        <div class="d-flex flex-column">
+                                            <p class="song-box__title">Uchi no Ko no Tame Narabararar</p>
+                                            <p class="song-box__subtitle">Title Nante Jibun De Kangaenasai</p>
+                                        </div>
                                     </div>
                                     <div class="song-group">
                                         <p class="song-item__time">17:58</p>
@@ -395,10 +503,12 @@
                                     </div>
                                 </div>
                                 <div class="song-item">
-                                    <img src="./img/song/song-10.jpg" alt="" class="song-item__img">
                                     <div class="song-box">
-                                        <p class="song-box__title">Eureka 7</p>
-                                        <p class="song-box__subtitle">Shounen Heart</p>
+                                        <img src="./img/song/song-10.jpg" alt="" class="song-item__img">
+                                        <div class="d-flex flex-column">
+                                            <p class="song-box__title">Eureka 7</p>
+                                            <p class="song-box__subtitle">Shounen Heart</p>
+                                        </div>
                                     </div>
                                     <div class="song-group">
                                         <p class="song-item__time">17:58</p>
@@ -453,6 +563,7 @@
                                             </div>
                                         </div>
                                     </a>
+                                    <span class="radio-new">Новое!</span>
                                 </div>
                                 <div class="radio-item">
                                     <img src="./img/song/radio-2.jpg" alt="" class="radio-item__img">
@@ -640,16 +751,21 @@
                                 <p class="nav-link__text">Каталог песен</p>
                             </a>
                         </div>
-                        <div class="dropdown lang-dropdown">
-                            <button class="lang-btn dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown button
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+                        <div class="custom-select">
+                            <select>
+                                <option data-display="Select">
+                                    <p class="nice-select__text">RU</p>
+                                    <img src="./img/flags/RU.png" alt="" class="nice-select__img">
+                                </option>
+                                <option value="1">
+                                    <p class="nice-select__text">EN</p>
+                                    <img src="./img/flags/US.png" alt="" class="nice-select__img">
+                                </option>
+                                <option value="2">
+                                    <p class="nice-select__text">CN</p>
+                                    <img src="./img/flags/CN.png" alt="" class="nice-select__img">
+                                </option>
+                            </select>
                         </div>
                     </div>
 
@@ -729,6 +845,8 @@
         </div>
     </div>
 </div>
+<script src="./js/jquery.js"></script>
+<script src="./js/jquery.nice-select.min.js"></script>
 <script src="./js/index.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="./js/swiper-bundle.min.js"></script>
