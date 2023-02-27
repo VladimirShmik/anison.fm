@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anison.fm</title>
-    <link rel="stylesheet" href="./scss/">
+    <link rel="stylesheet" href="./scss/select2.min.css">
     <link rel="stylesheet" href="./scss/bootstrap.min.css">
     <link rel="stylesheet" href="./scss/main.css">
 </head>
@@ -162,22 +162,23 @@
                                 <a href="#" class="search-link">Z</a>
                             </div>
                             <fieldset class="search-form">
-                                <label  class="search-box">
+                                <label class="search-box">
                                     <svg class="search-box__icon">
                                         <use xlink:href="./img/sprite.svg#search-icon"></use>
                                     </svg>
                                     <input type="search" placeholder="Няшный поиск" class="search-box__input">
                                 </label>
-                               <div class="dropdown search-dropdown">
-                                <button class=" dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Аниме
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </div>
+                                <div class="dropdown search-dropdown">
+                                    <button class=" dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        Аниме
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
                             </fieldset>
                         </div>
                     </div>
@@ -543,13 +544,13 @@
                                 </a>
                             </div>
                             <div class="radio-grid">
-                                <div class="radio-item">
+                                <a href="#" class="radio-item">
                                     <img src="./img/song/radio-1.jpg" alt="" class="radio-item__img">
                                     <div class="date-block">
                                         <span class="date-block__number">08</span>
                                         <p class="date-block__month">сентября</p>
                                     </div>
-                                    <a href="#" class="radio-info">
+                                    <div class="radio-info">
                                         <p class="radio-info__title">Обновление ссылок</p>
                                         <div class="radio-box">
                                             <p class="radio-box__subtitle">Анисоновцы! Сегодня сделали небольшой
@@ -562,16 +563,16 @@
                                                 </svg>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                     <span class="radio-new">Новое!</span>
-                                </div>
-                                <div class="radio-item">
-                                    <img src="./img/song/radio-2.jpg" alt="" class="radio-item__img">
+                                </a>
+                                <a href="#" class="radio-item">
+                                        <img src="./img/song/radio-2.jpg" alt="" class="radio-item__img">
                                     <div class="date-block">
                                         <span class="date-block__number">08</span>
                                         <p class="date-block__month">сентября</p>
                                     </div>
-                                    <a href="#" class="radio-info">
+                                    <div class="radio-info">
                                         <p class="radio-info__title">Обновление ссылок</p>
                                         <div class="radio-box">
                                             <p class="radio-box__subtitle">Анисоновцы! Сегодня сделали небольшой
@@ -584,148 +585,160 @@
                                                 </svg>
                                             </div>
                                         </div>
-                                    </a>
-
-                                </div>
-                                <div class="radio-item">
-                                    <img src="./img/song/radio-3.jpg" alt="" class="radio-item__img">
-                                    <div class="date-block">
-                                        <span class="date-block__number">08</span>
-                                        <p class="date-block__month">сентября</p>
                                     </div>
-                                    <a href="#" class="radio-info">
-                                        <p class="radio-info__title">Обновление ссылок</p>
-                                        <div class="radio-box">
-                                            <p class="radio-box__subtitle">Анисоновцы! Сегодня сделали небольшой
-                                                апгрейд!
-                                                — На сайте мы полностью заменили Skype на Discord. Если у кого-то указан
-                                                скайп в профиле, то можете...</p>
-                                            <div class="radio-bg">
-                                                <svg class="radio-icon">
-                                                    <use xlink:href="./img/sprite.svg#arrow-icon"></use>
-                                                </svg>
+                                    </a>
+                                    <a href="#" class="radio-item">
+                                        <img src="./img/song/radio-3.jpg" alt="" class="radio-item__img">
+                                        <div class="date-block">
+                                            <span class="date-block__number">08</span>
+                                            <p class="date-block__month">сентября</p>
+                                        </div>
+                                        <div class="radio-info">
+                                            <p class="radio-info__title">Обновление ссылок</p>
+                                            <div class="radio-box">
+                                                <p class="radio-box__subtitle">Анисоновцы! Сегодня сделали небольшой
+                                                    апгрейд!
+                                                    — На сайте мы полностью заменили Skype на Discord. Если у кого-то
+                                                    указан
+                                                    скайп в профиле, то можете...</p>
+                                                <div class="radio-bg">
+                                                    <svg class="radio-icon">
+                                                        <use xlink:href="./img/sprite.svg#arrow-icon"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
                                     </a>
+                                </a>
+                            </div>
 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--updates-section-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="updates-wrapper">
+                            <h2 class="updates-wrapper__title">Последние добавленные аниме</h2>
+                            <div class="updates-grid">
+                                <a href="#" class="updates-item">
+                                    <div class="updates-group">
+                                        <img src="./img/updates/updates-1.jpg" alt="" class="updates-item__img">
+                                    </div>
+                                    <p class="updates-item__title">Fantasy Bishoujo Juniku Ojisan to</p>
+                                    <p class="updates-item__subtitle">В другом мире с мужчиной, обратившимся
+                                        красоткой</p>
+                                </a>
+                                <a href="#" class="updates-item">
+                                    <div class="updates-group">
+                                        <img src="./img/updates/updates-2.jpg" alt="" class="updates-item__img">
+                                    </div>
+                                    <p class="updates-item__title">Sabikui Busco</p>
+                                    <p class="updates-item__subtitle">Биско-ржавоед</p>
+                                </a>
+                                <a href="#" class="updates-item">
+                                    <div class="updates-group">
+                                        <img src="./img/updates/updates-3.jpg" alt="" class="updates-item__img">
+                                    </div>
+                                    <p class="updates-item__title">Heike Monogatari</p>
+                                    <p class="updates-item__subtitle">Повесть о доме Тайра</p>
+                                </a>
+                                <a href="#" class="updates-item">
+                                    <div class="updates-group">
+                                        <img src="./img/updates/updates-4.jpg" alt="" class="updates-item__img">
+                                    </div>
+                                    <p class="updates-item__title">Kenja no Deshi wo Nanoru Kenja</p>
+                                    <p class="updates-item__subtitle">Она представилась как ученик мудреца</p>
+                                </a>
+                                <a href="#" class="updates-item">
+                                    <div class="updates-group">
+                                        <img src="./img/updates/updates-5.jpg" alt="" class="updates-item__img">
+                                    </div>
+                                    <p class="updates-item__title">Tensai Ouji no Akaji Kokka Saisei Jutsu</p>
+                                    <p class="updates-item__subtitle">Руководство гениального принца по вызволению
+                                        страны
+                                        путешественников</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--top-section-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-wrapper">
+                            <h2 class="top-wrapper__title">Аниме-радио Anison.fm № 1 в России</h2>
+                            <div class="top-grid">
+                                <div class="top-item">
+                                    <span class="top-item__number">2.306</span>
+                                    <p class="top-item__text">аниме</p>
+                                </div>
+                                <div class="top-item">
+                                    <span class="top-item__number">14.700</span>
+                                    <p class="top-item__text">треков в каталоге</p>
+                                </div>
+                                <div class="top-item">
+                                    <span class="top-item__number">88.792</span>
+                                    <p class="top-item__text">радиослушателей</p>
+                                </div>
+                                <div class="top-item">
+                                    <span class="top-item__number">376</span>
+                                    <p class="top-item__text">песен ежедневно</p>
+                                </div>
+                                <div class="top-item">
+                                    <span class="top-item__number">1.187.778</span>
+                                    <p class="top-item__text">заявок выполнено</p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-        </div>
-        <!--updates-section-->
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="updates-wrapper">
-                        <h2 class="updates-wrapper__title">Последние добавленные аниме</h2>
-                        <div class="updates-grid">
-                            <a href="#" class="updates-item">
-                                <img src="./img/updates/updates-1.jpg" alt="" class="updates-item__img">
-                                <p class="updates-item__title">Fantasy Bishoujo Juniku Ojisan to</p>
-                                <p class="updates-item__subtitle">В другом мире с мужчиной, обратившимся красоткой</p>
-                            </a>
-                            <a href="#" class="updates-item">
-                                <img src="./img/updates/updates-2.jpg" alt="" class="updates-item__img">
-                                <p class="updates-item__title">Sabikui Busco</p>
-                                <p class="updates-item__subtitle">Биско-ржавоед</p>
-                            </a>
-                            <a href="#" class="updates-item">
-                                <img src="./img/updates/updates-3.jpg" alt="" class="updates-item__img">
-                                <p class="updates-item__title">Heike Monogatari</p>
-                                <p class="updates-item__subtitle">Повесть о доме Тайра</p>
-                            </a>
-                            <a href="#" class="updates-item">
-                                <img src="./img/updates/updates-4.jpg" alt="" class="updates-item__img">
-                                <p class="updates-item__title">Kenja no Deshi wo Nanoru Kenja</p>
-                                <p class="updates-item__subtitle">Она представилась как ученик мудреца</p>
-                            </a>
-                            <a href="#" class="updates-item">
-                                <img src="./img/updates/updates-5.jpg" alt="" class="updates-item__img">
-                                <p class="updates-item__title">Tensai Ouji no Akaji Kokka Saisei Jutsu</p>
-                                <p class="updates-item__subtitle">Руководство гениального принца по вызволению страны
-                                    путешественников</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--top-section-->
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="top-wrapper">
-                        <h2 class="top-wrapper__title">Аниме-радио Anison.fm № 1 в России</h2>
-                        <div class="top-grid">
-                            <div class="top-item">
-                                <span class="top-item__number">2.306</span>
-                                <p class="top-item__text">аниме</p>
+            <!--partners-section-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="partners-container">
+                            <div class="partners-wrapper">
+                                <h2 class="partners-wrapper__title">Наши партнёры</h2>
+                                <div class="partners-grid">
+                                    <a href="#" class="partners-item">
+                                        <img src="./img/partners/partners-1.png" alt="" class="partners-item__img">
+                                        <p class="partners-item__text">animeonline.su</p>
+                                    </a>
+                                    <a href="#" class="partners-item">
+                                        <img src="./img/partners/partners-2.png" alt="" class="partners-item__img">
+                                        <p class="partners-item__text">amvnews.ru</p>
+                                    </a>
+                                    <a href="#" class="partners-item">
+                                        <img src="./img/partners/partners-3.png" alt="" class="partners-item__img">
+                                        <p class="partners-item__text">narutoplanet.ru</p>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="top-item">
-                                <span class="top-item__number">14.700</span>
-                                <p class="top-item__text">треков в каталоге</p>
-                            </div>
-                            <div class="top-item">
-                                <span class="top-item__number">88.792</span>
-                                <p class="top-item__text">радиослушателей</p>
-                            </div>
-                            <div class="top-item">
-                                <span class="top-item__number">376</span>
-                                <p class="top-item__text">песен ежедневно</p>
-                            </div>
-                            <div class="top-item">
-                                <span class="top-item__number">1.187.778</span>
-                                <p class="top-item__text">заявок выполнено</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--partners-section-->
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="partners-container">
-                        <div class="partners-wrapper">
-                            <h2 class="partners-wrapper__title">Наши партнёры</h2>
-                            <div class="partners-grid">
-                                <a href="#" class="partners-item">
-                                    <img src="./img/partners/partners-1.png" alt="" class="partners-item__img">
-                                    <p class="partners-item__text">animeonline.su</p>
-                                </a>
-                                <a href="#" class="partners-item">
-                                    <img src="./img/partners/partners-2.png" alt="" class="partners-item__img">
-                                    <p class="partners-item__text">amvnews.ru</p>
-                                </a>
-                                <a href="#" class="partners-item">
-                                    <img src="./img/partners/partners-3.png" alt="" class="partners-item__img">
-                                    <p class="partners-item__text">narutoplanet.ru</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="playlist-wrapper">
-                            <h2 class="playlist-wrapper__title">Плейлист для плеера</h2>
-                            <div class="playlist-grid">
-                                <a href="#" class="playlist-item">
-                                    <p class="playlist-item__text">Скачайте плейлист, чтобы слушать радио через плеер на компьютере</p>
-                                    <span class="playlist-bg">
+                            <div class="playlist-wrapper">
+                                <h2 class="playlist-wrapper__title">Плейлист для плеера</h2>
+                                <div class="playlist-grid">
+                                    <a href="#" class="playlist-item">
+                                        <p class="playlist-item__text">Скачайте плейлист, чтобы слушать радио через
+                                            плеер на компьютере</p>
+                                        <span class="playlist-bg">
                                         <svg class="playlist-icon">
                                             <use xlink:href="./img/sprite.svg#download-icon"></use>
                                         </svg>
                                     </span>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </main>
 <!--footer-->
 <div class="footer">
@@ -735,36 +748,35 @@
                 <div class="col-12">
                     <div class="widgets-grid">
                         <div class="widgets-radio">
-
+                            <div class="form-check form-switch widgets-switch">
+                                <input class="form-check-input" type="checkbox" role="switch"
+                                       id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                            </div>
                         </div>
-                        <div class="widgets-block">
-                            <a href="" class="nav-link">
-                                <svg class="nav-link__icon">
-                                    <use xlink:href="./img/sprite.svg#widgets-icon"></use>
-                                </svg>
-                                <p class="nav-link__text">Каталог песен</p>
-                            </a>
-                            <a href="" class="nav-link">
-                                <svg class="nav-link__icon">
-                                    <use xlink:href="./img/sprite.svg#statistic-icon"></use>
-                                </svg>
-                                <p class="nav-link__text">Каталог песен</p>
-                            </a>
-                        </div>
-                        <div class="custom-select">
-                            <select>
-                                <option data-display="Select">
-                                    <p class="nice-select__text">RU</p>
-                                    <img src="./img/flags/RU.png" alt="" class="nice-select__img">
-                                </option>
-                                <option value="1">
-                                    <p class="nice-select__text">EN</p>
-                                    <img src="./img/flags/US.png" alt="" class="nice-select__img">
-                                </option>
-                                <option value="2">
-                                    <p class="nice-select__text">CN</p>
-                                    <img src="./img/flags/CN.png" alt="" class="nice-select__img">
-                                </option>
+                        <nav class="widgets-block">
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <svg class="nav-link__icon">
+                                        <use xlink:href="./img/sprite.svg#widgets-icon"></use>
+                                    </svg>
+                                    <p class="nav-link__text">Виджеты</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <svg class="nav-link__icon">
+                                        <use xlink:href="./img/sprite.svg#statistic-icon"></use>
+                                    </svg>
+                                    <p class="nav-link__text">Каталог песен</p>
+                                </a>
+                            </li>
+                        </nav>
+                        <div class="select-wrapper">
+                            <select class="simple-select" name="lang">
+                                <option value="RU" data-image="./img/flags/RU.png">RU</option>
+                                <option value="EN" data-image="./img/flags/US.png">EN</option>
+                                <option value="CN" data-image="./img/flags/CN.png">CN</option>
                             </select>
                         </div>
                     </div>
@@ -778,6 +790,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="footer-block">
+                        <p class="footer-copyright d-block d-lg-none">
+                            <span class="footer-copyright__text">© 2013-2021</span>
+                            <span class="footer-copyright__text">Все права защищены.</span>
+                        </p>
                         <p class="footer-block__title">
                             <span class="footer-block__span">Аниме-радио Anison.fm</span>
                             — это музыкальное развлекательное онлайн радио, созданное специально для анимешников. Здесь
@@ -788,6 +804,7 @@
                             викторины, живое
                             общение со слушателями — все это вы сможете услышать только на аниме радио Anison.fm!
                         </p>
+
                         <div class="footer-links">
                             <div class="footer-social">
                                 <a href="#" class="social-link">
@@ -814,7 +831,7 @@
                             <a href="" class="footer-link">
                                 <img src="./img/logo-main.png" alt="" class="footer-link__img">
                             </a>
-                            <p class="footer-copyright">
+                            <p class="footer-copyright d-none d-lg-block">
                                 <span class="footer-copyright__text">© 2013-2021</span>
                                 <span class="footer-copyright__text">Все права защищены.</span>
                             </p>
@@ -829,24 +846,31 @@
 </div>
 <!-- login-modal-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-login">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <form action="#" class="login-form">
+                    <label class="login-nick">
+                        Никнейм
+                        <input type="text" class="login-nick__input">
+                    </label>
+                    <div class="form-password">
+
+                        <label class="form-label" for="password">Текущий пароль</label>
+                        <input type="password" id="password" class="form-control form-password-input" name="" value=""
+                               placeholder="Введите данные" aria-required="true" aria-invalid="true">
+                        <button type="button" class="input-group-icon form-password-btn"></button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
 <script src="./js/jquery.js"></script>
-<script src="./js/jquery.nice-select.min.js"></script>
+<script src="./js/select2.min.js"></script>
 <script src="./js/index.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="./js/swiper-bundle.min.js"></script>
