@@ -155,7 +155,7 @@
 .live-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 0 0 80px;
+  margin: 0 0 110px;
   padding-top: 80px;
 
 }
@@ -484,6 +484,8 @@ background-color: transparent;
     stroke-width: 1.2;
 
     &--fill {
+      width: 24px;
+      height: 24px;
       stroke: #C62C5A;
       fill: #C62C5A;
     }
@@ -617,6 +619,7 @@ background-color: transparent;
 .radio-item {
   position: relative;
  overflow: hidden;
+  border-radius: 6px;
   &::after {
     position: absolute;
     content: '';
@@ -634,6 +637,7 @@ background-color: transparent;
     width: 100%;
     object-fit: cover;
     transition-duration: 0.5s;
+    border-radius: 6px;
 
   }
 }

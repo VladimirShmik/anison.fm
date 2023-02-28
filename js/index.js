@@ -1,12 +1,43 @@
 const buttonToggleLike = document.querySelector('.song-like');
-const buttonNotActive = document.querySelector('.song-like__icon');
-const buttonActive = document.querySelector('.song-like__icon--fill');
-function buttonToggle(){
-    buttonNotActive.classList.toggle("song-like__icon--hide");
-    buttonActive.classList.toggle("song-like__icon--fill");
-};
 
-buttonToggleLike.addEventListener("click", buttonToggle);
+function buttonToggle(parent){
+    const buttonActive = parent.querySelector('.song-like__icon--fill');
+    const buttonNotActive = parent.querySelector('.song-like__icon');
+    buttonNotActive.classList.toggle("song-like__icon--hide");
+    buttonActive.classList.toggle("song-like__icon--hide");
+}
+
+const allItems = document.querySelector(".song-grid");
+allItems.addEventListener("click", (e) =>{
+    const targetIcon = e.target.closest(".song-like__icon");
+    if (targetIcon) {
+        const parent = targetIcon.closest(".song-item");
+        buttonToggle(parent);
+    }
+});
+
+const buttonToggleStart = document.querySelector('.song-start');
+
+function startToggle(parent){
+    const startActive = parent.querySelector('.song-start__icon--stop');
+    const startNotActive = parent.querySelector('.song-start__icon');
+     startNotActive.classList.toggle("song-start__icon--hide");
+     startActive.classList.toggle("song-start__icon--hide");
+}
+
+const allItemsStart = document.querySelector(".song-grid");
+allItemsStart.addEventListener("click", (e) =>{
+    const targetStart = e.target.closest(".song-start__icon");
+    if (targetStart) {
+        const parent = targetStart.closest(".song-item");
+        startToggle(parent);
+    }
+});
+ const inputSwitch = document.querySelector('.form-check-input');
+ const bodyTheme =document.querySelector('body')
+ inputSwitch.addEventListener("click" , function (){
+     bodyTheme.classList.toggle('dark-theme')
+ })
 
 const hoverContainer = document.querySelector('.player-wrapper');
 const playerDropdown = document.querySelector('.song-dropdown');

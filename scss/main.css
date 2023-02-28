@@ -382,7 +382,7 @@ p {
 .live-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 0 0 80px;
+  margin: 0 0 110px;
   padding-top: 80px;
 }
 
@@ -708,6 +708,8 @@ p {
   stroke-width: 1.2;
 }
 .song-like__icon--fill {
+  width: 24px;
+  height: 24px;
   stroke: #C62C5A;
   fill: #C62C5A;
 }
@@ -834,6 +836,7 @@ p {
 .radio-item {
   position: relative;
   overflow: hidden;
+  border-radius: 6px;
 }
 .radio-item::after {
   position: absolute;
@@ -852,6 +855,7 @@ p {
   width: 100%;
   object-fit: cover;
   transition-duration: 0.5s;
+  border-radius: 6px;
 }
 
 .radio-item:hover .radio-item__img {
@@ -1626,5 +1630,111 @@ p {
 }
 
 /*modals*/
+.dark-theme .section-bg {
+  background-color: #1a171e;
+}
+.dark-theme .live-block__title {
+  color: #FFFFFF;
+}
+.dark-theme .live-item {
+  background: #242228;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.dark-theme .live-item:hover {
+  background: linear-gradient(90.16deg, #5A2E98 0%, #4F268A 100%);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.dark-theme .live-date {
+  border-right: 2px solid #FFFFFF;
+}
+.dark-theme .live-date__number {
+  color: #FFFFFF;
+}
+.dark-theme .live-date__month {
+  color: #FFFFFF;
+}
+.dark-theme .live-info__title {
+  color: #FFFFFF;
+}
+.dark-theme .live-info__name {
+  color: #FFFFFF;
+}
+.dark-theme .live-info__time {
+  color: #FFFFFF;
+}
+.dark-theme .song-wrapper__title {
+  color: #FFFFFF;
+}
+.dark-theme .radio-wrapper__title {
+  color: #FFFFFF;
+}
+.dark-theme .radio-link__text {
+  color: #FFFFFF;
+}
+.dark-theme .radio-link__icon {
+  stroke: #FFFFFF;
+}
+.dark-theme .song-grid {
+  background: #242228;
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.15));
+}
+.dark-theme .song-item:hover {
+  background: #1A171E;
+}
+.dark-theme .song-box__title {
+  color: #FFFFFF;
+}
+.dark-theme .song-item__time {
+  color: #FFFFFF;
+}
+.dark-theme .updates-wrapper__title {
+  color: #FFFFFF;
+}
+.dark-theme .updates-item__title {
+  color: #FFFFFF;
+}
+.dark-theme .top-wrapper__title {
+  color: #FFFFFF;
+}
+.dark-theme .top-item {
+  background: #242228;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.dark-theme .top-item__number {
+  color: #FFFFFF;
+}
+.dark-theme .top-item__text {
+  color: #8F8B96;
+}
+.dark-theme .partners-wrapper__title {
+  color: #FFFFFF;
+}
+.dark-theme .playlist-wrapper__title {
+  color: #FFFFFF;
+}
+.dark-theme .partners-item {
+  background: #242228;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.dark-theme .playlist-item {
+  background: #242228;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.dark-theme .playlist-item::after {
+  background-image: url("../img/partners/partners-5.png");
+}
+.dark-theme .playlist-bg {
+  border-color: #ffffff;
+}
+.dark-theme .playlist-icon {
+  stroke: #ffffff;
+}
+.dark-theme .song-start__icon--stop {
+  fill: #ffffff;
+}
+.dark-theme .search-wrapper {
+  background: #242228;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
 
 /*# sourceMappingURL=main.css.map */
