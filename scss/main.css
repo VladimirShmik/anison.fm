@@ -289,11 +289,17 @@ p {
   top: -35px;
 }
 
+.player-wrapper {
+  position: relative;
+}
 .player-wrapper .song-item {
   background: #242228;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 6px;
+  border-radius: 6px 6px 0 0;
   padding: 15px 35px;
+}
+.player-wrapper .song-item:hover {
+  background: #242228;
 }
 .player-wrapper .song-item .song-box__title {
   color: #FFFFFF;
@@ -553,6 +559,92 @@ p {
   }
 }
 
+.song-dropdown {
+  width: 100%;
+  position: absolute;
+  display: none;
+  z-index: 4;
+}
+.song-dropdown--show {
+  display: block;
+}
+.song-dropdown__title {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 130%;
+  color: #FFFFFF;
+  background: #1A171E;
+  padding: 15px 30px;
+}
+
+.song-list {
+  background: #242228;
+  border-radius: 0px 0px 6px 6px;
+}
+
+.song-vote {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.song-vote__active {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #D4990C;
+}
+.song-vote__icon {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: #B7B4BD;
+  stroke-width: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.song-vote__icon:hover {
+  stroke: #ffffff;
+}
+.song-vote__author {
+  font-weight: 400;
+  font-size: 11px;
+  color: #FBD57C;
+}
+.song-vote__author:hover {
+  text-decoration-line: underline;
+  color: #FBD57C;
+}
+.song-vote__votes {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+.song-vote__subtitle {
+  font-weight: 400;
+  font-size: 13px;
+  color: #8F8B96;
+}
+
+.list-item {
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-item__number {
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-right: 10px;
+}
+.list-item .song-box__title {
+  color: #FFFFFF;
+}
+
 .song-item {
   display: flex;
   align-items: center;
@@ -696,6 +788,24 @@ p {
 .radio-link {
   display: flex;
   align-items: center;
+}
+.radio-link--dropdown {
+  padding: 10px 30px 20px 30px;
+}
+.radio-link--dropdown .radio-link__text {
+  font-weight: 400;
+  font-size: 15px;
+  color: #FFFFFF;
+}
+.radio-link--dropdown .radio-link__icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  fill: none;
+  stroke: #FFFFFF;
+  margin-top: 2px;
+  margin-left: 5px;
+  stroke-width: 1.2;
 }
 .radio-link__text {
   font-weight: 400;
@@ -1509,6 +1619,10 @@ p {
 
 .select2-search--dropdown {
   padding: 0;
+}
+
+.select-item + .select-result {
+  background-color: red;
 }
 
 /*modals*/

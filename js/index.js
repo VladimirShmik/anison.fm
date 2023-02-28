@@ -2,16 +2,19 @@ const buttonToggleLike = document.querySelector('.song-like');
 const buttonNotActive = document.querySelector('.song-like__icon');
 const buttonActive = document.querySelector('.song-like__icon--fill');
 function buttonToggle(){
-    buttonNotActive.classList.toggle('song-like__icon--hide');
+    buttonNotActive.classList.toggle("song-like__icon--hide");
+    buttonActive.classList.toggle("song-like__icon--fill");
 };
+
 buttonToggleLike.addEventListener("click", buttonToggle);
-const buttonToggleStart = document.querySelector('.song-start');
-const buttonStart = document.querySelector('.song-start__icon');
-const buttonStop = document.querySelector('.song-like__icon--stop');
-function buttonToggle(){
-    buttonStart.classList.toggle('song-like__icon--hide');
+
+const hoverContainer = document.querySelector('.player-wrapper');
+const playerDropdown = document.querySelector('.song-dropdown');
+function hoverToggle(){
+    playerDropdown.classList.toggle('song-dropdown--show');
 };
-buttonToggleLike.addEventListener("click", buttonToggle);
+hoverContainer.addEventListener("click", hoverToggle);
+
 $(".simple-select").select2({
     Search: false,
     templateResult: formatState,

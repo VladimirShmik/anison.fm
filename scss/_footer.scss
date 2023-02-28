@@ -205,3 +205,6 @@
 .select2-search--dropdown {
   padding: 0;
 }
+.select-item + .select-result{
+  background-color: red;
+}

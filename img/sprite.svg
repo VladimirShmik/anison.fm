@@ -71,4 +71,7 @@
     <symbol viewBox="0 0 24 24" id="list-icon">
         <path d="M14 4.79111H21M14 9.86074H21M3 14.9304H21M3 20H21M5.89443 10.4212L9.42229 8.63273C10.8964 7.88542 10.8964 5.75251 9.42229 5.0052L5.89443 3.2167C4.56463 2.54254 3 3.523 3 5.03047V8.60746C3 10.1149 4.56462 11.0954 5.89443 10.4212Z" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
+    <symbol viewBox="0 0 16 16" id="plus-icon">
+        <path d="M7.99967 1.3335V14.6668M14.6663 8.00016L1.33301 8.00016" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 </symbol>
