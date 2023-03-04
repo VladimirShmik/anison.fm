@@ -58,6 +58,13 @@
   .song-grid{
     background: #242228;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.15));
+    @media(min-width: 320px) and (max-width: 1200px) {
+      padding: 0;
+      background-color: #1a171e;
+      box-shadow: none;
+      filter: none  ;
+    }
+
   }
   .song-item{
     &:hover{
@@ -108,6 +115,14 @@
       background-image: url("../img/partners/partners-5.png");
     }
   }
+  .playlist-item:hover .playlist-bg {
+    background: #ffffff;
+  }
+
+  .playlist-item:hover .playlist-icon {
+    stroke: #242228;
+  }
+
   .playlist-bg{
     border-color: #ffffff;
   }
@@ -120,5 +135,100 @@
   .search-wrapper{
     background: #242228;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  }
+  .modal-content{
+    background: #242228;
+    box-shadow: 0px 0px 20px rgba(37, 19, 64, 0.5);
+  }
+  .modal-body{
+    &__title{
+      color: #ffffff;
+    }
+  }
+  .login-nick{
+    color: #ffffff;
+    &__subtitle{
+      color: #8F8B96;
+    }
+    &__input{
+      background-color: transparent;
+      border: 1px solid #353338;
+      font-weight: 400;
+      font-size: 15px;
+      color: #8F8B96;
+      &::placeholder{
+        font-weight: 400;
+        font-size: 15px;
+        color: #8F8B96;
+      }
+    }
+  }
+  .form-label{
+    color: #ffffff;
+  }
+  .form-password-input{
+    background-color: transparent;
+    border: 1px solid #353338;
+    font-weight: 400;
+    font-size: 15px;
+    color: #8F8B96;
+    &::placeholder{
+      font-weight: 400;
+      font-size: 15px;
+      color: #8F8B96;
+    }
+  }
+  .modal-link{
+    &:hover{
+      color: #FFFFFF;
+    }
+  }
+  .btn-close{
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    padding: 0 !important;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 5.00009L5 19M19 18.9999L5 5' stroke='white' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    &:focus{
+      box-shadow: none;
+      outline: none;
+    }
+  }
+  .mobile-nav{
+    background-color: #1A171E;
+  }
+  .header-login__btn--mobile{
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    &:hover{
+      color: #242228;
+      background-color: #ffffff;
+      border: 1px solid transparent;
+    }
+    &:active{
+      color: #FFFFFF;
+      background: linear-gradient(90.16deg, #50248D 0%, #421A7B 100%);
+      border: 1px solid transparent;
+    }
+
+  }
+  .profile-block{
+    &__img{
+
+    }
+    &__title{
+      color: #FFFFFF;
+    }
+  }
+  .mobile-link{
+    &__icon{
+   stroke: #FFFFFF;
+    }
+    &__text{
+      color: #FFFFFF;
+    }
+  }
+  .header-login__btn{
+
   }
 }
