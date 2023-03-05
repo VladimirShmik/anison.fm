@@ -1,14 +1,14 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 function buttonToggle(parent) {
-    const buttonActive = parent.querySelector('.song-like__icon--fill');
-    const buttonNotActive = parent.querySelector('.song-like__icon');
-    buttonNotActive.classList.toggle("song-like__icon--hide");
-    buttonActive.classList.toggle("song-like__icon--hide");
+    const buttonActive = parent.querySelector('.song-like__icon--empty');
+    const buttonNotActive = parent.querySelector('.song-like__icon--fill');
+    buttonNotActive.classList.toggle("hide");
+    buttonActive.classList.toggle("hide");
 };
-
-const allItems = document.querySelector("body");
-if (document.querySelector('body')) {
+const allItems = document.querySelector(".buttonCheck");
+if ( allItems !== null) {
     allItems.addEventListener("click", (e) => {
-
         const targetIcon = e.target.closest(".song-like__icon");
         if (targetIcon) {
             const parent = targetIcon.closest(".song-group");
@@ -17,16 +17,49 @@ if (document.querySelector('body')) {
 
     });
 };
+function buttonToggleModal(parent) {
+    const buttonActive = parent.querySelector('.song-like__icon--empty');
+    const buttonNotActive = parent.querySelector('.song-like__icon--fill');
+    buttonNotActive.classList.toggle("hide");
+    buttonActive.classList.toggle("hide");
+};
+const allItemsModal = document.querySelector(".modalCheck");
+if ( allItemsModal !== null) {
+    allItemsModal.addEventListener("click", (e) => {
+        const targetIcon = e.target.closest(".song-like__icon");
+        if (targetIcon) {
+            const parent = targetIcon.closest(".song-group");
+            buttonToggleModal(parent);
+        }
 
-function startToggle(parent) {
-    const startActive = parent.querySelector('.song-start__icon');
+    });
+};
+function startToggleModal(parent) {
+    const startActive = parent.querySelector('.song-start__icon--start');
     const startNotActive = parent.querySelector('.song-start__icon--stop');
-    startNotActive.classList.toggle("song-start__icon--hide");
-    startActive.classList.toggle("song-start__icon--hide");
+    startNotActive.classList.toggle("hide");
+    startActive.classList.toggle("hide");
 };
 
-const allItemsStart = document.querySelector("body");
-if (document.querySelector('body')) {
+const allItemsStartModal = document.querySelector(".modalCheck");
+if ( allItemsStartModal !== null) {
+    allItemsStartModal.addEventListener("click", (e) => {
+        const targetStart = e.target.closest(".song-start__icon");
+        if (targetStart) {
+            const parent = targetStart.closest(".song-group");
+            startToggleModal(parent);
+        }
+    });
+};
+function startToggle(parent) {
+    const startActive = parent.querySelector('.song-start__icon--start');
+    const startNotActive = parent.querySelector('.song-start__icon--stop');
+    startNotActive.classList.toggle("hide");
+    startActive.classList.toggle("hide");
+};
+
+const allItemsStart = document.querySelector(".buttonCheck");
+if ( allItemsStart !== null) {
     allItemsStart.addEventListener("click", (e) => {
         const targetStart = e.target.closest(".song-start__icon");
         if (targetStart) {
@@ -53,27 +86,28 @@ if (document.querySelector('body')) {
         }
     });
 };
-
-let modalBtn = document.querySelector('.modal-live-bg--show');
-let modalIcon = document.querySelector('.modal-live__icon--active');
-let modalIconActive = document.querySelector('.modal-live__icon--hidden');
-if (document.querySelector('body')) {
-    modalBtn.addEventListener('click', function () {
-        modalIcon.classList.toggle('modal-live__icon--hide');
-        modalIconActive.classList.toggle('modal-live__icon--hide');
-    });
-};
 const inputSwitch = document.querySelector('.form-check-input');
 const bodyTheme = document.querySelector('body')
 inputSwitch.addEventListener("click", function () {
     bodyTheme.classList.toggle('dark-theme')
 });
-let menuBtn = document.querySelector('.menu-btn');
-let menu = document.querySelector('.mobile-nav');
-menuBtn.addEventListener('click', function () {
-    menuBtn.classList.toggle('active');
-    menu.classList.toggle('active');
-});
+// let modalBtn = document.querySelector('.modal-live-bg--show');
+// let modalIcon = document.querySelector('.modal-live__icon--active');
+// let modalIconActive = document.querySelector('.modal-live__icon--hidden');
+// if (document.querySelector('body')) {
+//     modalBtn.addEventListener('click', function () {
+//         modalIcon.classList.toggle('modal-live__icon--hide');
+//         modalIconActive.classList.toggle('modal-live__icon--hide');
+//     });
+// };
+
+// let menuBtn = document.querySelector('.menu-btn');
+// let menu = document.querySelector('.mobile-nav');
+// menuBtn.addEventListener('click', function () {
+//     menuBtn.classList.toggle('active');
+//     menu.classList.toggle('active');
+// });
+
 const form = document.querySelector(".login-form");
 if (form) {
     function togglePasswordType(input, button) {
@@ -120,6 +154,17 @@ new Swiper('.swiperList', {
     },
     scrollbar: {
         el: ".swiper-scrollbar",
-            hide: true,
+        hide: true,
     },
 });
+function attentionToggle() {
+    const trackAttention = document.querySelector('.attention-track');
+    trackAttention.classList.toggle('attention-track--active')
+}
+const trackContainer = document.querySelectorAll('.song-info--blocked');
+trackContainer.forEach(item => {
+    item.addEventListener('mouseover', function(event) {
+        event.stopPropagation();
+         attentionToggle();
+    })
+})
