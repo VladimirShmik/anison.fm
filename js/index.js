@@ -3,7 +3,7 @@ function buttonToggle(parent) {
     const buttonNotActive = parent.querySelector('.song-like__icon');
     buttonNotActive.classList.toggle("song-like__icon--hide");
     buttonActive.classList.toggle("song-like__icon--hide");
-}
+};
 
 const allItems = document.querySelector("body");
 if (document.querySelector('body')) {
@@ -11,48 +11,49 @@ if (document.querySelector('body')) {
 
         const targetIcon = e.target.closest(".song-like__icon");
         if (targetIcon) {
-            const parent = targetIcon.closest(".song-item");
+            const parent = targetIcon.closest(".song-group");
             buttonToggle(parent);
         }
 
     });
-}
-;
+};
 
 function startToggle(parent) {
     const startActive = parent.querySelector('.song-start__icon');
     const startNotActive = parent.querySelector('.song-start__icon--stop');
     startNotActive.classList.toggle("song-start__icon--hide");
     startActive.classList.toggle("song-start__icon--hide");
-}
+};
 
 const allItemsStart = document.querySelector("body");
 if (document.querySelector('body')) {
     allItemsStart.addEventListener("click", (e) => {
         const targetStart = e.target.closest(".song-start__icon");
         if (targetStart) {
-            const parent = targetStart.closest(".song-item");
+            const parent = targetStart.closest(".song-group");
             startToggle(parent);
         }
     });
 };
+
 function voteToggle(parent) {
     const voteActive = parent.querySelector('.song-vote__icon');
     const voteNotActive = parent.querySelector('.song-vote__icon--minus');
     voteActive.classList.toggle("song-vote__icon--hide");
     voteNotActive.classList.toggle("song-vote__icon--hide");
-}
+};
 
 const allItemsVote = document.querySelector("body");
 if (document.querySelector('body')) {
     allItemsVote.addEventListener("click", (e) => {
         const targetStart = e.target.closest(".song-vote__icon");
         if (targetStart) {
-            const parent = targetStart.closest(".song-item");
+            const parent = targetStart.closest(".song-group");
             voteToggle(parent);
         }
     });
 };
+
 let modalBtn = document.querySelector('.modal-live-bg--show');
 let modalIcon = document.querySelector('.modal-live__icon--active');
 let modalIconActive = document.querySelector('.modal-live__icon--hidden');
@@ -110,3 +111,15 @@ function formatState(opt) {
         return $opt;
     }
 };
+new Swiper('.swiperList', {
+    slidesPerView: 12,
+    direction: "vertical",
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    scrollbar: {
+        el: ".swiper-scrollbar",
+            hide: true,
+    },
+});
