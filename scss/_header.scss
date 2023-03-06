@@ -60,7 +60,7 @@
   }
 }
 .nav-item{
-  padding: 25px 10px;
+  padding: 23px 10px;
   &:hover{
     background: rgba(140, 97, 199, 0.3);
     cursor: pointer;
@@ -78,7 +78,7 @@
     height: 20px;
     fill: none;
     stroke: white;
-    stroke-width: 2px;
+    stroke-width: 1.2;
   }
   &__text{
     font-weight: 400;

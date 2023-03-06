@@ -319,7 +319,8 @@ p {
 }
 .main-img__img {
   position: relative;
-  top: -35px;
+  top: -30px;
+  right: -20px;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .main-img__img {
@@ -337,7 +338,7 @@ p {
   background: #242228;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   border-radius: 6px 6px 0 0;
-  padding: 15px 35px;
+  padding: 20px 35px;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .player-wrapper .song-item {
@@ -361,7 +362,7 @@ p {
   position: absolute;
   box-shadow: 0px 0px 20px rgba(183, 168, 199, 0.15);
   border-radius: 6px;
-  bottom: -30px;
+  bottom: -37px;
   width: 100%;
   display: flex;
   gap: 10px;
@@ -441,13 +442,13 @@ p {
 .live-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 0 0 110px;
-  padding-top: 80px;
-  margin-bottom: 60px;
+  padding-top: 125px;
+  margin-bottom: 95px;
 }
 @media (min-width: 320px) and (max-width: 1023px) {
   .live-wrapper {
     padding-top: 60px;
+    margin-bottom: 60px;
   }
 }
 
@@ -532,6 +533,7 @@ p {
   font-size: 40px;
   text-align: center;
   color: #242228;
+  margin-bottom: 12px;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .live-date__number {
@@ -560,7 +562,6 @@ p {
 
 .live-info {
   display: flex;
-  gap: 5px;
   flex-direction: column;
   padding-left: 25px;
 }
@@ -1706,7 +1707,7 @@ p {
 }
 
 .nav-item {
-  padding: 25px 10px;
+  padding: 23px 10px;
 }
 .nav-item:hover {
   background: rgba(140, 97, 199, 0.3);
@@ -1725,7 +1726,7 @@ p {
   height: 20px;
   fill: none;
   stroke: white;
-  stroke-width: 2px;
+  stroke-width: 1.2;
 }
 .nav-link__text {
   font-weight: 400;

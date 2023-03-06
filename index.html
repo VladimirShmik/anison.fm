@@ -153,16 +153,18 @@
                                 </a>
                                 <p class="logo-title__subtitle">Аниме-радио №1 во Вселенной</p>
                             </h1>
-                            <div class="player-wrapper">
+                            <div class="player-wrapper buttonCheck">
                                 <div class="song-item">
-                                    <button class="song-start">
-                                        <svg class="song-start__icon">
-                                            <use xlink:href="./img/sprite.svg#play-icon"></use>
-                                        </svg>
-                                        <svg class="song-start__icon song-start__icon--stop song-like__icon--hide">
-                                            <use xlink:href="./img/sprite.svg#stop-icon"></use>
-                                        </svg>
-                                    </button>
+                                    <div class="song-group">
+                                        <button class="song-start">
+                                            <svg class="song-start__icon song-start__icon--start">
+                                                <use xlink:href="../img/sprite.svg#play-icon"></use>
+                                            </svg>
+                                            <svg class="song-start__icon song-start__icon--stop hide">
+                                                <use xlink:href="../img/sprite.svg#stop-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
                                     <div class="song-box">
                                         <img src="./img/song/song-1.jpg" alt="" class="song-item__img">
                                         <div class="d-flex flex-column">
@@ -178,14 +180,13 @@
                                             </svg>
                                         </button>
                                         <button class="song-like">
-                                            <svg class="song-like__icon">
-                                                <use xlink:href="./img/sprite.svg#like-icon"></use>
+                                            <svg class="song-like__icon song-like__icon--empty">
+                                                <use xlink:href="../img/sprite.svg#like-icon"></use>
                                             </svg>
-                                            <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
-                                                <use xlink:href="./img/sprite.svg#like-fill-icon"></use>
+                                            <svg class="song-like__icon song-like__icon--fill hide">
+                                                <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
                                             </svg>
                                         </button>
-
                                         <button class="song-list" data-bs-toggle="modal" data-bs-target="#listModal">
                                             <svg class="song-like__icon">
                                                 <use xlink:href="./img/sprite.svg#list-icon"></use>

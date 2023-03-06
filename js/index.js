@@ -1,5 +1,6 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+//song-check-like//
 function buttonToggle(parent) {
     const buttonActive = parent.querySelector('.song-like__icon--empty');
     const buttonNotActive = parent.querySelector('.song-like__icon--fill');
@@ -17,6 +18,7 @@ if ( allItems !== null) {
 
     });
 };
+
 function buttonToggleModal(parent) {
     const buttonActive = parent.querySelector('.song-like__icon--empty');
     const buttonNotActive = parent.querySelector('.song-like__icon--fill');
@@ -34,13 +36,13 @@ if ( allItemsModal !== null) {
 
     });
 };
+//song-check-start//
 function startToggleModal(parent) {
     const startActive = parent.querySelector('.song-start__icon--start');
     const startNotActive = parent.querySelector('.song-start__icon--stop');
     startNotActive.classList.toggle("hide");
     startActive.classList.toggle("hide");
 };
-
 const allItemsStartModal = document.querySelector(".modalCheck");
 if ( allItemsStartModal !== null) {
     allItemsStartModal.addEventListener("click", (e) => {
@@ -51,13 +53,13 @@ if ( allItemsStartModal !== null) {
         }
     });
 };
+
 function startToggle(parent) {
     const startActive = parent.querySelector('.song-start__icon--start');
     const startNotActive = parent.querySelector('.song-start__icon--stop');
     startNotActive.classList.toggle("hide");
     startActive.classList.toggle("hide");
 };
-
 const allItemsStart = document.querySelector(".buttonCheck");
 if ( allItemsStart !== null) {
     allItemsStart.addEventListener("click", (e) => {
