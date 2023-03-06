@@ -737,7 +737,7 @@ p {
 .song-vote {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 .song-vote__active {
   width: 6px;
