@@ -108,7 +108,14 @@ inputSwitch.addEventListener("click", function () {
 // menuBtn.addEventListener('click', function () {
 //     menuBtn.classList.toggle('active');
 //     menu.classList.toggle('active');
-// });
+// });;
+const songTrack = document.querySelector('.player-wrapper')
+const songDropdown = document.querySelector('.song-dropdown');
+if (songTrack !== null) {
+    songTrack.addEventListener("mouseover", (e) => {
+      songDropdown.classList.toggle('song-dropdown--show');
+    });
+};
 
 const form = document.querySelector(".login-form");
 if (form) {

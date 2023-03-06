@@ -202,7 +202,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 125px;
-  margin-bottom: 95px;
+  margin-bottom: 85px;
   @media (min-width: 320px) and (max-width: 1023px) {
     padding-top: 60px;
     margin-bottom: 60px;
@@ -317,7 +317,7 @@
   display: flex;
   flex-direction: column;
   padding-left: 25px;
-
+  gap: 10px;
   &__title {
     font-weight: 600;
     font-size: 20px;
@@ -347,7 +347,7 @@
 /*music-section*/
 .music-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1.55fr;
+  grid-template-columns: 1fr 1.6fr;
   grid-gap: 30px;
   margin-bottom: 80px;
 
@@ -404,7 +404,7 @@
   height: 100%;
   filter: drop-shadow(0px 0px 20px rgba(183, 168, 199, 0.15));
   border-radius: 6px;
-  padding: 30px 0;
+  padding: 20px 0;
   @media(min-width: 320px) and (max-width: 1200px) {
     background-color: transparent;
   }
@@ -585,7 +585,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px;
+  padding: 11.5px 30px 11.5px 25px;
   @media(min-width: 320px) and (max-width: 1200px) {
     padding: 8px 0;
   }
