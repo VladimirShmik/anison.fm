@@ -1,5 +1,49 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+
+const soundRange = document.querySelector(".list-dropdown");
+const sound = document.querySelector(".song-sound");
+soundRange.addEventListener("mouseleave", ()=>{
+    soundRange.classList.add("hide");
+});
+sound.addEventListener("mouseenter", ()=>{
+    console.log("rrr");
+    soundRange.classList.remove("hide");
+});
+soundRange.children[0].addEventListener("change", e=>{
+    const buttonActive = document.querySelector('.song-sound__icon--off');
+    const buttonNotActive = document.querySelector('.song-sound__icon--on');
+    console.log(soundRange.children[0].value);
+    if(soundRange.children[0].value == 100 && buttonActive.classList.contains("hide")){
+        buttonActive.classList.toggle("hide");
+        buttonNotActive.classList.toggle("hide");
+    }
+    else{
+        buttonActive.classList.add("hide");
+        buttonNotActive.classList.remove("hide");
+    }
+});
+sound.addEventListener("dblclick", ()=>{
+    const buttonActive = document.querySelector('.song-sound__icon--off');
+    const buttonNotActive = document.querySelector('.song-sound__icon--on');
+    if(buttonNotActive.classList.contains("hide")){
+
+
+        buttonActive.classList.toggle("hide");
+        buttonNotActive.classList.toggle("hide");
+        soundRange.children[0].value = 0;
+    }
+    else{
+
+        buttonActive.classList.toggle("hide");
+        buttonNotActive.classList.toggle("hide");
+        soundRange.children[0].value = 100;
+    }
+
+
+});
+
 //song-check-like//
 function buttonToggle(parent) {
     const buttonActive = parent.querySelector('.song-like__icon--empty');
@@ -11,9 +55,11 @@ const allItems = document.querySelectorAll(".song-like");
 allItems.forEach(el=>{
     el.addEventListener("click", (e) => {
         if (e.currentTarget.classList.contains("song-like")) {
+            console.log(e.currentTarget);
             const parent = e.target.closest(".song-group");
             buttonToggle(parent);
         }
+
 
     });
 
@@ -65,7 +111,7 @@ function startToggle(parent) {
 const allItemsStart = document.querySelector(".buttonCheck");
 if ( allItemsStart !== null) {
     allItemsStart.addEventListener("click", (e) => {
-        const targetStart = e.target.closest(".song-start__icon");
+        const targetStart = e.currentTarget.closest(".song-start__icon");
         if (targetStart) {
             const parent = targetStart.closest(".song-group");
             startToggle(parent);
@@ -80,8 +126,8 @@ function voteToggle(parent) {
     voteNotActive.classList.toggle("song-vote__icon--hide");
 };
 
-const allItemsVote = document.querySelector("body");
-if (document.querySelector('body')) {
+const allItemsVote = document.querySelector(".song-list");
+if (document.querySelector('.song-list')) {
     allItemsVote.addEventListener("click", (e) => {
         const targetStart = e.target.closest(".song-vote__icon");
         if (targetStart) {
@@ -111,18 +157,18 @@ inputSwitch.addEventListener("click", function () {
 //     menuBtn.classList.toggle('active');
 //     menu.classList.toggle('active');
 // });;
-const songTrack = document.querySelector('.player-wrapper')
-const songDropdown = document.querySelector('.song-dropdown');
-if (songTrack !== null) {
-    songTrack.addEventListener("mouseenter", (e) => {
-        console.log(e.target);
-        songDropdown.classList.add('song-dropdown--show');
-        songTrack.addEventListener("mouseleave",() =>{
-            songDropdown.classList.remove('song-dropdown--show');
-        })
-
-    });
-};
+// const songTrack = document.querySelector('.player-wrapper')
+// const songDropdown = document.querySelector('.song-dropdown');
+// if (songTrack !== null) {
+//     songTrack.addEventListener("mouseenter", (e) => {
+//         console.log(e.target);
+//         songDropdown.classList.add('song-dropdown--show');
+//         songTrack.addEventListener("mouseleave",() =>{
+//             songDropdown.classList.remove('song-dropdown--show');
+//         })
+//
+//     });
+// };
 
 const form = document.querySelector(".login-form");
 if (form) {
@@ -184,3 +230,12 @@ trackContainer.forEach(item => {
         attentionToggle();
     })
 })
+const trackInfo = document.querySelectorAll(".tracks-info__title");
+trackInfo.forEach(e=>{
+    console.log(e.clientWidth, e.scrollWidth);
+    if(e.scrollWidth == e.clientWidth){
+        e.removeAttribute("data-bs-toggle");
+    }
+});
+
+
