@@ -924,10 +924,6 @@ p {
   stroke: #C62C5A;
 }
 
-.hide {
-  display: none;
-}
-
 .song-sound {
   width: 24px;
   height: 24px;
@@ -960,7 +956,7 @@ p {
   transform: rotate(90deg);
   background: #353338;
   top: -90px;
-  left: 0;
+  left: -50px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
   border-radius: 6px;
   width: 130px;
@@ -1708,6 +1704,10 @@ p {
 /*player-mobile*/
 .main-bg-mobile {
   background: #242228;
+}
+
+.hide {
+  display: none;
 }
 
 @media (min-width: 1400px) {

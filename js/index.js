@@ -7,17 +7,19 @@ function buttonToggle(parent) {
     buttonNotActive.classList.toggle("hide");
     buttonActive.classList.toggle("hide");
 };
-const allItems = document.querySelector(".buttonCheck");
-if ( allItems !== null) {
-    allItems.addEventListener("click", (e) => {
-        const targetIcon = e.target.closest(".song-like__icon");
-        if (targetIcon) {
-            const parent = targetIcon.closest(".song-group");
+const allItems = document.querySelectorAll(".song-like");
+allItems.forEach(el=>{
+    el.addEventListener("click", (e) => {
+        if (e.currentTarget.classList.contains("song-like")) {
+            const parent = e.target.closest(".song-group");
             buttonToggle(parent);
         }
 
     });
-};
+
+})
+
+
 
 function buttonToggleModal(parent) {
     const buttonActive = parent.querySelector('.song-like__icon--empty');
@@ -113,13 +115,15 @@ const songTrack = document.querySelector('.player-wrapper')
 const songDropdown = document.querySelector('.song-dropdown');
 if (songTrack !== null) {
     songTrack.addEventListener("mouseenter", (e) => {
+        console.log(e.target);
         songDropdown.classList.add('song-dropdown--show');
         songTrack.addEventListener("mouseleave",() =>{
             songDropdown.classList.remove('song-dropdown--show');
-        });
+        })
 
     });
 };
+
 const form = document.querySelector(".login-form");
 if (form) {
     function togglePasswordType(input, button) {
@@ -177,6 +181,6 @@ const trackContainer = document.querySelectorAll('.song-info--blocked');
 trackContainer.forEach(item => {
     item.addEventListener('mouseover', function(event) {
         event.stopPropagation();
-         attentionToggle();
+        attentionToggle();
     })
 })
