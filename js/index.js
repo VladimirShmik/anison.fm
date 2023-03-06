@@ -112,11 +112,14 @@ inputSwitch.addEventListener("click", function () {
 const songTrack = document.querySelector('.player-wrapper')
 const songDropdown = document.querySelector('.song-dropdown');
 if (songTrack !== null) {
-    songTrack.addEventListener("mouseover", (e) => {
-      songDropdown.classList.toggle('song-dropdown--show');
+    songTrack.addEventListener("mouseenter", (e) => {
+        songDropdown.classList.add('song-dropdown--show');
+        songTrack.addEventListener("mouseleave",() =>{
+            songDropdown.classList.remove('song-dropdown--show');
+        });
+
     });
 };
-
 const form = document.querySelector(".login-form");
 if (form) {
     function togglePasswordType(input, button) {

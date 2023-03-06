@@ -174,11 +174,20 @@
                                     </div>
                                     <div class="song-group">
                                         <p class="song-item__time">17:58</p>
-                                        <button class="song-sound">
-                                            <svg class="song-like__icon">
-                                                <use xlink:href="./img/sprite.svg#sound-icon"></use>
-                                            </svg>
-                                        </button>
+                                        <div class="song-container">
+                                            <button class="song-sound">
+                                                <svg class="song-sound__icon song-sound__icon--on">
+                                                    <use xlink:href="./img/sprite.svg#sound-icon"></use>
+                                                </svg>
+                                                <svg class="song-sound__icon song-sound__icon--off hide">
+                                                    <use xlink:href="./img/sprite.svg#sound-icon-off"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="list-dropdown">
+                                                <input type="range" class="form-range" min="0" max="100" id="customRange2">
+                                            </div>
+                                        </div>
+
                                         <button class="song-like">
                                             <svg class="song-like__icon song-like__icon--empty">
                                                 <use xlink:href="../img/sprite.svg#like-icon"></use>
@@ -188,7 +197,7 @@
                                             </svg>
                                         </button>
                                         <button class="song-list" data-bs-toggle="modal" data-bs-target="#listModal">
-                                            <svg class="song-like__icon">
+                                            <svg class="song-list__icon">
                                                 <use xlink:href="./img/sprite.svg#list-icon"></use>
                                             </svg>
                                         </button>
@@ -806,7 +815,7 @@
                             </div>
                             <div class="radio-grid">
                                 <a href="#" class="radio-item">
-                                    <img src="./img/song/radio-1.jpg" alt="" class="radio-item__img">
+                                    <img src="./img/song/radio-1.png" alt="" class="radio-item__img">
                                     <div class="date-block">
                                         <span class="date-block__number">08</span>
                                         <p class="date-block__month">сентября</p>
@@ -828,7 +837,7 @@
                                     <span class="radio-new">Новое!</span>
                                 </a>
                                 <a href="#" class="radio-item">
-                                    <img src="./img/song/radio-2.jpg" alt="" class="radio-item__img">
+                                    <img src="./img/song/radio-2.png" alt="" class="radio-item__img">
                                     <div class="date-block">
                                         <span class="date-block__number">08</span>
                                         <p class="date-block__month">сентября</p>
@@ -849,7 +858,7 @@
                                     </div>
                                 </a>
                                 <a href="#" class="radio-item">
-                                    <img src="./img/song/radio-3.jpg" alt="" class="radio-item__img">
+                                    <img src="./img/song/radio-3.png" alt="" class="radio-item__img">
                                     <div class="date-block">
                                         <span class="date-block__number">08</span>
                                         <p class="date-block__month">сентября</p>
