@@ -99,20 +99,28 @@ justify-content: flex-start;
   grid-gap: 10px;
   padding: 0;
   align-items: center;
-
+  @media (min-width: 320px) and (max-width: 1023px){
+    gap: 3px;
+  }
 
   &__icon{
     width: 20px;
     height: 20px;
     fill: none;
     stroke: white;
-    stroke-width: 2px;
+    stroke-width: 1.2px;
+    @media (min-width: 320px) and (max-width: 1023px){
+      width: 16px;
+      height: 16px;
+    }
   }
   &__text{
     font-weight: 400;
     font-size: 17px;
     color: #FFFFFF;
-
+    @media (min-width: 320px) and (max-width: 1023px){
+      font-size: 13px;
+    }
   }
 }
 .mobile-menu{
@@ -173,7 +181,7 @@ justify-content: flex-start;
     position: absolute;
     width: 100%;
     background-color: #F5F5F5;
-    top: 60px;
+    top: 0px;
     height: 100vh;
     z-index: 10;
     left: 9999px;

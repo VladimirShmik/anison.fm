@@ -1,12 +1,11 @@
 /*modals*/
 .modal-login {
   max-width: 550px;
-  @media (min-width: 320px) and (max-width: 425px) {
-    margin: 0;
-    height: 100vw;
-  }
  .captha-block{
    margin-bottom: 10px;
+   img{
+     width: 100%;
+   }
  }
   &--normal {
     display: none;
@@ -32,7 +31,12 @@
 
   .modal-body {
     padding: 0;
-
+    @media(min-width: 320px) and (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 25px;
+    }
     &__subtitle {
       font-weight: 400;
       font-size: 15px;
@@ -51,13 +55,18 @@
       color: #242228;
       margin-bottom: 30px;
       margin-top: 15px;
-
+      @media(min-width: 320px) and (max-width: 1200px) {
+        margin-top: 0px;
+        font-size: 20px;
+      }
     }
   }
 
   .login-form {
     padding: 0 75px;
-
+    @media(min-width: 320px) and (max-width: 1200px) {
+      padding: 0;
+    }
   }
 
   .login-nick {
@@ -253,6 +262,8 @@
   background-size: cover;
   padding: 0 !important;
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 5.00009L5 19M19 18.9999L5 5' stroke='white' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  &--modal{
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.8334 4.16676L4.16675 15.8334M15.8334 15.8333L4.16675 4.16669' stroke='%238F8B96' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");  }
   &:focus{
     box-shadow: none;
     outline: none;
@@ -264,7 +275,7 @@
 }
 
 .modal-list {
-  max-width: 660px;
+  max-width: 600px;
 
   .modal-content {
     background-color: transparent !important;
@@ -276,7 +287,7 @@
   .modal-header {
     display: flex;
     flex-direction: column;
-    padding: 20px 30px;
+    padding: 22px 35px;
     background: linear-gradient(90.16deg, #5A2E98 0%, #4F268A 100%);
     border-bottom: none;
 
@@ -317,11 +328,17 @@
 
   .modal-body {
     padding: 0;
+    @media(min-width: 320px) and (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 25px;
+    }
   }
 
   .modal-live {
     background: #1A171E;
-    padding: 15px 30px;
+    padding: 8px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -348,7 +365,8 @@
 
   .modal-img {
     position: absolute;
-    left: -50%;
+    left: -55%;
+  bottom: 0;
   }
 
   .modals-author {
@@ -361,6 +379,8 @@
       max-width: 100%;
       overflow: visible;
       white-space: normal;
+      font-size: 13px;
+
     }
   }
 
@@ -385,6 +405,9 @@
 
 .modal-dialog {
   margin: 6rem auto;
+  @media(min-width: 320px) and (max-width: 1200px) {
+    margin: 0;
+  }
   &--bottom {
     position: fixed;
     top: 45px;
@@ -523,4 +546,113 @@
       grid-template-columns: 1fr;
     }
   }
+}
+.modal-live-item{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  &__title{
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 130%;
+    color: #FFFFFF;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &__subtitle{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: #B3A5D0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &__img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 4px;
+  }
+  &__time{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #FFFFFF;
+  }
+  .song-like__icon{
+    width: 20px;
+    height: 20px;
+  }
+
+  }
+.live-box {
+  display: flex;
+ align-items: center;
+  max-width: 360px;
+  margin-top: 15px;
+}
+.music-grid{
+  background-color: #242228 ;
+  padding: 5px 0;
+}
+.music-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #242228;
+  padding: 10px 25px 10px 35px;
+  cursor: pointer;
+  border-left: 3px solid  #242228;
+  &:hover{
+    background: rgba(140, 97, 199, 0.15);
+    border-left: 3px solid #6838AB;
+  }
+  .song-vote{
+    gap: 13px;
+  }
+}
+.music-box{
+  display: flex;
+  align-items: center;
+  &__title{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 130%;
+    color: #FFFFFF;
+  }
+  &__img{
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  &__subtitle{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    color: #8F8B96;
+  }
+  &__votes{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    color: #FFFFFF;
+  }
+  &__votes-title{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    color: #8F8B96;
+  }
+  &__number{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin-right: 15px;
+  }
+
 }

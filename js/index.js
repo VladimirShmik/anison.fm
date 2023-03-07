@@ -1,20 +1,24 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 const trackInfo = document.querySelectorAll(".tracks-info__title");
-trackInfo.forEach(e=>{
+trackInfo.forEach(e => {
     console.log(e.clientWidth, e.scrollWidth);
-    if(e.scrollWidth == e.clientWidth){
+    if (e.scrollWidth == e.clientWidth) {
         e.removeAttribute("data-bs-toggle");
     }
 });
-
-//song-check-like//
-function buttonToggle(parent) {
-    const buttonActive = parent.querySelector('.song-like__icon--empty');
-    const buttonNotActive = parent.querySelector('.song-like__icon--fill');
-    buttonNotActive.classList.toggle("hide");
-    buttonActive.classList.toggle("hide");
-};
+const updatesInfo = document.querySelectorAll('.updates-item__title')
+updatesInfo.forEach(e => {
+    console.log(e.clientWidth, e.scrollWidth);
+    if (e.scrollWidth == e.clientWidth) {
+        e.removeAttribute("data-bs-toggle");
+    }
+});
+const foundBtn = document.querySelector('.search-dropdown__title');
+const foundForm = document.querySelector(".search-form")
+const foundInput = document.querySelector('.search-box__input');
+const foundList = document.querySelector('.search-list');
+const foundValid = document.querySelector(".search-validation");
 const voteAll = document.querySelector(".song-sign");
 const plus = document.querySelector(".song-sign__icon--plus")
 const minus = document.querySelector(".song-sign__icon--minus")
@@ -23,8 +27,62 @@ const soundRange = songContainer.querySelector(".list-dropdown");
 const sound = songContainer.querySelector(".song-sound");
 const soundOnButton = sound.querySelector('.song-sound__icon--off');
 const soundOffButton = sound.querySelector('.song-sound__icon--on');
+const musicContainer = document.querySelector('.music-grid');
 
+function musicToggle(parent) {
+    plus.classList.toggle("hide");
+    minus.classList.toggle("hide");
+};
+musicContainer.addEventListener("click", (e) => {
+    if (e.target.classList.contains("mask-block")) {
+        const parent = e.target.closest(".song-sign");
+        musicToggle(parent);
 
+    }
+
+});
+
+//song-check-like//
+foundBtn.addEventListener("click", e => {
+    foundBtn.classList.toggle("search-dropdown__title--active");
+    foundList.classList.toggle('hide');
+
+});
+foundList.addEventListener('click', elem => {
+    for (let i = 0; i < foundList.children.length; i++) {
+        foundList.children[i].classList.remove('search-item--active');
+    }
+    elem.target.classList.add('search-item--active');
+    foundBtn.innerText = elem.target.textContent.trim();
+    foundList.classList.add('hide');
+
+    foundValid.classList.add("hide");
+    foundValid.nextElementSibling.classList.add("hide");
+});
+
+foundInput.addEventListener("input", e => {
+    console.log(foundValid.nextElementSibling);
+    console.log(foundList.children[2]);
+    if (foundList.children[2].classList.contains("search-item--active")) {
+        foundValid.classList.remove("hide");
+    } else {
+        foundValid.nextElementSibling.classList.remove("hide");
+    }
+    foundInput.focus();
+
+});
+foundInput.addEventListener("blur", () => {
+    foundValid.classList.add("hide");
+    foundValid.nextElementSibling.classList.add("hide");
+
+});
+
+function buttonToggle(parent) {
+    const buttonActive = parent.querySelector('.song-like__icon--empty');
+    const buttonNotActive = parent.querySelector('.song-like__icon--fill');
+    buttonNotActive.classList.toggle("hide");
+    buttonActive.classList.toggle("hide");
+};
 const toggleSoundButtons = () => {
     soundOnButton.classList.toggle("hide");
     soundOffButton.classList.toggle("hide");
@@ -58,7 +116,7 @@ sound.addEventListener("dblclick", () => {
 
 });
 const allItems = document.querySelectorAll(".song-like");
-allItems.forEach(el=>{
+allItems.forEach(el => {
     el.addEventListener("click", (e) => {
         if (e.currentTarget.classList.contains("song-like")) {
 
@@ -72,7 +130,6 @@ allItems.forEach(el=>{
 })
 
 
-
 function buttonToggleModal(parent) {
     const buttonActive = parent.querySelector('.song-like__icon--empty');
     const buttonNotActive = parent.querySelector('.song-like__icon--fill');
@@ -80,7 +137,7 @@ function buttonToggleModal(parent) {
     buttonActive.classList.toggle("hide");
 };
 const allItemsModal = document.querySelector(".modalCheck");
-if ( allItemsModal !== null) {
+if (allItemsModal !== null) {
     allItemsModal.addEventListener("click", (e) => {
         const targetIcon = e.target.closest(".song-like__icon");
         if (targetIcon) {
@@ -89,7 +146,8 @@ if ( allItemsModal !== null) {
         }
 
     });
-};
+}
+;
 
 
 function startToggle(parent) {
@@ -99,8 +157,8 @@ function startToggle(parent) {
     startActive.classList.toggle("hide");
 };
 const allItemsStart = document.querySelectorAll(".song-start");
-if ( allItemsStart !== null) {
-    allItemsStart.forEach(el=>{
+if (allItemsStart !== null) {
+    allItemsStart.forEach(el => {
 
         el.addEventListener("click", (e) => {
             const targetStart = e.target.closest(".song-start");
@@ -110,7 +168,8 @@ if ( allItemsStart !== null) {
             }
         });
     })
-};
+}
+;
 
 function voteToggle(parent) {
     const voteActive = parent.querySelector('.song-sign__icon--plus');
@@ -122,7 +181,7 @@ function voteToggle(parent) {
 const allItemsVote = document.querySelector(".song-dropdown");
 
 allItemsVote.addEventListener("click", (e) => {
-    if(e.target.classList.contains("song-sign__icon")){
+    if (e.target.classList.contains("mask-block")) {
         const parent = e.target.closest(".song-vote");
 
 
@@ -145,12 +204,13 @@ if (songTrack !== null) {
     songTrack.addEventListener("mouseenter", (e) => {
 
         songDropdown.classList.add('song-dropdown--show');
-        songTrack.addEventListener("mouseleave",() =>{
+        songTrack.addEventListener("mouseleave", () => {
             songDropdown.classList.remove('song-dropdown--show');
         })
 
     });
-};
+}
+;
 
 const form = document.querySelector(".login-form");
 if (form) {
@@ -201,14 +261,23 @@ new Swiper('.swiperList', {
         hide: true,
     },
 });
+
 function attentionToggle() {
     const trackAttention = document.querySelector('.attention-track');
     trackAttention.classList.toggle('attention-track--active')
 }
+
 const trackContainer = document.querySelectorAll('.song-info--blocked');
 trackContainer.forEach(item => {
-    item.addEventListener('mouseover', function(event) {
+    item.addEventListener('mouseover', function (event) {
         event.stopPropagation();
         attentionToggle();
     })
 })
+let menuBtn = document.querySelector('.menu-btn');
+let menu = document.querySelector('.mobile-nav');
+menuBtn.addEventListener('click', function () {
+    menuBtn.classList.toggle('active');
+    menu.classList.toggle('active');
+});
+;
