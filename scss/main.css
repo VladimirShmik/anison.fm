@@ -121,6 +121,12 @@ p {
   margin-bottom: 0;
 }
 
+input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 @font-face {
   font-family: "Nunito";
   src: url("../fonts/Nunito-SemiBold.eot");
@@ -1026,7 +1032,6 @@ p {
 .song-like {
   width: 24px;
   height: 24px;
-  pointer-events: auto;
 }
 .song-like__icon {
   width: 24px;
@@ -1055,6 +1060,7 @@ p {
   width: 24px;
   height: 24px;
   stroke-width: 1.2;
+  pointer-events: none;
 }
 .song-sound__icon--on {
   fill: none;
@@ -1072,12 +1078,17 @@ p {
 .song-sign {
   width: 24px;
   height: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .song-sign__icon {
   width: 16px;
   height: 16px;
   fill: none;
   display: flex;
+  pointer-events: none;
   stroke: #B7B4BD;
   align-items: center;
   justify-content: center;
@@ -1116,6 +1127,7 @@ p {
   width: 24px;
   height: 24px;
   stroke-width: 1.2;
+  pointer-events: none;
   fill: none;
   stroke: #B7B4BD;
 }
@@ -1824,7 +1836,7 @@ p {
   height: 20px;
   background-size: cover;
   padding: 0 !important;
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.8334 4.16676L4.16675 15.8334M15.8334 15.8333L4.16675 4.16669' stroke='%238F8B96' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.8332 4.16682L4.1665 15.8334M15.8332 15.8333L4.1665 4.16675' stroke='%238F8B96' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 
 .info-btn {
@@ -1851,6 +1863,14 @@ p {
 /*player-mobile*/
 .main-bg-mobile {
   background: #242228;
+}
+
+.mask-block {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .hide {
@@ -2365,6 +2385,9 @@ p {
     height: 100vw;
   }
 }
+.modal-login .captha-block {
+  margin-bottom: 10px;
+}
 .modal-login--normal {
   display: none;
 }
@@ -2408,7 +2431,7 @@ p {
   margin-top: 15px;
 }
 .modal-login .login-form {
-  padding: 0 65px;
+  padding: 0 75px;
 }
 .modal-login .login-nick {
   width: 100%;
@@ -2420,8 +2443,8 @@ p {
   font-weight: 400;
   font-size: 13px;
   color: #8F8B96;
-  margin-top: 5px;
-  margin-bottom: 20px;
+  margin-top: 7px;
+  margin-bottom: 22px;
 }
 .modal-login .login-nick__input {
   margin-top: 10px;
@@ -2511,7 +2534,7 @@ p {
   color: #FFFFFF;
   background: linear-gradient(90.16deg, #5A2E98 0%, #4F268A 100%);
   border-radius: 6px;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 .modal-login .modal-btn:hover, .modal-login .modal-btn:active {
   background: linear-gradient(90.16deg, #7346B1 0%, #63399F 100%);
@@ -2528,20 +2551,33 @@ p {
   align-items: center;
   justify-content: center;
 }
+.modal-login .modal-links__hr {
+  transform: rotate(180deg);
+  width: 2px;
+  height: 20px;
+  background-color: #8F8B96;
+}
 .modal-login .modal-link {
   font-weight: 400;
   font-size: 15px;
   color: #8F8B96;
-  text-decoration: underline;
-  padding-left: 10px;
+  margin-left: 10px;
+  position: relative;
 }
 .modal-login .modal-link:first-child {
-  padding-right: 10px;
-  padding-left: 0;
-  border-right: 1px solid #8F8B96;
+  margin-right: 10px;
 }
 .modal-login .modal-link:hover {
   color: #242228;
+}
+.modal-login .modal-link:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: -3px;
+  background-color: #8F8B96;
 }
 .modal-login .modal-link--text {
   text-decoration: none;
@@ -2567,7 +2603,7 @@ p {
 }
 
 .modal-backdrop {
-  background: rgba(91, 56, 142, 0.6980392157);
+  background: rgba(91, 56, 142, 0.7);
 }
 
 .modal-list {
@@ -2667,6 +2703,9 @@ p {
   color: #FFFFFF;
 }
 
+.modal-dialog {
+  margin: 6rem auto;
+}
 .modal-dialog--bottom {
   position: fixed;
   top: 45px;

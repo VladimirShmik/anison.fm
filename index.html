@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./scss/bootstrap.min.css">
     <link rel="stylesheet" href="./scss/main.css">
 </head>
-<body class="dark-theme">
+<body class="">
 <!--header-->
 <header class="header">
     <div class="header-bg">
@@ -220,14 +220,15 @@
                                             <div class="song-vote">
                                                 <span class="song-vote__active"></span>
                                                 <a href="#" class="song-vote__author">Arri</a>
-                                                    <button class="song-sign">
-                                                        <svg class="song-sign__icon song-sign__icon--plus">
-                                                            <use xlink:href="./img/sprite.svg#plus-icon"></use>
-                                                        </svg>
-                                                        <svg class="song-sign__icon song-sign__icon--minus hide">
-                                                            <use xlink:href="./img/sprite.svg#minus-icon"></use>
-                                                        </svg>
-                                                    </button>
+                                                <button class="song-sign">
+                                                    <span class="mask-block"></span>
+                                                    <svg class="song-sign__icon song-sign__icon--plus">
+                                                        <use xlink:href="./img/sprite.svg#plus-icon"></use>
+                                                    </svg>
+                                                    <svg class="song-sign__icon song-sign__icon--minus hide">
+                                                        <use xlink:href="./img/sprite.svg#minus-icon"></use>
+                                                    </svg>
+                                                </button>
                                                 <div class="d-flex flex-column">
                                                     <span class="song-vote__votes">110</span>
                                                     <p class="song-vote__subtitle">голосов</p>
@@ -246,6 +247,7 @@
                                             <div class="song-vote">
                                                 <a href="#" class="song-vote__author">UsagiChiba</a>
                                                 <button class="song-sign">
+                                                    <span class="mask-block"></span>
                                                     <svg class="song-sign__icon song-sign__icon--plus">
                                                         <use xlink:href="./img/sprite.svg#plus-icon"></use>
                                                     </svg>
@@ -271,6 +273,7 @@
                                             <div class="song-vote">
                                                 <a href="#" class="song-vote__author">WeebsVeteran</a>
                                                 <button class="song-sign">
+                                                    <span class="mask-block"></span>
                                                     <svg class="song-sign__icon song-sign__icon--plus">
                                                         <use xlink:href="./img/sprite.svg#plus-icon"></use>
                                                     </svg>
@@ -296,6 +299,7 @@
                                             <div class="song-vote">
                                                 <a href="#" class="song-vote__author">MrGo</a>
                                                 <button class="song-sign">
+                                                    <span class="mask-block"></span>
                                                     <svg class="song-sign__icon song-sign__icon--plus">
                                                         <use xlink:href="./img/sprite.svg#plus-icon"></use>
                                                     </svg>
@@ -321,6 +325,7 @@
                                             <div class="song-vote">
                                                 <a href="#" class="song-vote__author">Dead_Waifu</a>
                                                 <button class="song-sign">
+                                                    <span class="mask-block"></span>
                                                     <svg class="song-sign__icon song-sign__icon--plus">
                                                         <use xlink:href="./img/sprite.svg#plus-icon"></use>
                                                     </svg>
@@ -1183,7 +1188,7 @@
 </div>
 <!-- login-modal-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-login modal-dialog-centered">
+    <div class="modal-dialog modal-login">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1204,6 +1209,7 @@
                     <button class="modal-btn">Войти</button>
                     <div class="modal-links">
                         <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#exampleModal2">Регистрация</a>
+                        <hr  class="modal-links__hr" >
                         <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#exampleModal3">Забыли
                             пароль?</a>
                     </div>
@@ -1215,7 +1221,7 @@
 </div>
 <!-- registration-modal-->
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-    <div class="modal-dialog modal-login modal-dialog-centered">
+    <div class="modal-dialog modal-login">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1225,13 +1231,13 @@
                 <form action="#" class="login-form">
                     <label class="login-nick">
                         Никнейм
-                        <input type="text" class="login-nick__input form-control mb-0" placeholder="Никнейм" disabled>
+                        <input type="text" class="login-nick__input form-control mb-0" placeholder="Никнейм">
                     </label>
                     <p class="login-nick__subtitle">От 3 до 14 символов (a-Z, 0-9, -_)</p>
                     <div class="form-password mb-0">
-                        <label class="form-label" for="password">Текущий пароль</label>
+                        <label class="form-label" for="password">Пароль</label>
                         <input type="password" id="password" class="form-control form-password-input" name="" value=""
-                               placeholder="Введите данные" aria-required="true" aria-invalid="true">
+                               placeholder="Пароль" aria-required="true" aria-invalid="true">
                         <button type="submit" class="input-group-icon form-password-btn"></button>
                     </div>
                     <p class="login-nick__subtitle ">От 6 символов</p>
@@ -1243,6 +1249,9 @@
                     <label class="login-nick mb-2">
                         Уж не зомби ли вы?
                     </label>
+                    <div class="captha-block">
+                        <img src="./img/backgrounds/captha.png" alt="">
+                    </div>
                     <button class="modal-btn">Зарегистрироваться</button>
                     <div class="modal-links">
                         <p class="modal-link modal-link--text">Уже есть аккаунт?</p>
@@ -1256,7 +1265,7 @@
 </div>
 <!-- reboot-password-->
 <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
-    <div class="modal-dialog modal-login modal-dialog-centered">
+    <div class="modal-dialog modal-login">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1279,7 +1288,7 @@
 </div>
 <!-- mail-send-->
 <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
-    <div class="modal-dialog modal-login modal-dialog-centered">
+    <div class="modal-dialog modal-login">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1296,7 +1305,7 @@
 </div>
 <!-- password-send-->
 <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
-    <div class="modal-dialog modal-login modal-dialog-centered">
+    <div class="modal-dialog modal-login">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
