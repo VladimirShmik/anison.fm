@@ -1,47 +1,11 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-
-
-const soundRange = document.querySelector(".list-dropdown");
-const sound = document.querySelector(".song-sound");
-soundRange.addEventListener("mouseleave", ()=>{
-    soundRange.classList.add("hide");
-});
-sound.addEventListener("mouseenter", ()=>{
-    console.log("rrr");
-    soundRange.classList.remove("hide");
-});
-soundRange.children[0].addEventListener("change", e=>{
-    const buttonActive = document.querySelector('.song-sound__icon--off');
-    const buttonNotActive = document.querySelector('.song-sound__icon--on');
-    console.log(soundRange.children[0].value);
-    if(soundRange.children[0].value == 100 && buttonActive.classList.contains("hide")){
-        buttonActive.classList.toggle("hide");
-        buttonNotActive.classList.toggle("hide");
+const trackInfo = document.querySelectorAll(".tracks-info__title");
+trackInfo.forEach(e=>{
+    console.log(e.clientWidth, e.scrollWidth);
+    if(e.scrollWidth == e.clientWidth){
+        e.removeAttribute("data-bs-toggle");
     }
-    else{
-        buttonActive.classList.add("hide");
-        buttonNotActive.classList.remove("hide");
-    }
-});
-sound.addEventListener("dblclick", ()=>{
-    const buttonActive = document.querySelector('.song-sound__icon--off');
-    const buttonNotActive = document.querySelector('.song-sound__icon--on');
-    if(buttonNotActive.classList.contains("hide")){
-
-
-        buttonActive.classList.toggle("hide");
-        buttonNotActive.classList.toggle("hide");
-        soundRange.children[0].value = 0;
-    }
-    else{
-
-        buttonActive.classList.toggle("hide");
-        buttonNotActive.classList.toggle("hide");
-        soundRange.children[0].value = 100;
-    }
-
-
 });
 
 //song-check-like//
@@ -51,11 +15,53 @@ function buttonToggle(parent) {
     buttonNotActive.classList.toggle("hide");
     buttonActive.classList.toggle("hide");
 };
+const voteAll = document.querySelector(".song-sign");
+const plus = document.querySelector(".song-sign__icon--plus")
+const minus = document.querySelector(".song-sign__icon--minus")
+const songContainer = document.querySelector(".song-container");
+const soundRange = songContainer.querySelector(".list-dropdown");
+const sound = songContainer.querySelector(".song-sound");
+const soundOnButton = sound.querySelector('.song-sound__icon--off');
+const soundOffButton = sound.querySelector('.song-sound__icon--on');
+
+
+const toggleSoundButtons = () => {
+    soundOnButton.classList.toggle("hide");
+    soundOffButton.classList.toggle("hide");
+};
+
+sound.addEventListener("mouseenter", () => {
+    soundRange.classList.remove("hide");
+    soundRange.children[0].focus();
+});
+
+soundRange.children[0].addEventListener("blur", () => {
+
+    soundRange.classList.add("hide");
+
+
+});
+
+soundRange.children[0].addEventListener("change", (e) => {
+    const value = e.target.value;
+    if (value === "100" && soundOnButton.classList.contains("hide")) {
+        toggleSoundButtons();
+    } else if (value === "0" && soundOffButton.classList.contains("hide")) {
+        toggleSoundButtons();
+    }
+});
+
+sound.addEventListener("dblclick", () => {
+    toggleSoundButtons();
+    soundRange.children[0].value = soundOnButton.classList.contains("hide") ? "0" : "100";
+
+
+});
 const allItems = document.querySelectorAll(".song-like");
 allItems.forEach(el=>{
     el.addEventListener("click", (e) => {
         if (e.currentTarget.classList.contains("song-like")) {
-            console.log(e.currentTarget);
+
             const parent = e.target.closest(".song-group");
             buttonToggle(parent);
         }
@@ -84,23 +90,7 @@ if ( allItemsModal !== null) {
 
     });
 };
-//song-check-start//
-function startToggleModal(parent) {
-    const startActive = parent.querySelector('.song-start__icon--start');
-    const startNotActive = parent.querySelector('.song-start__icon--stop');
-    startNotActive.classList.toggle("hide");
-    startActive.classList.toggle("hide");
-};
-const allItemsStartModal = document.querySelector(".modalCheck");
-if ( allItemsStartModal !== null) {
-    allItemsStartModal.addEventListener("click", (e) => {
-        const targetStart = e.target.closest(".song-start__icon");
-        if (targetStart) {
-            const parent = targetStart.closest(".song-group");
-            startToggleModal(parent);
-        }
-    });
-};
+
 
 function startToggle(parent) {
     const startActive = parent.querySelector('.song-start__icon--start');
@@ -108,67 +98,59 @@ function startToggle(parent) {
     startNotActive.classList.toggle("hide");
     startActive.classList.toggle("hide");
 };
-const allItemsStart = document.querySelector(".buttonCheck");
+const allItemsStart = document.querySelectorAll(".song-start");
 if ( allItemsStart !== null) {
-    allItemsStart.addEventListener("click", (e) => {
-        const targetStart = e.currentTarget.closest(".song-start__icon");
-        if (targetStart) {
-            const parent = targetStart.closest(".song-group");
-            startToggle(parent);
-        }
-    });
+    allItemsStart.forEach(el=>{
+
+        el.addEventListener("click", (e) => {
+            const targetStart = e.target.closest(".song-start");
+            if (targetStart) {
+                const parent = targetStart.closest(".song-group");
+                startToggle(parent);
+            }
+        });
+    })
 };
 
 function voteToggle(parent) {
-    const voteActive = parent.querySelector('.song-vote__icon');
-    const voteNotActive = parent.querySelector('.song-vote__icon--minus');
-    voteActive.classList.toggle("song-vote__icon--hide");
-    voteNotActive.classList.toggle("song-vote__icon--hide");
+    const voteActive = parent.querySelector('.song-sign__icon--plus');
+    const voteNotActive = parent.querySelector('.song-sign__icon--minus');
+    voteActive.classList.toggle("hide");
+    voteNotActive.classList.toggle("hide");
 };
 
-const allItemsVote = document.querySelector(".song-list");
-if (document.querySelector('.song-list')) {
-    allItemsVote.addEventListener("click", (e) => {
-        const targetStart = e.target.closest(".song-vote__icon");
-        if (targetStart) {
-            const parent = targetStart.closest(".song-group");
-            voteToggle(parent);
-        }
-    });
-};
+const allItemsVote = document.querySelector(".song-dropdown");
+
+allItemsVote.addEventListener("click", (e) => {
+    if(e.target.classList.contains("song-sign__icon")){
+        const parent = e.target.closest(".song-vote");
+
+
+        voteToggle(parent);
+
+    }
+
+});
+
+
 const inputSwitch = document.querySelector('.form-check-input');
 const bodyTheme = document.querySelector('body')
 inputSwitch.addEventListener("click", function () {
     bodyTheme.classList.toggle('dark-theme')
 });
-// let modalBtn = document.querySelector('.modal-live-bg--show');
-// let modalIcon = document.querySelector('.modal-live__icon--active');
-// let modalIconActive = document.querySelector('.modal-live__icon--hidden');
-// if (document.querySelector('body')) {
-//     modalBtn.addEventListener('click', function () {
-//         modalIcon.classList.toggle('modal-live__icon--hide');
-//         modalIconActive.classList.toggle('modal-live__icon--hide');
-//     });
-// };
 
-// let menuBtn = document.querySelector('.menu-btn');
-// let menu = document.querySelector('.mobile-nav');
-// menuBtn.addEventListener('click', function () {
-//     menuBtn.classList.toggle('active');
-//     menu.classList.toggle('active');
-// });;
-// const songTrack = document.querySelector('.player-wrapper')
-// const songDropdown = document.querySelector('.song-dropdown');
-// if (songTrack !== null) {
-//     songTrack.addEventListener("mouseenter", (e) => {
-//         console.log(e.target);
-//         songDropdown.classList.add('song-dropdown--show');
-//         songTrack.addEventListener("mouseleave",() =>{
-//             songDropdown.classList.remove('song-dropdown--show');
-//         })
-//
-//     });
-// };
+const songTrack = document.querySelector('.player-wrapper')
+const songDropdown = document.querySelector('.song-dropdown');
+if (songTrack !== null) {
+    songTrack.addEventListener("mouseenter", (e) => {
+
+        songDropdown.classList.add('song-dropdown--show');
+        songTrack.addEventListener("mouseleave",() =>{
+            songDropdown.classList.remove('song-dropdown--show');
+        })
+
+    });
+};
 
 const form = document.querySelector(".login-form");
 if (form) {
@@ -230,12 +212,3 @@ trackContainer.forEach(item => {
         attentionToggle();
     })
 })
-const trackInfo = document.querySelectorAll(".tracks-info__title");
-trackInfo.forEach(e=>{
-    console.log(e.clientWidth, e.scrollWidth);
-    if(e.scrollWidth == e.clientWidth){
-        e.removeAttribute("data-bs-toggle");
-    }
-});
-
-
