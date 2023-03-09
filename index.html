@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./scss/bootstrap.min.css">
     <link rel="stylesheet" href="./scss/main.css">
 </head>
-<body class="">
+<body class="dark-theme">
 <!--header-->
 <header class="header">
     <div class="header-bg">
@@ -26,7 +26,7 @@
                         </div>
                         <nav class="nav-menu">
                             <li class="nav-item">
-                                <a href="/anison.fm/anime.html" class="nav-link">
+                                <a href="#" class="nav-link">
                                     <svg class="nav-link__icon">
                                         <use xlink:href="./img/sprite.svg#song-icon"></use>
                                     </svg>
@@ -34,15 +34,15 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/anison.fm/order/song-catalog.html" class="nav-link">
-                                    <svg class="nav-link__icon mt-1">
+                                <a href="#" class="nav-link">
+                                    <svg class="nav-link__icon">
                                         <use xlink:href="./img/sprite.svg#fav-icon"></use>
                                     </svg>
                                     <p class="nav-link__text">Избранное</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/anison.fm/artist.html" class="nav-link">
+                                <a href="#" class="nav-link">
                                     <svg class="nav-link__icon">
                                         <use xlink:href="./img/sprite.svg#chat-icon"></use>
                                     </svg>
@@ -50,7 +50,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link">
+                                <a href="#" class="nav-link">
                                     <svg class="nav-link__icon">
                                         <use xlink:href="./img/sprite.svg#donat-icon"></use>
                                     </svg>
@@ -68,32 +68,32 @@
                         </div>
                         <div class="btn-container">
                             <button class="menu-btn">
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                              <svg class="menu-btn__icon">
+                                  <use xlink:href="./img/sprite.svg#menu-icon"></use>
+                              </svg>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-            <nav class="mobile-nav">
-                <div class="mobile-header">
-                    <div class="header-listeners">
-                        <div class="listeners-block">
-                            <svg class="listeners-block__icon">
-                                <use xlink:href="./img/sprite.svg#listeners-icon"></use>
-                            </svg>
-                            <p class="listeners-block__text">Слушателей: 751</p>
-                        </div>
+        <nav class="mobile-nav">
+            <div class="mobile-header">
+                <div class="header-listeners">
+                    <div class="listeners-block">
+                        <svg class="listeners-block__icon">
+                            <use xlink:href="./img/sprite.svg#listeners-icon"></use>
+                        </svg>
+                        <p class="listeners-block__text">Слушателей: 751</p>
                     </div>
-
                 </div>
+                <button type="button" class="btn-close btn-close--mobile"></button>
+            </div>
+            <div class="mobile-menu">
                 <button type="button" class="header-login__btn header-login__btn--mobile" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">
                     Войти
                 </button>
-                <!--profile-block-->
 <!--                <div class="profile-block">-->
 <!--                    <img src="./img/backgrounds/profile-img.png " alt="" class="profile-block__img">-->
 <!--                    <p class="profile-block__title">Arifureta</p>-->
@@ -143,10 +143,12 @@
                         <svg class="mobile-link__icon">
                             <use xlink:href="./img/sprite.svg#statistic-icon"></use>
                         </svg>
-                        <p class="mobile-link__text">Статистикан</p>
+                        <p class="mobile-link__text">Статистика</p>
                     </a>
                 </li>
-            </nav>
+            </div>
+
+        </nav>
     </div>
 </header>
 <!--main-->
@@ -167,7 +169,7 @@
                             <div class="player-wrapper buttonCheck">
                                 <div class="player-item">
                                     <div class="d-flex align-items-center">
-                                        <div class="song-group me-4">
+                                        <div class="song-group mr-30">
                                             <button class="song-start">
                                                 <svg class="song-start__icon song-start__icon--start">
                                                     <use xlink:href="./img/sprite.svg#play-icon"></use>
@@ -178,17 +180,18 @@
                                             </button>
                                         </div>
                                         <div class="song-box">
-                                            <img src="./img/song/song-1.jpg" alt="" class="song-item__img song-item__img--title">
+                                            <img src="./img/song/song-1.jpg" alt=""
+                                                 class="song-item__img song-item__img--title">
                                             <div class="d-flex flex-column">
-                                                <p class="song-box__title">Maria Holic</p>
-                                                <p class="song-box__subtitle">Rurun Riru Ranran Rara</p>
+                                                <a href="#" class="song-box__title">Maria Holic</a>
+                                                <a href="#" class="song-box__subtitle">Rurun Riru Ranran Rara</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="song-group">
-                                        <p class="song-item__time">17:58</p>
+                                        <p class="song-item__time">0:14</p>
                                         <div class="song-container">
-                                            <button class="song-sound">
+                                            <button class="song-sound ">
                                                 <svg class="song-sound__icon song-sound__icon--on">
                                                     <use xlink:href="./img/sprite.svg#sound-icon"></use>
                                                 </svg>
@@ -197,7 +200,8 @@
                                                 </svg>
                                             </button>
                                             <div class="list-dropdown hide">
-                                                <input type="range" class="form-range" min="0" max="100" id="customRange2">
+                                                <input type="range" class="form-range" min="0" max="100"
+                                                       id="customRange2">
                                             </div>
                                         </div>
 
@@ -224,13 +228,15 @@
                                                 <span class="list-item__number">1</span>
                                                 <img src="./img/song/song-11.jpg" alt="" class="song-item__img">
                                                 <div class="d-flex flex-column">
-                                                    <p class="song-box__title">FLCL</p>
-                                                    <p class="song-box__subtitle">Little Busters</p>
+                                                    <a href="#" class="song-box__title">FLCL</a>
+                                                    <a href="#" class="song-box__subtitle">Little Busters</a>
                                                 </div>
                                             </div>
                                             <div class="song-vote">
-                                                <span class="song-vote__active"></span>
-                                                <a href="#" class="song-vote__author">Arri</a>
+                                                <div class="song-wrap">
+                                                    <span class="song-vote__active"></span>
+                                                    <a href="#" class="song-vote__author">Arri</a>
+                                                </div>
                                                 <button class="song-sign">
                                                     <span class="mask-block"></span>
                                                     <svg class="song-sign__icon song-sign__icon--plus">
@@ -251,8 +257,8 @@
                                                 <span class="list-item__number">2</span>
                                                 <img src="./img/song/song-12.jpg" alt="" class="song-item__img">
                                                 <div class="d-flex flex-column">
-                                                    <p class="song-box__title">AJIN</p>
-                                                    <p class="song-box__subtitle">Yoru wa Nemureru kai</p>
+                                                    <a href="#" class="song-box__title">AJIN</a>
+                                                    <a href="#" class="song-box__subtitle">Yoru wa Nemureru kai</a>
                                                 </div>
                                             </div>
                                             <div class="song-vote">
@@ -277,8 +283,8 @@
                                                 <span class="list-item__number">3</span>
                                                 <img src="./img/song/song-13.jpg" alt="" class="song-item__img">
                                                 <div class="d-flex flex-column">
-                                                    <p class="song-box__title">Uta no Prince-sama</p>
-                                                    <p class="song-box__subtitle">Up-Down-Up!</p>
+                                                    <a href="#" class="song-box__title">Uta no Prince-sama</a>
+                                                    <a href="#" class="song-box__subtitle">Up-Down-Up!</a>
                                                 </div>
                                             </div>
                                             <div class="song-vote">
@@ -303,8 +309,8 @@
                                                 <span class="list-item__number">4</span>
                                                 <img src="./img/song/song-14.jpg" alt="" class="song-item__img">
                                                 <div class="d-flex flex-column">
-                                                    <p class="song-box__title">Rakudai Kishi no Cavalry</p>
-                                                    <p class="song-box__subtitle">Rakudai Kishi no Cavalry</p>
+                                                    <a href="#" class="song-box__title">Rakudai Kishi no Cavalry</a>
+                                                    <a href="#" class="song-box__subtitle">Rakudai Kishi no Cavalry</a>
                                                 </div>
                                             </div>
                                             <div class="song-vote">
@@ -329,8 +335,8 @@
                                                 <span class="list-item__number">5</span>
                                                 <img src="./img/song/song-15.jpg" alt="" class="song-item__img">
                                                 <div class="d-flex flex-column">
-                                                    <p class="song-box__title">Slayers</p>
-                                                    <p class="song-box__subtitle">Get Along</p>
+                                                    <a href="#" class="song-box__title">Slayers</a>
+                                                    <a href="#" class="song-box__subtitle">Get Along</a>
                                                 </div>
                                             </div>
                                             <div class="song-vote">
@@ -350,12 +356,13 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="#" class="radio-link radio-link--dropdown">
+                                        <button class="radio-link radio-link--dropdown" data-bs-toggle="modal"
+                                                data-bs-target="#listModal">
                                             <p class="radio-link__text">Вся очередь заказов</p>
                                             <svg class="radio-link__icon">
                                                 <use xlink:href="./img/sprite.svg#arrow-icon"></use>
                                             </svg>
-                                        </a>
+                                        </button>
                                     </div>
 
                                 </div>
@@ -372,6 +379,7 @@
                                 <a href="#" class="search-link">B</a>
                                 <a href="#" class="search-link">C</a>
                                 <a href="#" class="search-link">D</a>
+                                <a href="#" class="search-link">E</a>
                                 <a href="#" class="search-link">F</a>
                                 <a href="#" class="search-link">G</a>
                                 <a href="#" class="search-link">H</a>
@@ -401,11 +409,11 @@
                                     <input type="search" placeholder="Няшный поиск" class="search-box__input">
                                 </label>
                                 <div class="search-dropdown">
-                                    <button class="search-dropdown__title search-dropdown__title--active">Аниме</button>
+                                    <button class="search-dropdown__title">Аниме</button>
                                     <ul class="search-list hide">
-                                       <li class="search-item search-item--active">
-                                           Аниме
-                                       </li>
+                                        <li class="search-item search-item--active">
+                                            Аниме
+                                        </li>
                                         <li class="search-item">
                                             Трек
                                         </li>
@@ -453,7 +461,7 @@
                                 </div>
                                 <div class=" search-validation search-validation--text hide">
                                     <a href="#" class="validation-item">
-                                       <p class="validation-item__title">Nanase Hikaru</p>
+                                        <p class="validation-item__title">Nanase Hikaru</p>
                                     </a>
                                     <a href="#" class="validation-item">
                                         <p class="validation-item__title">Nana Mizuki</p>
@@ -520,7 +528,7 @@
 
                             </div>
                         </div>
-                            <a href="#" class="mobile-btn">Заказать трек</a>
+                        <a href="#" class="mobile-btn">Заказать трек</a>
                         <div class="search-wrapper search-wrapper--mobile">
                             <form action="#" class="search-form">
                                 <label class="search-box">
@@ -1013,7 +1021,8 @@
                                     <div class="radio-info">
                                         <p class="radio-info__title">Последние добавленные треки</p>
                                         <div class="radio-box">
-                                            <p class="radio-box__subtitle">Добавленные треки в период с 17 марта по 20 апреля. Найти сп…</p>
+                                            <p class="radio-box__subtitle">Добавленные треки в период с 17 марта по 20
+                                                апреля. Найти сп…</p>
                                             <div class="radio-bg">
                                                 <svg class="radio-icon">
                                                     <use xlink:href="./img/sprite.svg#arrow-icon"></use>
@@ -1031,7 +1040,8 @@
                                     <div class="radio-info">
                                         <p class="radio-info__title">Anison.fm в Discord</p>
                                         <div class="radio-box">
-                                            <p class="radio-box__subtitle">Наш дискорд-канал долгое время был закрыт для слушателей, Мы вернулись</p>
+                                            <p class="radio-box__subtitle">Наш дискорд-канал долгое время был закрыт для
+                                                слушателей, Мы вернулись</p>
                                             <div class="radio-bg">
                                                 <svg class="radio-icon">
                                                     <use xlink:href="./img/sprite.svg#arrow-icon"></use>
@@ -1062,7 +1072,9 @@
                                 <div class="updates-group">
                                     <img src="./img/updates/updates-1.jpg" alt="" class="updates-item__img">
                                 </div>
-                                <p class="updates-item__title"  data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Fantasy Bishoujo Juniku Ojisan to">Fantasy Bishoujo Juniku Ojisan to</p>
+                                <p class="updates-item__title" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                   data-bs-title="Fantasy Bishoujo Juniku Ojisan to">Fantasy Bishoujo Juniku Ojisan
+                                    to</p>
                                 <p class="updates-item__subtitle">В другом мире с мужчиной, обратившимся
                                     красоткой</p>
                             </a>
@@ -1070,28 +1082,33 @@
                                 <div class="updates-group">
                                     <img src="./img/updates/updates-2.jpg" alt="" class="updates-item__img">
                                 </div>
-                                <p class="updates-item__title" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Sabikui Busco">Sabikui Busco</p>
+                                <p class="updates-item__title" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                   data-bs-title="Sabikui Busco">Sabikui Busco</p>
                                 <p class="updates-item__subtitle">Биско-ржавоед</p>
                             </a>
                             <a href="#" class="updates-item">
                                 <div class="updates-group">
                                     <img src="./img/updates/updates-3.jpg" alt="" class="updates-item__img">
                                 </div>
-                                <p class="updates-item__title" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Heike Monogatari">Heike Monogatari</p>
+                                <p class="updates-item__title" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                   data-bs-title="Heike Monogatari">Heike Monogatari</p>
                                 <p class="updates-item__subtitle">Повесть о доме Тайра</p>
                             </a>
                             <a href="#" class="updates-item">
                                 <div class="updates-group">
                                     <img src="./img/updates/updates-4.jpg" alt="" class="updates-item__img">
                                 </div>
-                                <p class="updates-item__title" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Kenja no Deshi wo Nanoru Kenja">Kenja no Deshi wo Nanoru Kenja</p>
+                                <p class="updates-item__title" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                   data-bs-title="Kenja no Deshi wo Nanoru Kenja">Kenja no Deshi wo Nanoru Kenja</p>
                                 <p class="updates-item__subtitle">Она представилась как ученик мудреца</p>
                             </a>
                             <a href="#" class="updates-item">
                                 <div class="updates-group">
                                     <img src="./img/updates/updates-5.jpg" alt="" class="updates-item__img">
                                 </div>
-                                <p class="updates-item__title" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tensai Ouji no Akaji Kokka Saisei Jutsu">Tensai Ouji no Akaji Kokka Saisei Jutsu</p>
+                                <p class="updates-item__title" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                   data-bs-title="Tensai Ouji no Akaji Kokka Saisei Jutsu">Tensai Ouji no Akaji Kokka
+                                    Saisei Jutsu</p>
                                 <p class="updates-item__subtitle">Руководство гениального принца по вызволению
                                     страны
                                     путешественников</p>
@@ -1199,7 +1216,7 @@
                                     <svg class="nav-link__icon">
                                         <use xlink:href="./img/sprite.svg#statistic-icon"></use>
                                     </svg>
-                                    <p class="nav-link__text">Каталог песен</p>
+                                    <p class="nav-link__text">Статистика</p>
                                 </a>
                             </li>
                         </nav>
@@ -1221,7 +1238,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="footer-block">
-                        <p class="footer-copyright d-block d-lg-none">
+                        <p class="footer-copyright d-flex d-lg-none">
                             <span class="footer-copyright__text">© 2013-2021</span>
                             <span class="footer-copyright__text">Все права защищены.</span>
                         </p>
@@ -1262,7 +1279,7 @@
                             <a href="" class="footer-link">
                                 <img src="./img/logo-main.png" alt="" class="footer-link__img">
                             </a>
-                            <p class="footer-copyright d-none d-lg-block">
+                            <p class="footer-copyright d-none d-lg-flex">
                                 <span class="footer-copyright__text">© 2013-2021</span>
                                 <span class="footer-copyright__text">Все права защищены.</span>
                             </p>
@@ -1280,7 +1297,8 @@
     <div class="modal-dialog modal-login modal-fullscreen-lg-down">
         <div class="modal-content ">
             <div class="modal-header">
-                <button type="button" class="btn-close btn-close--modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close--modal" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <h2 class="modal-body__title">Вход</h2>
@@ -1298,7 +1316,7 @@
                     <button class="modal-btn">Войти</button>
                     <div class="modal-links">
                         <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#exampleModal2">Регистрация</a>
-                        <hr  class="modal-links__hr" >
+                        <hr class="modal-links__hr">
                         <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#exampleModal3">Забыли
                             пароль?</a>
                     </div>
@@ -1313,7 +1331,8 @@
     <div class="modal-dialog modal-login modal-fullscreen-lg-down">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="btn-close btn-close--modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close--modal" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <h2 class="modal-body__title">Регистрация</h2>
@@ -1357,7 +1376,8 @@
     <div class="modal-dialog modal-login modal-fullscreen-lg-down">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="btn-close btn-close--modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close--modal" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <h2 class="modal-body__title mb-1">Восстановление пароля</h2>
@@ -1380,7 +1400,8 @@
     <div class="modal-dialog modal-login modal-fullscreen-lg-down">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="btn-close btn-close--modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close--modal" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="login-form">
@@ -1397,7 +1418,8 @@
     <div class="modal-dialog modal-login modal-fullscreen-lg-down">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="btn-close btn-close--modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close--modal" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="login-form">
@@ -1412,8 +1434,8 @@
     </div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="listModal" tabindex="-1" aria-labelledby="listModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-list" >
+<div class="modal fade modal-list" id="listModal" tabindex="-1" aria-labelledby="listModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="d-flex align-items-center justify-content-between w-100">
@@ -1474,6 +1496,7 @@
                                 <div class="modals-author">
                                     <p class="song-box__subtitle">Заказал</p>
                                     <a href="#" class="song-vote__author">Arri</a>
+                                    <span class="info-btn info-btn--orange">Amoled</span>
                                     <p class="song-box__subtitle">17:15:32</p>
                                 </div>
                             </div>

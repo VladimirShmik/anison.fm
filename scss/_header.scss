@@ -11,7 +11,7 @@
   &__btn{
     border: 1px solid #FFFFFF;
     border-radius: 6px;
-    padding: 11.5px 53.5px;
+    padding: 12.5px 53px  ;
     font-weight: 400;
     font-size: 15px;
     text-align: center;
@@ -60,7 +60,7 @@
   }
 }
 .nav-item{
-  padding: 23px 10px;
+  padding: 25px 10px;
   &:hover{
     background: rgba(140, 97, 199, 0.3);
     cursor: pointer;
@@ -70,7 +70,7 @@
 .nav-link{
   display: grid;
   grid-template-columns: 20px 1fr;
-  grid-gap: 10px;
+  grid-gap: 8px;
   padding: 0;
   align-items: center;
   &__icon{
@@ -100,7 +100,7 @@ justify-content: flex-start;
   padding: 0;
   align-items: center;
   @media (min-width: 320px) and (max-width: 1023px){
-    gap: 3px;
+    gap: 6px;
   }
 
   &__icon{
@@ -144,56 +144,47 @@ justify-content: flex-start;
   height: 20px;
   position: relative;
   z-index:2;
-
-  overflow: hidden;
-}
-.menu-btn span {
-  width: 20px;
-  height: 1.2px;
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #FFFFFF;
-  transition: all 0.2s;
-}
-.menu-btn span:nth-of-type(2) {
-  top: calc(50% - 5px);
-}
-.menu-btn span:nth-of-type(3) {
-  top: calc(50% + 5px);
-}
-.menu-btn.active span:nth-of-type(1) {
-  display: none;
-}
-.menu-btn.active span:nth-of-type(2) {
-  top: 50%;
-  transform: translate(-50%, 0%) rotate(45deg);
-}
-.menu-btn.active span:nth-of-type(3) {
-  top: 50%;
-  transform: translate(-50%, 0%) rotate(-45deg);
+  &__icon{
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: white;
+    stroke-width: 1.2;
+  }
 }
 .mobile-nav{
   display: none;
   @media (min-width: 320px) and (max-width: 1023px){
     position: absolute;
     width: 100%;
-    background-color: #F5F5F5;
     top: 0px;
     height: 100vh;
     z-index: 10;
     left: 9999px;
-    padding-right: calc(1.5rem * .5);
-    padding-left: calc(1.5rem * .5);
-    padding-top: 30px;
+    background-color: #F5F5F5;
     padding-bottom: 200px;
-    display: grid;
-    grid-gap: 45px;
+    display: flex;
+    flex-direction: column;
     transition: all 0.2s;
   }
 
+}
+.mobile-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90.16deg, #5A2E98 0%, #4F268A 100%);
+  padding: 18px;
+  height: fit-content;
+}
+.mobile-menu{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F5F5F5;
+  padding: 42px 20px 0;
+  gap: 40px;
 }
 .mobile-nav.active{
   left: 0;

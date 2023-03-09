@@ -14,24 +14,40 @@ updatesInfo.forEach(e => {
         e.removeAttribute("data-bs-toggle");
     }
 });
+//toggle-const//
+const plusButton = document.querySelector(".song-sign__icon--plus");
+const minusButton = document.querySelector(".song-sign__icon--minus");
+const soundOnButton = document.querySelector('.song-sound__icon--off');
+const soundOffButton = document.querySelector('.song-sound__icon--on');
+const buttonActive = document.querySelector('.song-like__icon--empty');
+const buttonNotActive = document.querySelector('.song-like__icon--fill');
+//container-const//
+const songContainer = document.querySelector(".song-container");
+const allItemsVote = document.querySelector(".song-dropdown");
+const soundRange = songContainer.querySelector(".list-dropdown");
 const foundBtn = document.querySelector('.search-dropdown__title');
 const foundForm = document.querySelector(".search-form")
 const foundInput = document.querySelector('.search-box__input');
 const foundList = document.querySelector('.search-list');
 const foundValid = document.querySelector(".search-validation");
 const voteAll = document.querySelector(".song-sign");
-const plus = document.querySelector(".song-sign__icon--plus")
-const minus = document.querySelector(".song-sign__icon--minus")
-const songContainer = document.querySelector(".song-container");
-const soundRange = songContainer.querySelector(".list-dropdown");
-const sound = songContainer.querySelector(".song-sound");
-const soundOnButton = sound.querySelector('.song-sound__icon--off');
-const soundOffButton = sound.querySelector('.song-sound__icon--on');
 const musicContainer = document.querySelector('.music-grid');
+const sound = songContainer.querySelector(".song-sound");
+//song-sign//
+function dropdownToggle(parent) {
+    plusButton.classList.toggle("hide");
+    minusButton.classList.toggle("hide");
+};
+allItemsVote.addEventListener("click", (e) => {
+    if (e.target.classList.contains("mask-block")) {
+        const parent = e.target.closest(".song-sign");
+        dropdownToggle(parent);
+    }
 
+});
 function musicToggle(parent) {
-    plus.classList.toggle("hide");
-    minus.classList.toggle("hide");
+    plusButton.classList.toggle("hide");
+    minusButton.classList.toggle("hide");
 };
 musicContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("mask-block")) {
@@ -171,25 +187,8 @@ if (allItemsStart !== null) {
 }
 ;
 
-function voteToggle(parent) {
-    const voteActive = parent.querySelector('.song-sign__icon--plus');
-    const voteNotActive = parent.querySelector('.song-sign__icon--minus');
-    voteActive.classList.toggle("hide");
-    voteNotActive.classList.toggle("hide");
-};
-
-const allItemsVote = document.querySelector(".song-dropdown");
-
-allItemsVote.addEventListener("click", (e) => {
-    if (e.target.classList.contains("mask-block")) {
-        const parent = e.target.closest(".song-vote");
 
 
-        voteToggle(parent);
-
-    }
-
-});
 
 
 const inputSwitch = document.querySelector('.form-check-input');
@@ -275,9 +274,15 @@ trackContainer.forEach(item => {
     })
 })
 let menuBtn = document.querySelector('.menu-btn');
+let menuHide = document.querySelector('.btn-close--mobile')
 let menu = document.querySelector('.mobile-nav');
+let body = document.querySelector('body')
 menuBtn.addEventListener('click', function () {
-    menuBtn.classList.toggle('active');
-    menu.classList.toggle('active');
+    menu.classList.add('active');
+    body.classList.add('hidden')
+});
+menuHide.addEventListener('click', function () {
+    menu.classList.remove('active');
+    body.classList.remove('hidden')
 });
 ;
