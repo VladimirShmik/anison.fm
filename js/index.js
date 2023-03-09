@@ -14,56 +14,121 @@ updatesInfo.forEach(e => {
         e.removeAttribute("data-bs-toggle");
     }
 });
-//toggle-const//
-const plusButton = document.querySelector(".song-sign__icon--plus");
-const minusButton = document.querySelector(".song-sign__icon--minus");
-const soundOnButton = document.querySelector('.song-sound__icon--off');
-const soundOffButton = document.querySelector('.song-sound__icon--on');
-const buttonActive = document.querySelector('.song-like__icon--empty');
-const buttonNotActive = document.querySelector('.song-like__icon--fill');
-//container-const//
+const voteAll = document.querySelector(".song-sign");
+
 const songContainer = document.querySelector(".song-container");
-const allItemsVote = document.querySelector(".song-dropdown");
 const soundRange = songContainer.querySelector(".list-dropdown");
+
+const musicContainer = document.querySelector('.music-grid');
+
+
+const plus = document.querySelector(".song-sign__icon--plus")
+const minus = document.querySelector(".song-sign__icon--minus")
+
+// function musicToggle(parent) {
+//     plus.classList.toggle("hide");
+//     minus.classList.toggle("hide");
+// };
+// musicContainer.addEventListener("click", (e) => {
+//     if (e.target.classList.contains("mask-block")) {
+//         const parent = e.target.closest(".song-sign");
+//         musicToggle(parent);
+//
+//     }
+//
+// });
+function voteToggle(parent) {
+    const voteActive = parent.querySelector('.song-sign__icon--plus');
+    const voteNotActive = parent.querySelector('.song-sign__icon--minus');
+    voteActive.classList.toggle("hide");
+    voteNotActive.classList.toggle("hide");
+};
+
+const allItemsVote = document.querySelector(".song-dropdown");
+allItemsVote.addEventListener("click", (e) => {
+    if (e.target.classList.contains("mask-block")) {
+        const parent = e.target.closest(".song-vote");
+        voteToggle(parent);
+    }
+});
+
+const allItemsMusic = document.querySelector(".music-grid");
+allItemsMusic.addEventListener("click", (e) => {
+    if (e.target.classList.contains("mask-block")) {
+        const parent = e.target.closest(".song-vote");
+        voteToggle(parent);
+    }
+});
+
+function startToggle(parent) {
+    const startActive = parent.querySelector('.song-start__icon--start');
+    const startNotActive = parent.querySelector('.song-start__icon--stop');
+    startNotActive.classList.toggle("hide");
+    startActive.classList.toggle("hide");
+};
+const allItemsStart = document.querySelector(".song-grid");
+allItemsStart.addEventListener("click", (e) => {
+    if (e.target.classList.contains("mask-block")) {
+        const parent = e.target.closest(".song-start");
+        startToggle(parent);
+    }
+});
+const allItemsPlayer = document.querySelector(".player-item");
+allItemsPlayer.addEventListener("click", (e) => {
+    if (e.target.classList.contains("mask-block")) {
+        const parent = e.target.closest(".song-start");
+        startToggle(parent);
+    }
+});
+
+
+function buttonToggle(parent) {
+    const buttonActive = parent.querySelector('.song-like__icon--empty');
+    const buttonNotActive = parent.querySelector('.song-like__icon--fill');
+    buttonNotActive.classList.toggle("hide");
+    buttonActive.classList.toggle("hide");
+};
+const allItems = document.querySelectorAll(".song-like");
+allItems.forEach(el => {
+    el.addEventListener("click", (e) => {
+        if (e.currentTarget.classList.contains("song-like")) {
+
+            const parent = e.target.closest(".song-group");
+            buttonToggle(parent);
+        }
+
+
+    });
+
+})
+
+const allItemsModal = document.querySelector(".modalCheck");
+if (allItemsModal !== null) {
+    allItemsModal.addEventListener("click", (e) => {
+        const targetIcon = e.target.closest(".song-like__icon");
+        if (targetIcon) {
+            const parent = targetIcon.closest(".song-group");
+            buttonToggleModal(parent);
+        }
+
+    });
+}
+;
+
+//search//
 const foundBtn = document.querySelector('.search-dropdown__title');
 const foundForm = document.querySelector(".search-form")
 const foundInput = document.querySelector('.search-box__input');
 const foundList = document.querySelector('.search-list');
 const foundValid = document.querySelector(".search-validation");
-const voteAll = document.querySelector(".song-sign");
-const musicContainer = document.querySelector('.music-grid');
-const sound = songContainer.querySelector(".song-sound");
-//song-sign//
-function dropdownToggle(parent) {
-    plusButton.classList.toggle("hide");
-    minusButton.classList.toggle("hide");
-};
-allItemsVote.addEventListener("click", (e) => {
-    if (e.target.classList.contains("mask-block")) {
-        const parent = e.target.closest(".song-sign");
-        dropdownToggle(parent);
-    }
 
-});
-function musicToggle(parent) {
-    plusButton.classList.toggle("hide");
-    minusButton.classList.toggle("hide");
-};
-musicContainer.addEventListener("click", (e) => {
-    if (e.target.classList.contains("mask-block")) {
-        const parent = e.target.closest(".song-sign");
-        musicToggle(parent);
 
-    }
-
-});
-
-//song-check-like//
 foundBtn.addEventListener("click", e => {
     foundBtn.classList.toggle("search-dropdown__title--active");
     foundList.classList.toggle('hide');
 
 });
+
 foundList.addEventListener('click', elem => {
     for (let i = 0; i < foundList.children.length; i++) {
         foundList.children[i].classList.remove('search-item--active');
@@ -87,18 +152,18 @@ foundInput.addEventListener("input", e => {
     foundInput.focus();
 
 });
+
 foundInput.addEventListener("blur", () => {
     foundValid.classList.add("hide");
     foundValid.nextElementSibling.classList.add("hide");
 
 });
 
-function buttonToggle(parent) {
-    const buttonActive = parent.querySelector('.song-like__icon--empty');
-    const buttonNotActive = parent.querySelector('.song-like__icon--fill');
-    buttonNotActive.classList.toggle("hide");
-    buttonActive.classList.toggle("hide");
-};
+//sound//
+const sound = songContainer.querySelector(".song-sound");
+const soundOnButton = sound.querySelector('.song-sound__icon--off');
+const soundOffButton = sound.querySelector('.song-sound__icon--on');
+
 const toggleSoundButtons = () => {
     soundOnButton.classList.toggle("hide");
     soundOffButton.classList.toggle("hide");
@@ -131,20 +196,6 @@ sound.addEventListener("dblclick", () => {
 
 
 });
-const allItems = document.querySelectorAll(".song-like");
-allItems.forEach(el => {
-    el.addEventListener("click", (e) => {
-        if (e.currentTarget.classList.contains("song-like")) {
-
-            const parent = e.target.closest(".song-group");
-            buttonToggle(parent);
-        }
-
-
-    });
-
-})
-
 
 function buttonToggleModal(parent) {
     const buttonActive = parent.querySelector('.song-like__icon--empty');
@@ -152,64 +203,30 @@ function buttonToggleModal(parent) {
     buttonNotActive.classList.toggle("hide");
     buttonActive.classList.toggle("hide");
 };
-const allItemsModal = document.querySelector(".modalCheck");
-if (allItemsModal !== null) {
-    allItemsModal.addEventListener("click", (e) => {
-        const targetIcon = e.target.closest(".song-like__icon");
-        if (targetIcon) {
-            const parent = targetIcon.closest(".song-group");
-            buttonToggleModal(parent);
-        }
-
-    });
-}
-;
 
 
-function startToggle(parent) {
-    const startActive = parent.querySelector('.song-start__icon--start');
-    const startNotActive = parent.querySelector('.song-start__icon--stop');
-    startNotActive.classList.toggle("hide");
-    startActive.classList.toggle("hide");
-};
-const allItemsStart = document.querySelectorAll(".song-start");
-if (allItemsStart !== null) {
-    allItemsStart.forEach(el => {
-
-        el.addEventListener("click", (e) => {
-            const targetStart = e.target.closest(".song-start");
-            if (targetStart) {
-                const parent = targetStart.closest(".song-group");
-                startToggle(parent);
-            }
-        });
-    })
-}
-;
-
-
-
-
-
+//input-switch//
 const inputSwitch = document.querySelector('.form-check-input');
 const bodyTheme = document.querySelector('body')
+
 inputSwitch.addEventListener("click", function () {
     bodyTheme.classList.toggle('dark-theme')
 });
 
+//song-track//
 const songTrack = document.querySelector('.player-wrapper')
 const songDropdown = document.querySelector('.song-dropdown');
-if (songTrack !== null) {
-    songTrack.addEventListener("mouseenter", (e) => {
 
-        songDropdown.classList.add('song-dropdown--show');
-        songTrack.addEventListener("mouseleave", () => {
-            songDropdown.classList.remove('song-dropdown--show');
-        })
+ if (songTrack !== null) {
+     songTrack.addEventListener("mouseenter", (e) => {
 
-    });
-}
-;
+         songDropdown.classList.add('song-dropdown--show');
+         songTrack.addEventListener("mouseleave", () => {
+             songDropdown.classList.remove('song-dropdown--show');
+         })
+
+     });
+ };
 
 const form = document.querySelector(".login-form");
 if (form) {
@@ -227,6 +244,7 @@ if (form) {
         }
     });
 }
+
 $(".simple-select").select2({
     Search: false,
     templateResult: formatState,
@@ -248,6 +266,7 @@ function formatState(opt) {
         return $opt;
     }
 };
+
 new Swiper('.swiperList', {
     slidesPerView: 12,
     direction: "vertical",
@@ -273,16 +292,11 @@ trackContainer.forEach(item => {
         attentionToggle();
     })
 })
+
 let menuBtn = document.querySelector('.menu-btn');
-let menuHide = document.querySelector('.btn-close--mobile')
 let menu = document.querySelector('.mobile-nav');
-let body = document.querySelector('body')
 menuBtn.addEventListener('click', function () {
-    menu.classList.add('active');
-    body.classList.add('hidden')
-});
-menuHide.addEventListener('click', function () {
-    menu.classList.remove('active');
-    body.classList.remove('hidden')
+    menuBtn.classList.toggle('active');
+    menu.classList.toggle('active');
 });
 ;
