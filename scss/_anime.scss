@@ -294,6 +294,9 @@
   max-height: 860px;
   position: relative;
   margin-bottom: 60px;
+  .swiper{
+    max-height: inherit;
+  }
   .swiper-wrapper{
     display: flex;
     flex-direction: column;

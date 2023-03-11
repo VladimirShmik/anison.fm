@@ -7,7 +7,7 @@ trackInfo.forEach(e => {
     }
 });
 new Swiper('.swiperList', {
-    slidesPerView: 13,
+    slidesPerView: 'auto',
     direction: "vertical",
     navigation: {
         nextEl: ".swiper-button-next",
@@ -19,7 +19,7 @@ new Swiper('.swiperList', {
     },
 });
 document.querySelectorAll('.tabs-navbar').forEach(n => {
-    const vocal = new Swiper(n.querySelector('.swiperVocal'), {
+    const vocal = new Swiper(n.querySelector('.swiperList'), {
         slidesPerView: 13,
         direction: "vertical",
         navigation: {
@@ -31,22 +31,6 @@ document.querySelectorAll('.tabs-navbar').forEach(n => {
             hide: true,
         },
     });
-
-    const pop = new Swiper(n.querySelector('.swiperPop'), {
-        slidesPerView: 13,
-        direction: "vertical",
-        navigation: {
-            nextEl: n.querySelector('.swiper-button-next'),
-            prevEl: n.querySelector('.swiper-button-prev'),
-        },
-        scrollbar: {
-            el: n.querySelector('.swiper-scrollbar'),
-            hide: true,
-        },
-    });
-
-    vocal.controller.control = pop;
-    pop.controller.control = vocal;
 });
 const updatesInfo = document.querySelectorAll('.updates-item__title')
 updatesInfo.forEach(e => {

@@ -4528,6 +4528,9 @@ input[type=search]::-ms-clear {
   position: relative;
   margin-bottom: 60px;
 }
+.swiper-list .swiper {
+  max-height: inherit;
+}
 .swiper-list .swiper-wrapper {
   display: flex;
   flex-direction: column;
