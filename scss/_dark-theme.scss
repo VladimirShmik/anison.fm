@@ -76,19 +76,42 @@
     }
 
   }
-
+  .search-form--sorting{
+    border: 1px solid #353338;
+    .search-box__input{
+      color: #8F8B96;
+    }
+  }
+  .sorting-search__link{
+    &:hover{
+      color: #FFFFFF;
+    }
+  }
   .song-item {
     &:hover {
       background: #1A171E;
     }
   }
-
+  .song-info:hover .song-info__icon {
+    stroke: #FFFFFF;
+  }
   .song-box__title {
     color: #FFFFFF;
   }
 
   .song-item__time {
     color: #FFFFFF;
+  }
+  .tracks-item--blocked{
+    .tracks-heading{
+      background: linear-gradient(90.16deg, #311D4D 0%, #291A3F 100%);
+      &__title{
+        color: #62577A;
+      }
+      &__subtitle{
+        color: #62577A;
+      }
+    }
   }
 
   .updates-wrapper__title {
@@ -159,14 +182,16 @@
   .song-start__icon--stop {
     fill: #ffffff;
   }
-
+  .song-start:hover .song-start__icon {
+    stroke: #ffffff;
+  }
   .search-wrapper {
     background: #242228;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   }
 
   .modal-content {
-    background: #242228;
+    background: transparent;
     box-shadow: 0px 0px 20px rgba(37, 19, 64, 0.5);
   }
 
@@ -175,7 +200,24 @@
       color: #ffffff;
     }
   }
+  .modal-anime{
+    .modal-body{
+      background-color:#242228;;
+    }
+  }
+ .modal-backdrop{
+   background: rgba(91, 56, 142, 0.7);
 
+ }
+  .anime-block{
+
+    &__text{
+      color: #FFFFFF;
+    }
+    &__img{
+
+    }
+  }
   .login-nick {
     color: #ffffff;
 
@@ -197,7 +239,18 @@
       }
     }
   }
-
+  .order-grid{
+    background: #242228;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  }
+  .order-item{
+    &__title{
+      color: #FFFFFF;
+    }
+    &__span{
+      color: #FFFFFF;
+    }
+  }
   .form-label {
     color: #ffffff;
   }
@@ -215,13 +268,86 @@
       color: #8F8B96;
     }
   }
+  .anime-title__title{
+    color: #FFFFFF;
+  }
+  .anime-info__title{
+    color: #FFFFFF;
+  }
+  .anime-row{
+    &__title{
+      color: #FFFFFF;
+    }
+  }
+  .modal-track{
+    .anime-track__time{
+      color: #FFFFFF;
+    }
+  }
+  .modal-anime{
+    .lang-block__text{
+      color: #FFFFFF;
+    }
+  }
 
+  .anime-track{
+    background: #242228;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    &__time{
+      color: #FFFFFF;
+
+    }
+    .anime-box__author{
+      color: #FFFFFF;
+    }
+  }
+  .anime-box{
+    &__title{
+      color: #FFFFFF;
+    }
+  }
+  .anime-title__icon{
+    stroke: #ffffff;
+  }
+  .anime-subtitle{
+    color: #FFFFFF;
+  }
+  .anime-slider{
+    &__title{
+      color: #FFFFFF;
+    }
+  }
+  .swiper-item{
+    &__text{
+      color: #FFFFFF;
+    }
+  }
   .modal-link {
     &:hover {
       color: #FFFFFF;
     }
   }
-
+  .swiper-slide{
+    :hover {
+      background: #242228;
+    }
+  }
+  .swiper-scrollbar-drag{
+    background: #242228;
+  }
+  .tabs-navbar{
+    .nav-link{
+      background: #242228;
+    }
+    .nav-item:hover > .nav-link{
+      color: #FFFFFF;
+    }
+    .nav-link.active{
+      background: linear-gradient(90.16deg, #5A2E98 0%, #4F268A 100%);
+      color: #FFFFFF!important;
+    }
+  }
   .btn-close {
     background-size: cover;
     padding: 0 !important;

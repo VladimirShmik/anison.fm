@@ -567,6 +567,18 @@ input[type=search]::-ms-clear {
   background: #FFFFFF;
   border-radius: 4px;
 }
+.search-form--sorting {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid #D1CED7;
+  border-radius: 4px;
+  width: 300px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .search-form--sorting {
+    width: 100%;
+  }
+}
 
 .search-box {
   position: relative;
@@ -588,6 +600,7 @@ input[type=search]::-ms-clear {
   font-weight: 400;
   font-size: 15px;
   color: #242228;
+  background-color: transparent;
 }
 .search-box__input::placeholder {
   font-weight: 400;
@@ -781,29 +794,64 @@ input[type=search]::-ms-clear {
   grid-gap: 30px;
   margin-bottom: 80px;
 }
-.music-wrapper--order {
-  grid-template-columns: 1.55fr 1fr;
-  margin-top: 110px;
-}
-.music-wrapper--list {
-  grid-template-columns: 1fr;
-  margin-top: 110px;
-}
-.music-wrapper--list .order-grid {
-  height: fit-content;
-}
-.music-wrapper--list .order-item {
-  max-width: 500px;
-}
-.music-wrapper--list .order-item:last-child {
-  margin-bottom: 0;
-}
 @media (min-width: 320px) and (max-width: 1200px) {
   .music-wrapper {
     grid-template-columns: 1fr;
     margin-bottom: 60px;
     grid-gap: 30px;
   }
+}
+.music-wrapper--order {
+  grid-template-columns: 1.43fr 1fr;
+  margin-top: 125px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .music-wrapper--order {
+    grid-template-columns: 1fr;
+    margin-top: 62px;
+    grid-gap: 60px;
+    margin-bottom: 35px;
+  }
+  .music-wrapper--order .song-wrapper__title--music {
+    margin-bottom: 30px;
+  }
+  .music-wrapper--order .song-wrapper__title--margin {
+    margin-bottom: 5px;
+  }
+}
+.music-wrapper--list {
+  grid-template-columns: 1fr;
+  margin-top: 125px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .music-wrapper--list {
+    grid-template-columns: 1fr;
+    margin-top: 62px;
+    grid-gap: 60px;
+    margin-bottom: 35px;
+  }
+  .music-wrapper--list .song-wrapper__title--music {
+    margin-bottom: 30px;
+  }
+  .music-wrapper--list .song-wrapper__title--margin {
+    margin-bottom: 5px;
+  }
+}
+.music-wrapper--list .order-grid {
+  height: fit-content;
+  padding-bottom: 45px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .music-wrapper--list .order-grid {
+    padding: 20px;
+    padding-bottom: 185px;
+  }
+}
+.music-wrapper--list .order-item {
+  max-width: 500px;
+}
+.music-wrapper--list .order-item:last-child {
+  margin-bottom: 0;
 }
 
 .song-wrapper {
@@ -1014,7 +1062,7 @@ input[type=search]::-ms-clear {
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .song-item {
-    padding: 8px 0;
+    padding: 7.5px 0;
   }
 }
 .song-item:hover {
@@ -1560,6 +1608,9 @@ input[type=search]::-ms-clear {
   flex-direction: column;
   margin-bottom: 75px;
 }
+.updates-wrapper--margin {
+  margin-bottom: 35px;
+}
 @media (min-width: 320px) and (max-width: 1200px) {
   .updates-wrapper {
     margin-bottom: 55px;
@@ -1581,13 +1632,13 @@ input[type=search]::-ms-clear {
 .updates-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 30px;
+  grid-gap: 20px 30px;
   grid-auto-rows: 445px;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .updates-grid {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 12px 10px;
+    grid-gap: 20px 10px;
     grid-auto-rows: 305px;
   }
 }
@@ -1595,6 +1646,12 @@ input[type=search]::-ms-clear {
 @media (min-width: 320px) and (max-width: 1200px) {
   .updates-grid > .updates-item:last-child {
     display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1200px) {
+  .updates-grid--catalog > .updates-item:last-child {
+    display: flex;
   }
 }
 
@@ -1965,14 +2022,30 @@ input[type=search]::-ms-clear {
   height: 100%;
   position: relative;
 }
+@media (min-width: 320px) and (max-width: 1200px) {
+  .order-grid {
+    padding: 20px;
+    padding-bottom: 185px;
+  }
+}
 .order-grid::before {
   position: absolute;
   content: "";
   background-image: url("../img/backgrounds/order-girl.png");
+  background-repeat: no-repeat;
   width: 400px;
   height: 650px;
   bottom: 0;
   right: -30px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .order-grid::before {
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 230px;
+    right: 10px;
+    background-image: url("../img/backgrounds/order-girl-mobile.png");
+  }
 }
 
 .order-item {
@@ -1981,18 +2054,36 @@ input[type=search]::-ms-clear {
   max-width: 350px;
   margin-bottom: 50px;
 }
+@media (min-width: 320px) and (max-width: 1200px) {
+  .order-item {
+    margin-bottom: 20px;
+    max-width: 280px;
+  }
+}
 .order-item__title {
   font-weight: 600;
   font-size: 24px;
   color: #242228;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .order-item__title {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
 }
 .order-item__text {
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
   color: #8F8B96;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .order-item__text {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
 }
 .order-item__text:last-child {
   margin-bottom: 0;
@@ -2958,7 +3049,7 @@ input[type=search]::-ms-clear {
 .modal-list .modal-content {
   background-color: transparent !important;
   box-shadow: none !important;
-  border-radius: 6px;
+  border-radius: 0 0 6px 6px;
   justify-content: flex-end;
 }
 .modal-list .modal-header {
@@ -3111,6 +3202,17 @@ input[type=search]::-ms-clear {
 .modal-anime {
   max-width: 880px;
 }
+.modal-anime .modal-content {
+  border-radius: 6px;
+}
+.modal-anime .modal-body {
+  padding: 40px 30px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-anime .modal-body {
+    padding: 0px;
+  }
+}
 .modal-anime .modal-header {
   padding: 20px 30px;
   display: flex;
@@ -3118,10 +3220,20 @@ input[type=search]::-ms-clear {
   flex-direction: column;
   background: linear-gradient(90.16deg, #5A2E98 0%, #4F268A 100%);
 }
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-anime .modal-header {
+    padding: 20px 20px;
+  }
+}
 .modal-anime .modal-title {
   color: #FFFFFF;
   font-weight: 600;
   font-size: 20px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-anime .modal-title {
+    font-size: 17px;
+  }
 }
 .modal-anime .modal-track {
   width: 100%;
@@ -3130,10 +3242,43 @@ input[type=search]::-ms-clear {
   justify-content: space-between;
   margin-bottom: 15px;
 }
+.modal-anime .modal-track .song-group {
+  gap: 10px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-anime .modal-track .song-group {
+    gap: 5px;
+  }
+}
+.modal-anime .modal-track .song-like__icon {
+  width: 20px;
+  height: 20px;
+}
+.modal-anime .modal-track .song-start__icon {
+  width: 20px;
+  height: 20px;
+}
+.modal-anime .modal-track .anime-track__time {
+  font-size: 17px;
+  color: #FFFFFF;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-anime .modal-track .anime-track__time {
+    font-size: 11px;
+  }
+}
 .modal-anime .modal-box__title {
   font-weight: 600;
   font-size: 17px;
   color: #FFFFFF;
+  line-height: 130%;
+  display: block;
+  max-width: 400px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-anime .modal-box__title {
+    font-size: 13px;
+  }
 }
 .modal-anime .modal-box__title:hover {
   text-decoration-line: underline;
@@ -3145,12 +3290,22 @@ input[type=search]::-ms-clear {
   font-size: 15px;
   color: #B3A5D0;
 }
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-anime .modal-box__subtitle {
+    font-size: 13px;
+  }
+}
 .modal-anime .modal-box__author {
   display: block;
   margin-left: 5px;
   font-weight: 400;
   font-size: 15px;
   color: #FFFFFF;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-anime .modal-box__author {
+    font-size: 13px;
+  }
 }
 .modal-anime .modal-box__author:hover {
   text-decoration-line: underline;
@@ -3171,6 +3326,11 @@ input[type=search]::-ms-clear {
   font-size: 15px;
   color: #B3A5D0;
 }
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-anime .modal-order__subtitle {
+    font-size: 13px;
+  }
+}
 .modal-anime .modal-order__author {
   display: block;
   margin-left: 5px;
@@ -3178,17 +3338,29 @@ input[type=search]::-ms-clear {
   font-size: 15px;
   color: #FFFFFF;
 }
-.modal-anime .modal-body {
-  padding: 30px;
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-anime .modal-order__author {
+    font-size: 13px;
+  }
 }
 .modal-anime .modal-translation {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-anime .modal-translation {
+    grid-template-columns: 1fr;
+  }
+}
 .modal-anime .modal-lang {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-anime .modal-lang {
+    padding: 20px 20px;
+  }
 }
 .modal-anime .lang-block {
   display: grid;
@@ -3216,6 +3388,14 @@ input[type=search]::-ms-clear {
   font-size: 15px;
   line-height: 130%;
   color: #8F8B96;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-anime--short-2 .modal-content {
+    padding: 0 20px;
+  }
+}
+.modal-anime--short-2 .modal-header {
+  border-radius: 6px;
 }
 .modal-anime--short {
   max-width: 600px;
@@ -3419,12 +3599,70 @@ input[type=search]::-ms-clear {
   }
 }
 
+.modal-dialog--padding {
+  padding: 0 20px;
+}
+
+.modal-info .modal-content {
+  background: #FFFFFF;
+  border-radius: 6px;
+  border: none;
+}
+.modal-info .btn-close {
+  width: 20px;
+  height: 20px;
+  margin: 0 -5px;
+}
+.modal-info .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: none;
+  padding: 20px 25px 0px;
+}
+.modal-info .modal-body {
+  padding: 0;
+}
+.modal-info .anime-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 35px;
+}
+.modal-info .anime-block__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  color: #242228;
+  max-width: 340px;
+  margin: 0 auto;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-info .anime-block__text {
+    font-size: 15px;
+    max-width: 280px;
+  }
+}
+.modal-info .anime-block__img {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 10px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .modal-info .anime-block__img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
 /*artist-section*/
 .artist-wrapper {
   display: flex;
   flex-direction: column;
-  margin-top: 110px;
-  margin-bottom: 40px;
+  margin-top: 120px;
+  margin-bottom: 42px;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .artist-wrapper {
@@ -3450,14 +3688,14 @@ input[type=search]::-ms-clear {
 }
 
 .artist-item {
-  padding: 10px 30px;
+  padding: 8px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .artist-item {
-    padding: 10px 20px;
+    padding: 5px 20px;
   }
 }
 .artist-item:hover {
@@ -3465,7 +3703,7 @@ input[type=search]::-ms-clear {
   cursor: pointer;
 }
 .artist-item .song-group {
-  gap: 10px;
+  gap: 5px;
 }
 .artist-item .song-group .song-like__icon {
   width: 20px;
@@ -3522,7 +3760,7 @@ input[type=search]::-ms-clear {
   font-weight: 600;
   font-size: 20px;
   color: #FFFFFF;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .artist-box__title {
@@ -3535,7 +3773,7 @@ input[type=search]::-ms-clear {
 .artist-category {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
 }
 .artist-category__text {
   font-weight: 600;
@@ -3554,12 +3792,12 @@ input[type=search]::-ms-clear {
 .artist-category__text::before {
   position: absolute;
   content: "";
-  width: 3px;
-  height: 3px;
+  width: 5px;
+  height: 4px;
   border-radius: 50%;
   background-color: #ffffff;
-  right: -11px;
-  top: 5px;
+  right: -10px;
+  top: 4px;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .artist-category__text::before {
@@ -3573,11 +3811,11 @@ input[type=search]::-ms-clear {
   background: #FFFFFF;
   border-radius: 0px 0px 6px 6px;
   padding: 20px 30px 20px 260px;
-  min-height: 150px;
+  min-height: 135px;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .artist-info {
-    padding: 20px;
+    padding: 10px 20px 25px;
     min-height: 20px;
   }
 }
@@ -3594,6 +3832,13 @@ input[type=search]::-ms-clear {
   text-overflow: ellipsis;
   margin-bottom: 10px;
 }
+@media (min-width: 320px) and (max-width: 1200px) {
+  .artist-info__text {
+    font-size: 13px;
+    -webkit-line-clamp: 4;
+    height: 85px;
+  }
+}
 .artist-info__text--active {
   display: block;
   overflow: visible;
@@ -3604,8 +3849,23 @@ input[type=search]::-ms-clear {
   align-items: flex-start;
   font-weight: 400;
   font-size: 13px;
-  text-decoration: underline;
+  width: fit-content;
   color: #8F8B96;
+  position: relative;
+}
+.artist-info__btn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  bottom: -4px;
+  background-color: #8F8B96;
+}
+.artist-info__btn:hover {
+  color: #242228;
+}
+.artist-info__btn:hover::before {
+  background-color: #242228;
 }
 
 .artist-avatar {
@@ -3672,6 +3932,7 @@ input[type=search]::-ms-clear {
 @media (min-width: 320px) and (max-width: 1200px) {
   .tracks-heading {
     padding: 10px 20px;
+    border-radius: 0;
   }
 }
 .tracks-heading__title {
@@ -3718,12 +3979,11 @@ input[type=search]::-ms-clear {
   background: linear-gradient(90.16deg, #7346B1 0%, #63399F 100%);
 }
 
-.tracks-heading:hover .radio-bg {
-  background: #FFFFFF;
+.tracks-wrapper .tracks-heading:hover .radio-bg {
+  background: #FFFFFF !important;
 }
-
-.tracks-heading:hover .radio-icon {
-  stroke: #242228;
+.tracks-wrapper .tracks-heading:hover .radio-icon {
+  stroke: #242228 !important;
 }
 
 .tracks-grid {
@@ -3754,7 +4014,7 @@ input[type=search]::-ms-clear {
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .tracks-info__title {
-    max-width: 150px;
+    max-width: 160px;
   }
 }
 .tracks-info__title--blocked {
@@ -3771,19 +4031,27 @@ input[type=search]::-ms-clear {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 110px;
-  margin-bottom: 40px;
+  margin-top: 120px;
+  margin-bottom: 45px;
+}
+.artist-sorting--margin {
+  margin-bottom: 30px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .artist-sorting--margin {
+    margin-bottom: 30px;
+  }
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .artist-sorting {
     flex-direction: column;
-    margin-top: 60px;
+    margin-top: 65px;
   }
 }
 
 @media (min-width: 320px) and (max-width: 1200px) {
   .sorting-block {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     width: 100%;
   }
 }
@@ -3791,16 +4059,28 @@ input[type=search]::-ms-clear {
   font-weight: 600;
   font-size: 28px;
   color: #242228;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .sorting-block__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 }
 .sorting-block__subtitle {
   font-weight: 400;
   font-size: 17px;
   color: #8F8B96;
 }
+@media (min-width: 320px) and (max-width: 1200px) {
+  .sorting-block__subtitle {
+    font-size: 15px;
+  }
+}
 
 .sorting-search {
   display: flex;
+  justify-content: flex-end;
   flex-direction: column;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
@@ -3819,6 +4099,7 @@ input[type=search]::-ms-clear {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 20px;
+    gap: 10px;
   }
 }
 .sorting-search__link {
@@ -3878,6 +4159,14 @@ input[type=search]::-ms-clear {
   color: #B3A5D0;
 }
 
+.tracks-item--blocked > .tracks-heading:hover > .radio-bg {
+  background-color: transparent !important;
+}
+
+.tracks-item--blocked > .tracks-heading:hover > .radio-bg > .radio-icon {
+  stroke: #FFFFFF !important;
+}
+
 .tracks-item--blocked > .tracks-heading > .d-flex > .song-info {
   cursor: pointer;
 }
@@ -3915,17 +4204,19 @@ input[type=search]::-ms-clear {
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-gap: 30px;
+  margin-bottom: 50px;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .anime-wrapper {
     grid-template-columns: 1fr;
+    gap: 35px;
   }
 }
 
 .anime-slider {
   display: flex;
   flex-direction: column;
-  margin-top: 110px;
+  margin-top: 125px;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .anime-slider {
@@ -3937,6 +4228,9 @@ input[type=search]::-ms-clear {
   font-size: 28px;
   color: #242228;
   margin-bottom: 30px;
+}
+.anime-slider__title--song {
+  margin-bottom: 42px;
 }
 
 .anime-list {
@@ -3952,7 +4246,7 @@ input[type=search]::-ms-clear {
 
 .anime-item {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 140px 1fr;
   grid-gap: 20px;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
@@ -3986,6 +4280,11 @@ input[type=search]::-ms-clear {
   font-size: 15px;
   color: #242228;
 }
+@media (min-width: 320px) and (max-width: 1200px) {
+  .anime-subtitle {
+    font-size: 13px;
+  }
+}
 
 .artist-box__subtitle {
   font-weight: 400;
@@ -3994,14 +4293,58 @@ input[type=search]::-ms-clear {
   margin-bottom: 5px;
 }
 
+@media (min-width: 320px) and (max-width: 1200px) {
+  .anime-page .artist-box {
+    padding-bottom: 15px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .anime-page .artist-box__title {
+    margin-bottom: 5px;
+  }
+}
+.anime-page .song-start__icon {
+  width: 20px;
+  height: 20px;
+}
+.anime-page .song-like__icon {
+  width: 20px;
+  height: 20px;
+}
+.anime-page .song-info__icon {
+  width: 20px;
+  height: 20px;
+}
+.anime-page .artist-box {
+  bottom: 23px;
+  left: 270px;
+}
+.anime-page .artist-info {
+  padding: 20px 30px 30px 270px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .anime-page .artist-info {
+    padding: 10px 20px 25px;
+  }
+}
+.anime-page .anime-list {
+  gap: 10px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .anime-page .anime-list {
+    gap: 20px;
+  }
+}
+
 .anime-avatar {
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 30px;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .anime-avatar {
-    left: 23%;
+    left: 17%;
+    top: 20px;
   }
 }
 .anime-avatar__img {
@@ -4023,6 +4366,12 @@ input[type=search]::-ms-clear {
   border-radius: 6px;
   margin-bottom: 40px;
 }
+@media (min-width: 320px) and (max-width: 1200px) {
+  .anime-info {
+    padding: 10px 20px;
+    margin-bottom: 65px;
+  }
+}
 .anime-info__icon {
   width: 24px;
   height: 24px;
@@ -4032,6 +4381,11 @@ input[type=search]::-ms-clear {
   font-size: 15px;
   line-height: 130%;
   color: #242228;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .anime-info__title {
+    font-size: 13px;
+  }
 }
 
 .anime-wrap {
@@ -4043,11 +4397,11 @@ input[type=search]::-ms-clear {
   font-weight: 600;
   font-size: 17px;
   color: #242228;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .anime-row__title {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 }
 
@@ -4072,6 +4426,13 @@ input[type=search]::-ms-clear {
 .anime-box {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .anime-box {
+    font-size: 13px;
+    gap: 5px;
+  }
 }
 .anime-box__title {
   font-weight: 600;
@@ -4082,6 +4443,11 @@ input[type=search]::-ms-clear {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+@media (min-width: 320px) and (max-width: 1200px) {
+  .anime-box__title {
+    font-size: 13px;
+  }
+}
 .anime-box__subtitle {
   font-weight: 400;
   font-size: 13px;
@@ -4089,12 +4455,22 @@ input[type=search]::-ms-clear {
   display: flex;
   align-items: center;
 }
+@media (min-width: 320px) and (max-width: 1200px) {
+  .anime-box__subtitle {
+    font-size: 11px;
+  }
+}
 .anime-box__author {
   display: block;
   margin-left: 5px;
   font-weight: 400;
   font-size: 13px;
   color: #242228;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .anime-box__author {
+    font-size: 11px;
+  }
 }
 
 .anime-track {
@@ -4108,12 +4484,13 @@ input[type=search]::-ms-clear {
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .anime-track {
-    background: transparent;
+    background: transparent !important;
+    padding: 5px 0;
     box-shadow: none;
   }
 }
 .anime-track .song-group {
-  gap: 10px;
+  gap: 5px;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .anime-track .song-group .song-item__time {
@@ -4141,6 +4518,10 @@ input[type=search]::-ms-clear {
   }
 }
 
+.swiper-slide :hover {
+  background: #E6E3EB;
+}
+
 .swiper-list {
   max-width: 300px;
   max-height: 860px;
@@ -4152,16 +4533,14 @@ input[type=search]::-ms-clear {
   flex-direction: column;
 }
 .swiper-list .swiper-slide {
-  max-height: 60px;
-}
-.swiper-list .swiper-slide--active {
-  background: rgba(140, 97, 199, 0.1);
-  border-left: 3px solid #6838AB;
+  max-height: 100px;
+  height: fit-content !important;
+  min-height: 57px !important;
 }
 .swiper-list .swiper-item {
   display: flex;
   flex-direction: column;
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 .swiper-list .swiper-item__text {
   font-weight: 600;
@@ -4208,6 +4587,47 @@ input[type=search]::-ms-clear {
 }
 .swiper-list .swiper-scrollbar-drag {
   background: rgba(140, 97, 199, 0.15);
+  height: 300px !important;
+}
+
+.tabs-navbar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.tabs-navbar .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+  align-items: center;
+  width: 100%;
+}
+.tabs-navbar .nav-tabs {
+  border: none;
+  margin-bottom: 40px;
+}
+.tabs-navbar .nav-item {
+  padding: 0;
+  border-radius: 4px;
+}
+.tabs-navbar .nav-link {
+  background: #FFFFFF;
+  border: none;
+  display: flex;
+  border-radius: 4px;
+  width: auto;
+  font-weight: 600;
+  font-size: 13px;
+  color: #8F8B96;
+  padding: 6px 10px;
+}
+.tabs-navbar .nav-link.active {
+  background: linear-gradient(90.16deg, #5A2E98 0%, #4F268A 100%);
+  color: #FFFFFF !important;
+}
+.tabs-navbar .nav-item:hover > .nav-link {
+  color: #242228;
 }
 
 .dark-theme .section-bg {
@@ -4270,14 +4690,35 @@ input[type=search]::-ms-clear {
     filter: none;
   }
 }
+.dark-theme .search-form--sorting {
+  border: 1px solid #353338;
+}
+.dark-theme .search-form--sorting .search-box__input {
+  color: #8F8B96;
+}
+.dark-theme .sorting-search__link:hover {
+  color: #FFFFFF;
+}
 .dark-theme .song-item:hover {
   background: #1A171E;
+}
+.dark-theme .song-info:hover .song-info__icon {
+  stroke: #FFFFFF;
 }
 .dark-theme .song-box__title {
   color: #FFFFFF;
 }
 .dark-theme .song-item__time {
   color: #FFFFFF;
+}
+.dark-theme .tracks-item--blocked .tracks-heading {
+  background: linear-gradient(90.16deg, #311D4D 0%, #291A3F 100%);
+}
+.dark-theme .tracks-item--blocked .tracks-heading__title {
+  color: #62577A;
+}
+.dark-theme .tracks-item--blocked .tracks-heading__subtitle {
+  color: #62577A;
 }
 .dark-theme .updates-wrapper__title {
   color: #FFFFFF;
@@ -4330,16 +4771,28 @@ input[type=search]::-ms-clear {
 .dark-theme .song-start__icon--stop {
   fill: #ffffff;
 }
+.dark-theme .song-start:hover .song-start__icon {
+  stroke: #ffffff;
+}
 .dark-theme .search-wrapper {
   background: #242228;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 }
 .dark-theme .modal-content {
-  background: #242228;
+  background: transparent;
   box-shadow: 0px 0px 20px rgba(37, 19, 64, 0.5);
 }
 .dark-theme .modal-body__title {
   color: #ffffff;
+}
+.dark-theme .modal-anime .modal-body {
+  background-color: #242228;
+}
+.dark-theme .modal-backdrop {
+  background: rgba(91, 56, 142, 0.7);
+}
+.dark-theme .anime-block__text {
+  color: #FFFFFF;
 }
 .dark-theme .login-nick {
   color: #ffffff;
@@ -4359,6 +4812,16 @@ input[type=search]::-ms-clear {
   font-size: 15px;
   color: #8F8B96;
 }
+.dark-theme .order-grid {
+  background: #242228;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+.dark-theme .order-item__title {
+  color: #FFFFFF;
+}
+.dark-theme .order-item__span {
+  color: #FFFFFF;
+}
 .dark-theme .form-label {
   color: #ffffff;
 }
@@ -4374,8 +4837,65 @@ input[type=search]::-ms-clear {
   font-size: 15px;
   color: #8F8B96;
 }
+.dark-theme .anime-title__title {
+  color: #FFFFFF;
+}
+.dark-theme .anime-info__title {
+  color: #FFFFFF;
+}
+.dark-theme .anime-row__title {
+  color: #FFFFFF;
+}
+.dark-theme .modal-track .anime-track__time {
+  color: #FFFFFF;
+}
+.dark-theme .modal-anime .lang-block__text {
+  color: #FFFFFF;
+}
+.dark-theme .anime-track {
+  background: #242228;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+}
+.dark-theme .anime-track__time {
+  color: #FFFFFF;
+}
+.dark-theme .anime-track .anime-box__author {
+  color: #FFFFFF;
+}
+.dark-theme .anime-box__title {
+  color: #FFFFFF;
+}
+.dark-theme .anime-title__icon {
+  stroke: #ffffff;
+}
+.dark-theme .anime-subtitle {
+  color: #FFFFFF;
+}
+.dark-theme .anime-slider__title {
+  color: #FFFFFF;
+}
+.dark-theme .swiper-item__text {
+  color: #FFFFFF;
+}
 .dark-theme .modal-link:hover {
   color: #FFFFFF;
+}
+.dark-theme .swiper-slide :hover {
+  background: #242228;
+}
+.dark-theme .swiper-scrollbar-drag {
+  background: #242228;
+}
+.dark-theme .tabs-navbar .nav-link {
+  background: #242228;
+}
+.dark-theme .tabs-navbar .nav-item:hover > .nav-link {
+  color: #FFFFFF;
+}
+.dark-theme .tabs-navbar .nav-link.active {
+  background: linear-gradient(90.16deg, #5A2E98 0%, #4F268A 100%);
+  color: #FFFFFF !important;
 }
 .dark-theme .btn-close {
   background-size: cover;

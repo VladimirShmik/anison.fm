@@ -616,1014 +616,431 @@
     </div>
   </div>
   <div class="section-bg">
-    <!--music-section-->
+    <!--anime-section-->
     <div class="container">
-      <!--artist-section-->
       <div class="row">
         <div class="col-12">
-          <div class="artist-sorting artist-sorting--margin">
-            <div class="sorting-block">
-              <p class="sorting-block__title">Избранное</p>
-              <p class="sorting-block__subtitle">У вас в избранном 8 аниме и 28 треков</p>
-            </div>
-            <div class="sorting-search">
-              <div class="sorting-search__box">
-                <p class="sorting-search__title">Сортировать по:</p>
-                <div class="d-flex align-items-center">
-                  <a href="#" class="sorting-search__link sorting-search__link--active">алфавиту</a>
-                  <a href="#" class="sorting-search__link">дате добавления</a>
-                </div>
-              </div>
-              <form action="#" class="search-form search-form--sorting">
-                <label class="search-box">
-                  <svg class="search-box__icon">
-                    <use xlink:href="../img/sprite.svg#search-icon"></use>
-                  </svg>
-                  <input type="search" placeholder="Поиск избранного" class="search-box__input">
-                </label>
-                <div class="search-dropdown">
-                  <button class="search-dropdown__title">Аниме</button>
-                  <ul class="search-list hide">
-                    <li class="search-item search-item--active">
-                      Аниме
-                    </li>
-                    <li class="search-item">
-                      Трек
-                    </li>
-                    <li class="search-item">
-                      Артист
-                    </li>
-                  </ul>
-                </div>
-                <div class="search-validation hide">
-                  <a href="#" class="validation-item">
-                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
-                    <div class="d-flex flex-column">
-                      <p class="validation-item__title">Full Metal Panic!</p>
-                      <p class="validation-item__subtitle">Стальная тревога!</p>
-                    </div>
-                  </a>
-                  <a href="#" class="validation-item">
-                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
-                    <div class="d-flex flex-column">
-                      <p class="validation-item__title">Hanage no Renkinjutsushi</p>
-                      <p class="validation-item__subtitle">Стальной алхимик</p>
-                    </div>
-                  </a>
-                  <a href="#" class="validation-item">
-                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
-                    <div class="d-flex flex-column">
-                      <p class="validation-item__title">Koutetsu Sangokushi</p>
-                      <p class="validation-item__subtitle">Стальные Хроники Царств</p>
-                    </div>
-                  </a>
-                  <a href="#" class="validation-item">
-                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
-                    <div class="d-flex flex-column">
-                      <p class="validation-item__title">Kurogane no Linebarrels</p>
-                      <p class="validation-item__subtitle">Стальные Лайнбаррели</p>
-                    </div>
-                  </a>
-                  <a href="#" class="validation-item">
-                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
-                    <div class="d-flex flex-column">
-                      <p class="validation-item__title">M3: Sono Kuroki Hagane</p>
-                      <p class="validation-item__subtitle">М3: Эта Чёрная Сталь</p>
-                    </div>
-                  </a>
-                </div>
-                <div class=" search-validation search-validation--text hide">
-                  <a href="#" class="validation-item">
-                    <p class="validation-item__title">Nanase Hikaru</p>
-                  </a>
-                  <a href="#" class="validation-item">
-                    <p class="validation-item__title">Nana Mizuki</p>
-                  </a>
-                  <a href="#" class="validation-item">
-                    <p class="validation-item__title">Nanairo Namida</p>
-                  </a>
-                  <a href="#" class="validation-item">
-                    <p class="validation-item__title">Hazel Fernandes</p>
-                  </a>
-                  <a href="#" class="validation-item">
-                    <p class="validation-item__title">Shiho Nanba</p>
-                  </a>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row p-0 p-lg-auto">
-        <div class="col-12 ">
-          <div class="tracks-wrapper">
-            <div class="tracks-row">
-              <div class="tracks-item">
-                <a href="#" class="tracks-heading">
-                  <div class="tracks-box">
-                    <img src="../img/song/song-1.jpg" alt="" class="tracks-heading__img">
-                    <div class="d-flex flex-column">
-                      <p class="tracks-heading__title">D-Frag!</p>
-                      <p class="tracks-heading__subtitle">Дефрагментация!</p>
-                    </div>
-                  </div>
-                  <div class="radio-bg">
-                    <svg class="radio-icon">
-                      <use xlink:href="../img/sprite.svg#arrow-icon"></use>
-                    </svg>
-                  </div>
-                </a>
-                <div class="artist-grid buttonCheck">
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title tracks-info__title--blocked"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Stalemate!">Stalemate!</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tracks-item">
-                <a href="#" class="tracks-heading">
-                  <div class="tracks-box">
-                    <img src="../img/song/song-1.jpg" alt="" class="tracks-heading__img">
-                    <div class="d-flex flex-column">
-                      <p class="tracks-heading__title">Azur Lane</p>
-                      <p class="tracks-heading__subtitle">Лазурный путь</p>
-                    </div>
-                  </div>
-                  <div class="radio-bg">
-                    <svg class="radio-icon">
-                      <use xlink:href="../img/sprite.svg#arrow-icon"></use>
-                    </svg>
-                  </div>
-                </a>
-                <div class="artist-grid buttonCheck">
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Soyokaze no Harmony">Soyokaze no Harmony</p>
-                      <p class="info-btn info-btn--green">ON AIR</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Soyokaze no Harmony">Pureness</p>
-                      <p class="info-btn info-btn--violet">NEW</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tracks-item">
-                <a href="#" class="tracks-heading">
-                  <div class="tracks-box">
-                    <img src="../img/song/song-1.jpg" alt="" class="tracks-heading__img">
-                    <div class="d-flex flex-column">
-                      <p class="tracks-heading__title">Azur Lane</p>
-                      <p class="tracks-heading__subtitle">Лазурный путь</p>
-                    </div>
-                  </div>
-                  <div class="radio-bg">
-                    <svg class="radio-icon">
-                      <use xlink:href="../img/sprite.svg#arrow-icon"></use>
-                    </svg>
-                  </div>
-                </a>
-                <div class="artist-grid buttonCheck">
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Pro Tanto Quid Retribuamus">Pro Tanto Quid Retribuamus</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="tracks-row">
-              <div class="tracks-item">
-                <a href="#" class="tracks-heading">
-                  <div class="tracks-box">
-                    <img src="../img/song/song-1.jpg" alt="" class="tracks-heading__img">
-                    <div class="d-flex flex-column">
-                      <p class="tracks-heading__title">Azur Lane</p>
-                      <p class="tracks-heading__subtitle">Лазурный путь</p>
-                    </div>
-                  </div>
-                  <div class="radio-bg">
-                    <svg class="radio-icon">
-                      <use xlink:href="../img/sprite.svg#arrow-icon"></use>
-                    </svg>
-                  </div>
-                </a>
-                <div class="artist-grid buttonCheck">
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Pro Tanto Quid Retribuamus">Pro Tanto Quid Retribuamus</p>
-                      <p class="info-btn info-btn--blue">Заказан</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="tracks-item">
-                <a href="#" class="tracks-heading">
-                  <div class="tracks-box">
-                    <img src="../img/song/song-1.jpg" alt="" class="tracks-heading__img">
-                    <div class="d-flex flex-column">
-                      <p class="tracks-heading__title">Azur Lane</p>
-                      <p class="tracks-heading__subtitle">Лазурный путь</p>
-                    </div>
-                  </div>
-                  <div class="radio-bg">
-                    <svg class="radio-icon">
-                      <use xlink:href="../img/sprite.svg#arrow-icon"></use>
-                    </svg>
-                  </div>
-                </a>
-                <div class="artist-grid ">
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Soyokaze no Harmony">Soyokaze no Harmony</p>
-                      <p class="info-btn info-btn--green">ON AIR</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Soyokaze no Harmony">Pureness</p>
-                      <p class="info-btn info-btn--violet">NEW</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Soyokaze no Harmony">Soyokaze no Harmony</p>
-                      <p class="info-btn info-btn--green">ON AIR</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Soyokaze no Harmony">Pureness</p>
-                      <p class="info-btn info-btn--violet">NEW</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Soyokaze no Harmony">Soyokaze no Harmony</p>
-                      <p class="info-btn info-btn--green">ON AIR</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Soyokaze no Harmony">Pureness</p>
-                      <p class="info-btn info-btn--violet">NEW</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tracks-item">
-                <a href="#" class="tracks-heading">
-                  <div class="tracks-box">
-                    <img src="../img/song/song-1.jpg" alt="" class="tracks-heading__img">
-                    <div class="d-flex flex-column">
-                      <p class="tracks-heading__title">Azur Lane</p>
-                      <p class="tracks-heading__subtitle">Лазурный путь</p>
-                    </div>
-                  </div>
-                  <div class="radio-bg">
-                    <svg class="radio-icon">
-                      <use xlink:href="../img/sprite.svg#arrow-icon"></use>
-                    </svg>
-                  </div>
-                </a>
-                <div class="artist-grid buttonCheck">
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Pro Tanto Quid Retribuamus">Pro Tanto Quid Retribuamus</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="tracks-row">
-              <div class="tracks-item">
-                <a href="#" class="tracks-heading">
-                  <div class="tracks-box">
-                    <img src="../img/song/song-1.jpg" alt="" class="tracks-heading__img">
-                    <div class="d-flex flex-column">
-                      <p class="tracks-heading__title">Dakara Boku Wa, H Ga Dekinai</p>
-                      <p class="tracks-heading__subtitle">Говорю же, у меня не встаёт!</p>
-                    </div>
-                  </div>
-                  <div class="radio-bg">
-                    <svg class="radio-icon">
-                      <use xlink:href="../img/sprite.svg#arrow-icon"></use>
-                    </svg>
-                  </div>
-                </a>
-                <div class="artist-grid buttonCheck">
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Reason why XXX">Reason why XXX</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="tracks-item tracks-item--blocked">
-                <a href="#" class="tracks-heading">
-                  <div class="tracks-box">
-                    <img src="../img/song/song-1.jpg" alt="" class="tracks-heading__img">
-                    <div class="d-flex flex-column">
-                      <div class="tracks-blocked">
-                        <p class="tracks-heading__title">Naruto</p>
-                        <button class="song-info song-info--blocked">
-                          <svg class="song-info__icon">
-                            <use xlink:href="../img/sprite.svg#info-icon"></use>
-                          </svg>
-                        </button>
+          <div class="anime-wrapper">
+            <div class="anime-slider">
+              <p class="anime-slider__title anime-slider__title--song">Список аниме</p>
+              <div class="tabs-navbar">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="vocal-tab" data-bs-toggle="tab" data-bs-target="#vocal" type="button" role="tab" aria-controls="vocal" aria-selected="true">Вокалоиды</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="j-pop-tab" data-bs-toggle="tab" data-bs-target="#j-pop" type="button" role="tab" aria-controls="j-pop" aria-selected="false">J-POP</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="games-tab" data-bs-toggle="tab" data-bs-target="#games" type="button" role="tab" aria-controls="games" aria-selected="false">Игры</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="another-tab" data-bs-toggle="tab" data-bs-target="#another" type="button" role="tab" aria-controls="another" aria-selected="false">Другое</button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="vocal" role="tabpanel" aria-labelledby="vocal-tab">
+                    <div class="swiper-list">
+                      <!-- Slider main container -->
+                      <div class="swiper swiperVocal">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rail Wars!</p>
+                              <p class="swiper-item__subtitle">Железнодорожные Войны!</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rainbow: Nisha Rokubou no Shichinin</p>
+                              <p class="swiper-item__subtitle">Радуга: Семеро из шестой камеры</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rakshasa Street</p>
+                              <p class="swiper-item__subtitle">Ракшаса — Улица демонов</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rakudai Kishi no Cavalry</p>
+                              <p class="swiper-item__subtitle">Доблесть рыцаря-неудачника</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rakuen Tsuihou</p>
+                              <p class="swiper-item__subtitle">Изгнанные из Рая</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Ramen Daisuki Koizumi-san</p>
+                              <p class="swiper-item__subtitle">Коидзуми любит рамэн</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Ranma</p>
+                              <p class="swiper-item__subtitle">Ранма</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Ranpo Kitan: Game of Laplace</p>
+                              <p class="swiper-item__subtitle">Загадочные истории Рампо: Игра Лапласа</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Ray</p>
+                              <p class="swiper-item__subtitle">Рэй</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">RDG: Red Data Girl</p>
+                              <p class="swiper-item__subtitle">Девушка из красной книги</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Re-Kan!</p>
+                              <p class="swiper-item__subtitle">Ре-Кан!</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Re-Main</p>
+                              <p class="swiper-item__subtitle">Ре-Мейн</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide swiper-slide--active">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Re:Zero kara Hajimeru Isekai Seikatsu</p>
+                              <p class="swiper-item__subtitle">Re: Жизнь в альтернативном мире с нуля</p>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
                       </div>
-                      <p class="tracks-heading__subtitle">Наруто: Ураганные хроники</p>
+                      <div class="swiper-arrows">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
                     </div>
                   </div>
-                  <div class="radio-bg">
-                    <svg class="radio-icon">
-                      <use xlink:href="../img/sprite.svg#arrow-icon"></use>
-                    </svg>
-                  </div>
-                  <div class="attention-track">
-                    <p class="attention-track__text">Данное аниме уже звучало в эфире за последние три часа. Вновь заказать можно через 180 минут.</p>
-                  </div>
-                </a>
-                <div class="artist-grid buttonCheck">
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Soyokaze no Harmony">Blue <Bird></Bird></p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Soyokaze no Harmony">Distane</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Soyokaze no Harmony">Blue Bird</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
+                  <div class="tab-pane fade" id="j-pop" role="tabpanel" aria-labelledby="j-pop-tab">
+                    <div class="swiper-list">
+                      <!-- Slider main container -->
+                      <div class="swiper swiperPop">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rail Wars!</p>
+                              <p class="swiper-item__subtitle">Железнодорожные Войны!</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rainbow: Nisha Rokubou no Shichinin</p>
+                              <p class="swiper-item__subtitle">Радуга: Семеро из шестой камеры</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rakshasa Street</p>
+                              <p class="swiper-item__subtitle">Ракшаса — Улица демонов</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rakudai Kishi no Cavalry</p>
+                              <p class="swiper-item__subtitle">Доблесть рыцаря-неудачника</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rakuen Tsuihou</p>
+                              <p class="swiper-item__subtitle">Изгнанные из Рая</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Ramen Daisuki Koizumi-san</p>
+                              <p class="swiper-item__subtitle">Коидзуми любит рамэн</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Ranma</p>
+                              <p class="swiper-item__subtitle">Ранма</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Ranpo Kitan: Game of Laplace</p>
+                              <p class="swiper-item__subtitle">Загадочные истории Рампо: Игра Лапласа</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Ray</p>
+                              <p class="swiper-item__subtitle">Рэй</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">RDG: Red Data Girl</p>
+                              <p class="swiper-item__subtitle">Девушка из красной книги</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Re-Kan!</p>
+                              <p class="swiper-item__subtitle">Ре-Кан!</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Re-Main</p>
+                              <p class="swiper-item__subtitle">Ре-Мейн</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide swiper-slide--active">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Re:Zero kara Hajimeru Isekai Seikatsu</p>
+                              <p class="swiper-item__subtitle">Re: Жизнь в альтернативном мире с нуля</p>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                      </div>
+                      <div class="swiper-arrows">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
                     </div>
                   </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Soyokaze no Harmony">Heros Come Back!!</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Silhouette">Silhouette</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Moshimo">Moshimo</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Lovers">Lovers</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
+                  <div class="tab-pane fade" id="games" role="tabpanel" aria-labelledby="games-tab">
+                    <div class="swiper-list">
+                      <!-- Slider main container -->
+                      <div class="swiper swiperList">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rail Wars!</p>
+                              <p class="swiper-item__subtitle">Железнодорожные Войны!</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rainbow: Nisha Rokubou no Shichinin</p>
+                              <p class="swiper-item__subtitle">Радуга: Семеро из шестой камеры</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rakshasa Street</p>
+                              <p class="swiper-item__subtitle">Ракшаса — Улица демонов</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rakudai Kishi no Cavalry</p>
+                              <p class="swiper-item__subtitle">Доблесть рыцаря-неудачника</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Rakuen Tsuihou</p>
+                              <p class="swiper-item__subtitle">Изгнанные из Рая</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Ramen Daisuki Koizumi-san</p>
+                              <p class="swiper-item__subtitle">Коидзуми любит рамэн</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Ranma</p>
+                              <p class="swiper-item__subtitle">Ранма</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Ranpo Kitan: Game of Laplace</p>
+                              <p class="swiper-item__subtitle">Загадочные истории Рампо: Игра Лапласа</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Ray</p>
+                              <p class="swiper-item__subtitle">Рэй</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">RDG: Red Data Girl</p>
+                              <p class="swiper-item__subtitle">Девушка из красной книги</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Re-Kan!</p>
+                              <p class="swiper-item__subtitle">Ре-Кан!</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Re-Main</p>
+                              <p class="swiper-item__subtitle">Ре-Мейн</p>
+                            </a>
+                          </div>
+                          <div class="swiper-slide swiper-slide--active">
+                            <a href="#" class="swiper-item">
+                              <p class="swiper-item__text">Re:Zero kara Hajimeru Isekai Seikatsu</p>
+                              <p class="swiper-item__subtitle">Re: Жизнь в альтернативном мире с нуля</p>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                      </div>
+                      <div class="swiper-arrows">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
                     </div>
                   </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Bacchikoi!!!">Bacchikoi!!!</p>
+                  <div class="tab-pane fade" id="another" role="tabpanel" aria-labelledby="another-tab">
+                    <div class="swiper-list">
+                    <!-- Slider main container -->
+                    <div class="swiper swiperList">
+                      <!-- Additional required wrapper -->
+                      <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                          <a href="#" class="swiper-item">
+                            <p class="swiper-item__text">Rail Wars!</p>
+                            <p class="swiper-item__subtitle">Железнодорожные Войны!</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#" class="swiper-item">
+                            <p class="swiper-item__text">Rainbow: Nisha Rokubou no Shichinin</p>
+                            <p class="swiper-item__subtitle">Радуга: Семеро из шестой камеры</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#" class="swiper-item">
+                            <p class="swiper-item__text">Rakshasa Street</p>
+                            <p class="swiper-item__subtitle">Ракшаса — Улица демонов</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#" class="swiper-item">
+                            <p class="swiper-item__text">Rakudai Kishi no Cavalry</p>
+                            <p class="swiper-item__subtitle">Доблесть рыцаря-неудачника</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#" class="swiper-item">
+                            <p class="swiper-item__text">Rakuen Tsuihou</p>
+                            <p class="swiper-item__subtitle">Изгнанные из Рая</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#" class="swiper-item">
+                            <p class="swiper-item__text">Ramen Daisuki Koizumi-san</p>
+                            <p class="swiper-item__subtitle">Коидзуми любит рамэн</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#" class="swiper-item">
+                            <p class="swiper-item__text">Ranma</p>
+                            <p class="swiper-item__subtitle">Ранма</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#" class="swiper-item">
+                            <p class="swiper-item__text">Ranpo Kitan: Game of Laplace</p>
+                            <p class="swiper-item__subtitle">Загадочные истории Рампо: Игра Лапласа</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#" class="swiper-item">
+                            <p class="swiper-item__text">Ray</p>
+                            <p class="swiper-item__subtitle">Рэй</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#" class="swiper-item">
+                            <p class="swiper-item__text">RDG: Red Data Girl</p>
+                            <p class="swiper-item__subtitle">Девушка из красной книги</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#" class="swiper-item">
+                            <p class="swiper-item__text">Re-Kan!</p>
+                            <p class="swiper-item__subtitle">Ре-Кан!</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="#" class="swiper-item">
+                            <p class="swiper-item__text">Re-Main</p>
+                            <p class="swiper-item__subtitle">Ре-Мейн</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide--active">
+                          <a href="#" class="swiper-item">
+                            <p class="swiper-item__text">Re:Zero kara Hajimeru Isekai Seikatsu</p>
+                            <p class="swiper-item__subtitle">Re: Жизнь в альтернативном мире с нуля</p>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- If we need scrollbar -->
+                      <div class="swiper-scrollbar"></div>
                     </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
+                    <div class="swiper-arrows">
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
                     </div>
                   </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Soyokaze no Harmony">Sayonara Memory</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
-                  </div>
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Shinkokyuu">Shinkokyuu</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-
-                    </div>
                   </div>
                 </div>
               </div>
-              <div class="tracks-item">
-                <a href="#" class="tracks-heading">
-                  <div class="tracks-box">
-                    <img src="../img/song/song-1.jpg" alt="" class="tracks-heading__img">
-                    <div class="d-flex flex-column">
-                      <p class="tracks-heading__title">Azur Lane</p>
-                      <p class="tracks-heading__subtitle">Лазурный путь</p>
-                    </div>
+            </div>
+            <div class="music-wrapper music-wrapper--list">
+              <div class="order-wrapper">
+                <h2 class="song-wrapper__title song-wrapper__title--music">Как сделать заказ</h2>
+                <div class="order-grid">
+                  <div class="order-item">
+                    <p class="order-item__title">Шаг 1</p>
+                    <p class="order-item__text">    Встроке сверху жмякните букву, с которой начинается название аниме, или воспользуйтесь поиском.</p>
+                    <p class="order-item__text">Если заказов много, рекомендуем голосовать за чужие заказы из списка кнопкой <span class="order-item__span">[+]</span>, а не добавлять свои.</p>
                   </div>
-                  <div class="radio-bg">
-                    <svg class="radio-icon">
-                      <use xlink:href="../img/sprite.svg#arrow-icon"></use>
-                    </svg>
+                  <div class="order-item">
+                    <p class="order-item__title">Шаг 2</p>
+                    <p class="order-item__text">Выберете нужное аниме, в нём будут все доступные треки</p>
                   </div>
-                </a>
-                <div class="artist-grid buttonCheck">
-                  <div class="artist-item">
-                    <div class="artist-group">
-                      <p class="tracks-info__title"   data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Pro Tanto Quid Retribuamus">Pro Tanto Quid Retribuamus</p>
-                    </div>
-                    <div class="song-group">
-                      <button class="song-like">
-                        <svg class="song-like__icon song-like__icon--empty">
-                          <use xlink:href="../img/sprite.svg#like-icon"></use>
-                        </svg>
-                        <svg class="song-like__icon song-like__icon--fill hide">
-                          <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-info" data-bs-toggle="modal"
-                              data-bs-target="#modalAnime1">
-                        <svg class="song-info__icon">
-                          <use xlink:href="../img/sprite.svg#info-icon"></use>
-                        </svg>
-                      </button>
-                      <button class="song-start">
-                        <svg class="song-start__icon song-start__icon--start">
-                          <use xlink:href="../img/sprite.svg#play-icon"></use>
-                        </svg>
-                        <svg class="song-start__icon song-start__icon--stop hide">
-                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                        </svg>
-                      </button>
-                    </div>
+                  <div class="order-item">
+                    <p class="order-item__title">Шаг 3</p>
+                    <p class="order-item__text">Жмякайте на ту песню, что нравится именно вам, она попадёт в очередь заказов. Но не забудьте нажать <span class="order-item__span">[Ага!]</span>, подтвердив свой заказ!
+                    </p>
+                    <p class="order-item__text">Готово!</p>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -1631,6 +1048,8 @@
         </div>
       </div>
     </div>
+  </div>
+  </div>
   </div>
 </main>
 <!--footer-->

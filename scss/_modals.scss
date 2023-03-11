@@ -292,9 +292,9 @@
     right: 0%;
   }
   .modal-content {
-    background-color: transparent !important;
+    background-color: transparent!important;
     box-shadow: none !important;
-    border-radius: 6px;
+    border-radius: 0 0 6px 6px  ;
     justify-content: flex-end;
   }
 
@@ -454,18 +454,34 @@
 
 .modal-anime {
   max-width: 880px;
+  .modal-content{
+    border-radius: 6px;
+  }
+    .modal-body{
+    padding: 40px 30px;
+      @media(min-width: 320px) and (max-width: 1200px) {
+        padding: 0px;
+      }
+  }
   .modal-header {
     padding: 20px 30px;
     display: flex;
     border:none;
     flex-direction: column;
     background: linear-gradient(90.16deg, #5A2E98 0%, #4F268A 100%);
+    @media(min-width: 320px) and (max-width: 1200px) {
+      padding: 20px 20px;
+    }
   }
 
   .modal-title {
     color: #FFFFFF;
     font-weight: 600;
     font-size: 20px;
+    @media(min-width: 320px) and (max-width: 1200px) {
+      font-size: 17px;
+
+    }
   }
 
   .modal-track {
@@ -474,6 +490,33 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 15px;
+    .song-group{
+      gap: 10px;
+      @media(min-width: 320px) and (max-width: 1200px) {
+        gap: 5px;
+
+
+
+      }
+    }
+    .song-like__icon{
+      width: 20px;
+      height: 20px;
+    }
+    .song-start__icon{
+      width: 20px;
+      height: 20px;
+    }
+    .anime-track__time{
+      font-size: 17px;
+      color: #FFFFFF;
+      @media(min-width: 320px) and (max-width: 1200px) {
+        font-size: 11px;
+
+
+
+      }
+    }
   }
 
   .modal-box {
@@ -482,7 +525,14 @@
       font-weight: 600;
       font-size: 17px;
       color: #FFFFFF;
+      line-height: 130%;
+      display: block;
+      max-width: 400px;
+      @media(min-width: 320px) and (max-width: 1200px) {
+        font-size: 13px;
 
+
+      }
       &:hover {
         text-decoration-line: underline;
       }
@@ -494,6 +544,9 @@
       font-weight: 400;
       font-size: 15px;
       color: #B3A5D0;
+      @media(min-width: 320px) and (max-width: 1200px) {
+        font-size: 13px;
+      }
     }
 
     &__author {
@@ -502,7 +555,10 @@
       font-weight: 400;
       font-size: 15px;
       color: #FFFFFF;
+      @media(min-width: 320px) and (max-width: 1200px) {
+        font-size: 13px;
 
+      }
       &:hover {
         text-decoration-line: underline;
       }
@@ -522,6 +578,10 @@
       font-weight: 400;
       font-size: 15px;
       color: #B3A5D0;
+      @media(min-width: 320px) and (max-width: 1200px) {
+        font-size: 13px;
+
+      }
     }
     &__author{
       display: block;
@@ -529,20 +589,26 @@
       font-weight: 400;
       font-size: 15px;
       color: #FFFFFF;
+      @media(min-width: 320px) and (max-width: 1200px) {
+        font-size: 13px;
+
+      }
     }
-  }
-  .modal-body{
-    padding: 30px;
   }
   .modal-translation{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
-
+    @media(min-width: 320px) and (max-width: 1200px) {
+      grid-template-columns:  1fr;
+    }
   }
   .modal-lang{
     display: flex;
     flex-direction: column;
+    @media(min-width: 320px) and (max-width: 1200px) {
+      padding: 20px 20px;
+    }
 
   }
   .lang-block{
@@ -572,7 +638,19 @@
       color: #8F8B96;
     }
   }
+  &--short-2{
+    .modal-content{
+      @media(min-width: 320px) and (max-width: 1200px) {
+        padding: 0 20px;
+      }
+    }
+
+    .modal-header{
+      border-radius: 6px;
+    }
+  }
   &--short{
+
     max-width: 600px;
     .modal-translation{
       display: grid;
@@ -752,5 +830,60 @@
       }
     }
   }
+.modal-dialog--padding{
+  padding: 0 20px;
+}
+.modal-info{
+  .modal-content{
+    background: #FFFFFF;
+    border-radius: 6px;
+    border: none;
+  }
+  .btn-close{
+    width: 20px;
+    height: 20px;
+    margin: 0 -5px;
+  }
+  .modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border: none;
+    padding: 20px 25px 0px;
+  }
+  .modal-body{
+
+    padding: 0;
+  }
+  .anime-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 35px;
+    &__text{
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 130%;
+      color: #242228;
+      max-width: 340px;
+      margin: 0 auto;
+      @media(min-width: 320px) and (max-width: 1200px) {
+        font-size: 15px;
+        max-width: 280px;
+      }
+    }
+    &__img{
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 10px;
+      @media(min-width: 320px) and (max-width: 1200px) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
 
 

@@ -3,8 +3,10 @@
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-gap: 30px;
+  margin-bottom: 50px;
   @media (min-width: 320px) and (max-width: 1200px){
     grid-template-columns: 1fr;
+    gap: 35px;
   }
 }
 .anime-page{
@@ -13,7 +15,7 @@
 .anime-slider{
   display: flex;
   flex-direction: column;
-  margin-top: 110px;
+  margin-top: 125px;
   @media (min-width: 320px) and (max-width: 1200px){
  display: none;
   }
@@ -22,6 +24,9 @@
     font-size: 28px;
     color: #242228;
     margin-bottom: 30px;
+    &--song{
+        margin-bottom: 42px;
+    }
   }
 
 }
@@ -35,7 +40,7 @@
 }
 .anime-item{
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 140px 1fr;
   grid-gap: 20px;
   @media(min-width: 320px) and (max-width: 1200px) {
     grid-template-columns:  1fr;
@@ -64,6 +69,9 @@
   font-weight: 400;
   font-size: 15px;
   color: #242228;
+  @media(min-width: 320px) and (max-width: 1200px) {
+    font-size: 13px;
+  }
 }
 .artist-box{
   &__subtitle{
@@ -73,12 +81,53 @@
     margin-bottom: 5px;
   }
 }
+.anime-page{
+  .artist-box{
+    @media(min-width: 320px) and (max-width: 1200px) {
+      padding-bottom: 15px;
+    }
+    &__title{
+      @media(min-width: 320px) and (max-width: 1200px) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .song-start__icon{
+    width: 20px;
+    height: 20px;
+  }
+  .song-like__icon{
+    width: 20px;
+    height: 20px;
+  }
+  .song-info__icon{
+    width: 20px;
+    height: 20px;
+  }
+  .artist-box{
+    bottom: 23px;
+    left: 270px;
+  }
+  .artist-info{
+    padding: 20px 30px 30px 270px;
+    @media (min-width: 320px) and (max-width: 1200px){
+      padding: 10px 20px 25px;
+    }
+  }
+  .anime-list{
+    gap: 10px;
+    @media (min-width: 320px) and (max-width: 1200px){
+      gap: 20px;
+    }
+  }
+}
 .anime-avatar{
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 30px;
   @media(min-width: 320px) and (max-width: 1200px) {
-    left: 23%;
+    left: 17%;
+    top: 20px;
   }
   &__img{
     width: 210px;
@@ -99,6 +148,11 @@
   border: 1px solid #C62C5A;
   border-radius: 6px;
   margin-bottom: 40px;
+  @media(min-width: 320px) and (max-width: 1200px) {
+    padding: 10px 20px;
+    margin-bottom: 65px;
+
+  }
   &__icon{
     width: 24px;
     height: 24px;
@@ -108,6 +162,10 @@
     font-size: 15px;
     line-height: 130%;
     color: #242228;
+    @media(min-width: 320px) and (max-width: 1200px) {
+      font-size: 13px;
+
+    }
   }
 }
 .anime-wrap{
@@ -121,9 +179,9 @@
     font-weight: 600;
     font-size: 17px;
     color: #242228;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     @media(min-width: 320px) and (max-width: 1200px) {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
   }
 }
@@ -145,6 +203,11 @@
 .anime-box{
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  @media(min-width: 320px) and (max-width: 1200px) {
+    font-size: 13px;
+    gap: 5px;
+  }
   &__title{
     font-weight: 600;
     font-size: 15px;
@@ -154,6 +217,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 
+    @media(min-width: 320px) and (max-width: 1200px) {
+      font-size: 13px;
+    }
+
   }
   &__subtitle{
     font-weight: 400;
@@ -161,6 +228,10 @@
     color: #8F8B96;
     display: flex;
     align-items: center;
+    @media(min-width: 320px) and (max-width: 1200px) {
+      font-size: 11px;
+
+    }
   }
   &__author{
     display: block;
@@ -168,6 +239,9 @@
     font-weight: 400;
     font-size: 13px;
     color: #242228;
+    @media(min-width: 320px) and (max-width: 1200px) {
+      font-size: 11px;
+    }
   }
 }
 .anime-track{
@@ -179,11 +253,12 @@
   box-shadow: 0px 0px 20px rgba(183, 168, 199, 0.15);
   border-radius: 6px;
   @media(min-width: 320px) and (max-width: 1200px) {
-    background: transparent;
+    background: transparent!important;
+    padding: 5px 0;
     box-shadow: none;
   }
   .song-group{
-    gap: 10px;
+    gap: 5px;
     .song-item__time{
       @media(min-width: 320px) and (max-width: 1200px) {
         color: #242228;
@@ -209,6 +284,11 @@
     }
   }
 }
+.swiper-slide{
+  :hover {
+    background: #E6E3EB;
+  }
+}
 .swiper-list{
  max-width: 300px;
   max-height: 860px;
@@ -219,16 +299,15 @@
     flex-direction: column;
   }
   .swiper-slide{
-    max-height: 60px;
-    &--active{
-      background: rgba(140, 97, 199, 0.1);
-      border-left: 3px solid #6838AB;
-    }
+    max-height: 100px;
+    height: fit-content!important;
+    min-height: 57px !important;
+
   }
   .swiper-item{
     display: flex;
     flex-direction: column;
-    padding: 10px 20px;
+    padding: 5px 20px;
     &__text{
       font-weight: 600;
       font-size: 13px;
@@ -276,5 +355,46 @@
   }
   .swiper-scrollbar-drag{
     background: rgba(140, 97, 199, 0.15);
+    height: 300px!important;
+  }
+}
+.tabs-navbar{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  .nav{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-tabs{
+  border: none;
+    margin-bottom: 40px;
+  }
+  .nav-item{
+    padding: 0;
+
+    border-radius: 4px;
+  }
+  .nav-link{
+    background: #FFFFFF;
+    border: none;
+    display: flex;
+    border-radius: 4px;
+    width: auto;
+    font-weight: 600;
+    font-size: 13px;
+    color: #8F8B96;
+    padding: 6px 10px;
+  }
+  .nav-link.active{
+    background: linear-gradient(90.16deg, #5A2E98 0%, #4F268A 100%);
+    color: #FFFFFF!important;
+  }
+  .nav-item:hover > .nav-link{
+    color: #242228;
   }
 }

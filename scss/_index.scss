@@ -325,6 +325,16 @@
   padding: 5px 14px 6px 45px;
   background: #FFFFFF;
   border-radius: 4px;
+  &--sorting{
+    margin-left: auto;
+    background: transparent;
+    border: 1px solid #D1CED7;
+    border-radius: 4px;
+    width: 300px;
+    @media(min-width: 320px) and (max-width: 1200px) {
+      width: 100%;
+    }
+  }
 }
 
 .search-box {
@@ -349,6 +359,7 @@
     font-weight: 400;
     font-size: 15px;
     color: #242228;
+    background-color: transparent;
 
     &::placeholder {
       font-weight: 400;
@@ -537,18 +548,50 @@
   grid-template-columns: 1fr 1.62fr;
   grid-gap: 30px;
   margin-bottom: 80px;
-
-  &--order {
-    grid-template-columns: 1.55fr 1fr;
-    margin-top: 110px;
+  @media(min-width: 320px) and (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    margin-bottom: 60px;
+    grid-gap: 30px;
   }
+  &--order {
+    grid-template-columns: 1.43fr 1fr;
+    margin-top: 125px;
+    @media(min-width: 320px) and (max-width: 1200px) {
+      grid-template-columns: 1fr;
+      margin-top: 62px;
+      grid-gap: 60px;
+      margin-bottom: 35px;
+      .song-wrapper__title--music{
+        margin-bottom: 30px;
+      }
+      .song-wrapper__title--margin{
+        margin-bottom: 5px;
+      }
+    }
 
+  }
   &--list {
     grid-template-columns: 1fr;
-    margin-top: 110px;
-
+    margin-top: 125px;
+    @media(min-width: 320px) and (max-width: 1200px) {
+      grid-template-columns: 1fr;
+      margin-top: 62px;
+      grid-gap: 60px;
+      margin-bottom: 35px;
+      .song-wrapper__title--music{
+        margin-bottom: 30px;
+      }
+      .song-wrapper__title--margin{
+        margin-bottom: 5px;
+      }
+    }
     .order-grid {
       height: fit-content;
+      padding-bottom: 45px;
+      @media(min-width: 320px) and (max-width: 1200px) {
+        padding: 20px;
+        padding-bottom: 185px;
+      }
     }
 
     .order-item {
@@ -558,12 +601,6 @@
         margin-bottom: 0;
       }
     }
-  }
-
-  @media(min-width: 320px) and (max-width: 1200px) {
-    grid-template-columns: 1fr;
-    margin-bottom: 60px;
-    grid-gap: 30px;
   }
 }
 
@@ -806,7 +843,7 @@
   justify-content: space-between;
   padding: 11.5px 30px 11.5px 30px;
   @media(min-width: 320px) and (max-width: 1200px) {
-    padding: 8px 0;
+    padding: 7.5px 0;
   }
 
   &:hover {
@@ -1367,6 +1404,9 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 75px;
+  &--margin{
+    margin-bottom: 35px;
+  }
   @media(min-width: 320px) and (max-width: 1200px) {
     margin-bottom: 55px;
   }
@@ -1386,11 +1426,11 @@
 .updates-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 30px;
+  grid-gap: 20px 30px;
   grid-auto-rows: 445px;
   @media(min-width: 320px) and (max-width: 1200px) {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 12px 10px;
+    grid-gap: 20px 10px;
     grid-auto-rows: 305px;
 
   }
@@ -1401,6 +1441,12 @@
     display: none;
   }
 }
+.updates-grid--catalog > .updates-item:last-child{
+  @media(min-width: 320px) and (max-width: 1200px) {
+    display: flex;
+  }
+}
+
 
 .updates-item {
   display: flex;
@@ -1751,15 +1797,26 @@
   border-radius: 6px;
   height: 100%;
   position: relative;
-
+  @media(min-width: 320px) and (max-width: 1200px) {
+    padding: 20px;
+    padding-bottom: 185px;
+  }
   &::before {
     position: absolute;
     content: '';
     background-image: url("../img/backgrounds/order-girl.png");
+    background-repeat: no-repeat;
     width: 400px;
     height: 650px;
     bottom: 0;
     right: -30px;
+    @media(min-width: 320px) and (max-width: 1200px) {
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 230px;
+      right: 10px;
+      background-image: url("../img/backgrounds/order-girl-mobile.png");
+    }
   }
 
 }
@@ -1769,12 +1826,21 @@
   flex-direction: column;
   max-width: 350px;
   margin-bottom: 50px;
+  @media(min-width: 320px) and (max-width: 1200px) {
+    margin-bottom: 20px;
+    max-width: 280px;
 
+  }
   &__title {
     font-weight: 600;
     font-size: 24px;
     color: #242228;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    @media(min-width: 320px) and (max-width: 1200px) {
+      font-size: 17px;
+      margin-bottom: 15px;
+
+    }
   }
 
   &__text {
@@ -1782,8 +1848,11 @@
     font-size: 17px;
     line-height: 130%;
     color: #8F8B96;
-    margin-bottom: 20px;
-
+    margin-bottom: 15px;
+    @media(min-width: 320px) and (max-width: 1200px) {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
