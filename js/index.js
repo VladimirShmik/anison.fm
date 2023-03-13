@@ -142,13 +142,14 @@ inputSwitch.addEventListener("click", function () {
 //song-track//
 const songTrack = document.querySelector('.player-wrapper')
 const songDropdown = document.querySelector('.song-dropdown');
-
+const songItem = document.querySelector('.player-item')
  if (songTrack !== null) {
      songTrack.addEventListener("mouseenter", (e) => {
-
+         songItem.classList.add('player-item--border');
          songDropdown.classList.add('song-dropdown--show');
          songTrack.addEventListener("mouseleave", () => {
              songDropdown.classList.remove('song-dropdown--show');
+             songItem.classList.remove('player-item--border');
          })
 
      });
@@ -287,4 +288,14 @@ document.querySelectorAll(".tracks-item--blocked > .tracks-heading").forEach(lin
     link.addEventListener('click', (e) => {
         e.preventDefault();
     })
-})
+});
+const modalLiveBtn = document.querySelector('.modal-live-bg--show');
+const modalLiveStart = document.querySelector('.modal-live__icon--active');
+const modalLiveStop = document.querySelector('.modal-live__icon--hidden');
+if(modalLiveBtn !== null){
+    console.log(modalLiveBtn)
+    modalLiveBtn.addEventListener('click', function () {
+        modalLiveStart.classList.toggle('hide');
+        modalLiveStop.classList.toggle('hide');
+    });
+}

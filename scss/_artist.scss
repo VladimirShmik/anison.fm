@@ -36,7 +36,7 @@
     cursor: pointer;
   }
  .song-group{
-   gap: 5px;
+   grid-gap: 5px;
    .song-like__icon{
      width: 20px;
      height: 20px;
@@ -105,9 +105,11 @@
   }
 }
 .artist-category{
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
-  gap: 14px;
+  justify-content: start;
+  grid-gap: 5px;
   &__text{
     font-weight: 600;
     font-size: 13px;
@@ -116,24 +118,13 @@
     @media(min-width: 320px) and (max-width: 1200px) {
       color: #242228;
     }
-    &:last-child{
-      &::before{
-        content: none;
-      }
-    }
-    &::before{
-      position: absolute;
-      content: '';
-      width: 5px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: #ffffff;
-      right: -10px;
-      top: 4px;
-      @media(min-width: 320px) and (max-width: 1200px) {
-        background-color:#242228;
-      }
-    }
+
+  }
+  &__span{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #ffffff;
   }
 }
 .artist-info{
@@ -233,9 +224,10 @@
     grid-gap: 10px;  }
 }
 .tracks-box{
-  display: flex;
+ display: grid;
+  grid-auto-flow: column;
   align-items: center;
-  gap: 10px;
+  grid-gap: 10px;
 }
 
 .tracks-heading{
@@ -333,9 +325,11 @@
   }
 }
 .artist-group{
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
   align-items: center;
-  gap: 5px;
+  grid-gap: 5px;
 }
 .artist-sorting{
   display: flex;
@@ -388,15 +382,16 @@
     width: 100%;
   }
   &__box{
-    display: flex;
+ display: grid;
+    grid-auto-flow: column;
  align-items: center;
-    gap: 5px;
+    grid-gap: 5px;
     margin-bottom: 15px;
     @media(min-width: 320px) and (max-width: 1200px) {
      flex-direction: column;
       align-items: flex-start;
       margin-bottom: 20px;
-      gap: 10px;
+      grid-gap: 10px;
     }
   }
   &__link{
@@ -424,9 +419,11 @@
   }
 }
 .tracks-blocked{
-  display: flex;
+ display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
   align-items: center;
-  gap: 5px;
+  grid-gap: 5px;
   margin-bottom: 5px;
   .tracks-heading__title{
     margin-bottom: 0;
@@ -479,12 +476,23 @@
   padding: 10px 20px;
   display: none;
   position: absolute;
-  background: rgba(198, 44, 90, 0.6);
-  border: 1px solid #C62C5A;
-  backdrop-filter: blur(2.5px);
-  border-radius: 6px;
   top: -40px;
   left: 0;
+  z-index: 2;
+  &:before{
+    border: 1px solid #C62C5A;
+    content: '';
+    padding: 10px 20px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    backdrop-filter: blur(2.5px);
+    border-radius: 6px;
+    background: rgba(198, 44, 90, 0.6);
+  }
   &--active{
     display: block;
   }

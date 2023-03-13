@@ -100,7 +100,7 @@ justify-content: flex-start;
   padding: 0;
   align-items: center;
   @media (min-width: 320px) and (max-width: 1023px){
-    gap: 6px;
+    grid-gap: 6px;
   }
 
   &__icon{
@@ -178,13 +178,13 @@ justify-content: flex-start;
   height: fit-content;
 }
 .mobile-menu{
-  display: flex;
+ display: grid;
   align-items: center;
-  flex-direction: column;
+  grid-auto-flow: row;
   justify-content: center;
   background-color: #F5F5F5;
   padding: 42px 20px 0;
-  gap: 40px;
+  grid-gap: 40px;
 }
 .mobile-nav.active{
   left: 0;

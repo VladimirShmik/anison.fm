@@ -3,10 +3,10 @@
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-gap: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   @media (min-width: 320px) and (max-width: 1200px){
     grid-template-columns: 1fr;
-    gap: 35px;
+    grid-gap: 35px;
   }
 }
 .anime-page{
@@ -23,7 +23,7 @@
     font-weight: 600;
     font-size: 28px;
     color: #242228;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     &--song{
         margin-bottom: 42px;
     }
@@ -31,11 +31,11 @@
 
 }
 .anime-list{
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+ display: grid;
+  grid-auto-flow: row;
+  grid-gap: 5px;
   @media(min-width: 320px) and (max-width: 1200px) {
-    gap: 15px;
+    grid-gap: 15px;
   }
 }
 .anime-item{
@@ -50,7 +50,7 @@
 .anime-title{
   display: grid;
   grid-template-columns: 16px 1fr;
-  grid-gap: 10px;
+  grid-gap: 7px;
   align-items: center;
   &__title{
     font-weight: 400;
@@ -109,15 +109,15 @@
     left: 270px;
   }
   .artist-info{
-    padding: 20px 30px 30px 270px;
+    padding: 20px 30px 35px 270px;
     @media (min-width: 320px) and (max-width: 1200px){
       padding: 10px 20px 25px;
     }
   }
   .anime-list{
-    gap: 10px;
+    grid-gap: 9px;
     @media (min-width: 320px) and (max-width: 1200px){
-      gap: 20px;
+      grid-gap: 20px;
     }
   }
 }
@@ -139,15 +139,16 @@
 }
 }
 .anime-info{
-  background: rgba(198, 44, 90, 0.1);
  display: grid;
   grid-template-columns: 24px 1fr;
-  grid-gap: 10px;
-  padding: 20px 30px;
+  grid-gap: 15px;
+  padding: 17px 30px;
   align-items: center;
+  background: rgba(198, 44, 90, 0.2);
   border: 1px solid #C62C5A;
   border-radius: 6px;
   margin-bottom: 40px;
+  margin-top: 3px;
   @media(min-width: 320px) and (max-width: 1200px) {
     padding: 10px 20px;
     margin-bottom: 65px;
@@ -170,7 +171,7 @@
 }
 .anime-wrap{
   display: grid;
-  grid-gap: 40px;
+  grid-gap: 41px;
 
 }
 .anime-row{
@@ -180,6 +181,7 @@
     font-size: 17px;
     color: #242228;
     margin-bottom: 35px;
+
     @media(min-width: 320px) and (max-width: 1200px) {
       margin-bottom: 25px;
     }
@@ -188,35 +190,191 @@
 .anime-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 9px;
   @media(min-width: 320px) and (max-width: 1200px) {
     grid-template-columns:  1fr;
   }
 
 }
 .anime-block{
- display: flex;
+ display: grid;
+  grid-auto-flow: column;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 5px;
-}
+  justify-content: start;
+  grid-gap: 8px;
+  &--track {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 35px;
+    grid-gap: 0;
+
+    .anime-buy {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-gap: 10px;
+
+      &__text {
+        font-weight: 400;
+        font-size: 15px;
+        color: #242228;
+      }
+
+      &__link {
+        font-weight: 400;
+        font-size: 15px;
+        color: #242228;
+        position: relative;
+        width: fit-content;
+
+        &:hover {
+          &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            background-color: #242228;
+          }
+        }
+      }
+    }
+  .anime-link:hover > .anime-link__icon{
+    stroke: #FFFFFF;
+  }
+    .anime-link:hover > .anime-link__text{
+      color: #FFFFFF;
+    }
+    .anime-btn {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-gap: 10px;
+      margin-bottom: 15px;
+
+      .anime-link {
+    display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 5px;
+        width: 170px;
+        height: 40px;
+        border: 1px solid #242228;
+        border-radius: 6px;
+     &:hover{
+       border: 1px solid #B7B4BD;
+       background: #B7B4BD;
+       color: #FFFFFF;
+     }
+        &__icon {
+          width: 14px;
+          height: 10px;
+          fill: none;
+          stroke: #242228;
+          stroke-width: 1.2;
+        }
+
+        &__text {
+          font-weight: 400;
+          font-size: 15px;
+          color: #242228;
+        }
+
+        &--gold {
+          background: #D5990C;
+          border-radius: 6px;
+          width: 170px;
+          height: 40px;
+          border: 1px solid #D5990C;
+          &:hover{
+            border: 1px solid #D5990C;
+            background: #D5990C;
+            color: #FFFFFF;
+          }
+          .anime-link__icon {
+            width: 20px;
+            height: 14px;
+            fill: none;
+            stroke: #FFFFFF;
+          }
+
+          .anime-link__text {
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+
+    .anime-block {
+      &__text {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 130%;
+        color: #8F8B96;
+        margin: 0 auto;
+        padding-bottom: 25px;
+        @media(min-width: 320px) and (max-width: 1200px) {
+          font-size: 15px;
+          max-width: 280px;
+        }
+      }
+
+      &__img {
+        width: 48px;
+        height: 48px;
+        margin: 0 auto 20px;
+        @media(min-width: 320px) and (max-width: 1200px) {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+      &__text{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        color: #242228;
+        max-width: 340px;
+        margin: 0 auto;
+        @media(min-width: 320px) and (max-width: 1200px) {
+          font-size: 15px;
+          max-width: 280px;
+        }
+      }
+      &__img{
+        width: 48px;
+        height: 48px;
+        margin: 0 auto 10px;
+        @media(min-width: 320px) and (max-width: 1200px) {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
 .anime-box{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 8px;
   @media(min-width: 320px) and (max-width: 1200px) {
     font-size: 13px;
-    gap: 5px;
+    grid-gap: 5px;
   }
   &__title{
     font-weight: 600;
     font-size: 15px;
     color: #242228;
-    max-width: 200px;
+    max-width: 206px;
     overflow: hidden;
+    width: fit-content;
     text-overflow: ellipsis;
     white-space: nowrap;
-
+    &:hover{
+      text-decoration: underline;
+    }
     @media(min-width: 320px) and (max-width: 1200px) {
       font-size: 13px;
     }
@@ -239,6 +397,9 @@
     font-weight: 400;
     font-size: 13px;
     color: #242228;
+    &:hover{
+      text-decoration: underline;
+    }
     @media(min-width: 320px) and (max-width: 1200px) {
       font-size: 11px;
     }
@@ -248,7 +409,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 30px;
+  padding: 0px 30px;
+  height: 70px;
   background: #FFFFFF;
   box-shadow: 0px 0px 20px rgba(183, 168, 199, 0.15);
   border-radius: 6px;
@@ -258,7 +420,7 @@
     box-shadow: none;
   }
   .song-group{
-    gap: 5px;
+    grid-gap: 5px;
     .song-item__time{
       @media(min-width: 320px) and (max-width: 1200px) {
         color: #242228;
@@ -288,10 +450,18 @@
   :hover {
     background: #E6E3EB;
   }
+  &--active{
+    background: rgba(140, 97, 199, 0.15);
+    border-left: 3px solid #6838AB;
+
+  }
+}
+.swiper-slide--active:hover {
+  background: rgba(140, 97, 199, 0.15);
 }
 .swiper-list{
  max-width: 300px;
-  max-height: 860px;
+  max-height: 810px;
   position: relative;
   margin-bottom: 60px;
   .swiper{
@@ -302,15 +472,12 @@
     flex-direction: column;
   }
   .swiper-slide{
-    max-height: 100px;
-    height: fit-content!important;
-    min-height: 57px !important;
-
   }
   .swiper-item{
+    max-height: 100px;
     display: flex;
     flex-direction: column;
-    padding: 5px 20px;
+    padding: 10px 20px;
     &__text{
       font-weight: 600;
       font-size: 13px;
@@ -332,13 +499,13 @@
     height: 100%;
     top: 0;
     .swiper-button-prev{
-      top: -10px;
-      left: 50%;
+      top: -20px;
+      left: 46%;
     }
     .swiper-button-next{
-      bottom: -30px;
+      bottom: -32px;
       top: auto;
-      left: 50%;
+      left: 46%;
     }
     .swiper-button-prev::after{
       content: '';
@@ -367,9 +534,10 @@
   flex-direction: column;
   width: 100%;
   .nav{
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     flex-wrap: nowrap;
-    gap: 5px;
+    grid-gap: 5px;
     align-items: center;
     width: 100%;
   }

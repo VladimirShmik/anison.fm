@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../scss/bootstrap.min.css">
   <link rel="stylesheet" href="../scss/main.css">
 </head>
-<body class="">
+<body class="dark-theme">
 <!--header-->
 <header class="header">
   <div class="header-bg">
@@ -26,7 +26,7 @@
             </div>
             <nav class="nav-menu">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="#" class="nav-link">
                   <svg class="nav-link__icon">
                     <use xlink:href="../img/sprite.svg#song-icon"></use>
                   </svg>
@@ -34,15 +34,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
-                  <svg class="nav-link__icon mt-1">
+                <a href="#" class="nav-link">
+                  <svg class="nav-link__icon">
                     <use xlink:href="../img/sprite.svg#fav-icon"></use>
                   </svg>
                   <p class="nav-link__text">Избранное</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="#" class="nav-link">
                   <svg class="nav-link__icon">
                     <use xlink:href="../img/sprite.svg#chat-icon"></use>
                   </svg>
@@ -50,7 +50,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="#" class="nav-link">
                   <svg class="nav-link__icon">
                     <use xlink:href="../img/sprite.svg#donat-icon"></use>
                   </svg>
@@ -68,9 +68,9 @@
             </div>
             <div class="btn-container">
               <button class="menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
+                <svg class="menu-btn__icon">
+                  <use xlink:href="../img/sprite.svg#menu-icon"></use>
+                </svg>
               </button>
             </div>
           </div>
@@ -78,63 +78,76 @@
       </div>
     </div>
     <nav class="mobile-nav">
-      <button type="button" class="header-login__btn header-login__btn--mobile" data-bs-toggle="modal"
-              data-bs-target="#exampleModal">
-        Войти
-      </button>
-      <!--profile-block-->
-      <!--                <div class="profile-block">-->
-      <!--                    <img src="../img/backgrounds/profile-img.png " alt="" class="profile-block__img">-->
-      <!--                    <p class="profile-block__title">Arifureta</p>-->
-      <!--                </div>-->
-      <li class="mobile-item">
-        <a href="# " class="mobile-link">
-          <svg class="mobile-link__icon">
-            <use xlink:href="../img/sprite.svg#song-icon"></use>
-          </svg>
-          <p class="mobile-link__text">Каталог песен</p>
-        </a>
-      </li>
-      <li class="mobile-item">
-        <a href="# " class="mobile-link">
-          <svg class="mobile-link__icon">
-            <use xlink:href="../img/sprite.svg#fav-icon"></use>
-          </svg>
-          <p class="mobile-link__text">Избранное</p>
-        </a>
-      </li>
-      <li class="mobile-item">
-        <a href="# " class="mobile-link">
-          <svg class="mobile-link__icon">
-            <use xlink:href="../img/sprite.svg#chat-icon"></use>
-          </svg>
-          <p class="mobile-link__text">Чат</p>
-        </a>
-      </li>
-      <li class="mobile-item">
-        <a href="# " class="mobile-link">
-          <svg class="mobile-link__icon">
-            <use xlink:href="../img/sprite.svg#donat-icon"></use>
-          </svg>
-          <p class="mobile-link__text">Донат</p>
-        </a>
-      </li>
-      <li class="mobile-item">
-        <a href="# " class="mobile-link">
-          <svg class="mobile-link__icon">
-            <use xlink:href="../img/sprite.svg#widgets-icon"></use>
-          </svg>
-          <p class="mobile-link__text">Виджеты</p>
-        </a>
-      </li>
-      <li class="mobile-item">
-        <a href="# " class="mobile-link">
-          <svg class="mobile-link__icon">
-            <use xlink:href="../img/sprite.svg#statistic-icon"></use>
-          </svg>
-          <p class="mobile-link__text">Статистикан</p>
-        </a>
-      </li>
+      <div class="mobile-header">
+        <div class="header-listeners">
+          <div class="listeners-block">
+            <svg class="listeners-block__icon">
+              <use xlink:href="../img/sprite.svg#listeners-icon"></use>
+            </svg>
+            <p class="listeners-block__text">Слушателей: 751</p>
+          </div>
+        </div>
+        <button type="button" class="btn-close btn-close--mobile"></button>
+      </div>
+      <div class="mobile-menu">
+        <button type="button" class="header-login__btn header-login__btn--mobile" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+          Войти
+        </button>
+        <!--                <div class="profile-block">-->
+        <!--                    <img src="../img/backgrounds/profile-img.png " alt="" class="profile-block__img">-->
+        <!--                    <p class="profile-block__title">Arifureta</p>-->
+        <!--                </div>-->
+        <li class="mobile-item">
+          <a href="" class="mobile-link">
+            <svg class="mobile-link__icon">
+              <use xlink:href="../img/sprite.svg#song-icon"></use>
+            </svg>
+            <p class="mobile-link__text">Каталог песен</p>
+          </a>
+        </li>
+        <li class="mobile-item">
+          <a href="# " class="mobile-link">
+            <svg class="mobile-link__icon">
+              <use xlink:href="../img/sprite.svg#fav-icon"></use>
+            </svg>
+            <p class="mobile-link__text">Избранное</p>
+          </a>
+        </li>
+        <li class="mobile-item">
+          <a href="# " class="mobile-link">
+            <svg class="mobile-link__icon">
+              <use xlink:href="../img/sprite.svg#chat-icon"></use>
+            </svg>
+            <p class="mobile-link__text">Чат</p>
+          </a>
+        </li>
+        <li class="mobile-item">
+          <a href="# " class="mobile-link">
+            <svg class="mobile-link__icon">
+              <use xlink:href="../img/sprite.svg#donat-icon"></use>
+            </svg>
+            <p class="mobile-link__text">Донат</p>
+          </a>
+        </li>
+        <li class="mobile-item">
+          <a href="# " class="mobile-link">
+            <svg class="mobile-link__icon">
+              <use xlink:href="../img/sprite.svg#widgets-icon"></use>
+            </svg>
+            <p class="mobile-link__text">Виджеты</p>
+          </a>
+        </li>
+        <li class="mobile-item">
+          <a href="# " class="mobile-link">
+            <svg class="mobile-link__icon">
+              <use xlink:href="../img/sprite.svg#statistic-icon"></use>
+            </svg>
+            <p class="mobile-link__text">Статистика</p>
+          </a>
+        </li>
+      </div>
+
     </nav>
   </div>
 </header>
@@ -153,41 +166,55 @@
                 </a>
                 <p class="logo-title__subtitle">Аниме-радио №1 во Вселенной</p>
               </h1>
-              <div class="player-wrapper">
-                <div class="song-item">
-                  <button class="song-start">
-                    <svg class="song-start__icon">
-                      <use xlink:href="../img/sprite.svg#play-icon"></use>
-                    </svg>
-                    <svg class="song-start__icon song-start__icon--stop song-like__icon--hide">
-                      <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                    </svg>
-                  </button>
-                  <div class="song-box">
-                    <img src="../img/song/song-1.jpg" alt="" class="song-item__img">
-                    <div class="d-flex flex-column">
-                      <p class="song-box__title">Hagane no Renkinjutsushi</p>
-                      <p class="song-box__subtitle">Rain</p>
+              <div class="player-wrapper buttonCheck">
+                <div class="player-item">
+                  <div class="d-flex align-items-center">
+                    <div class="song-group mr-30">
+                      <button class="song-start">
+                        <svg class="song-start__icon song-start__icon--start">
+                          <use xlink:href="../img/sprite.svg#play-icon"></use>
+                        </svg>
+                        <svg class="song-start__icon song-start__icon--stop hide">
+                          <use xlink:href="../img/sprite.svg#stop-icon"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="song-box">
+                      <img src="../img/song/song-1.jpg" alt=""
+                           class="song-item__img song-item__img--title">
+                      <div class="d-flex flex-column">
+                        <a href="#" class="song-box__title">Maria Holic</a>
+                        <a href="#" class="song-box__subtitle">Rurun Riru Ranran Rara</a>
+                      </div>
                     </div>
                   </div>
                   <div class="song-group">
-                    <p class="song-item__time">17:58</p>
-                    <button class="song-sound">
-                      <svg class="song-like__icon">
-                        <use xlink:href="../img/sprite.svg#sound-icon"></use>
-                      </svg>
-                    </button>
+                    <p class="song-item__time">0:14</p>
+                    <div class="song-container">
+                      <button class="song-sound ">
+                        <svg class="song-sound__icon song-sound__icon--on">
+                          <use xlink:href="../img/sprite.svg#sound-icon"></use>
+                        </svg>
+                        <svg class="song-sound__icon song-sound__icon--off hide">
+                          <use xlink:href="../img/sprite.svg#sound-icon-off"></use>
+                        </svg>
+                      </button>
+                      <div class="list-dropdown hide">
+                        <input type="range" class="form-range" min="0" max="100"
+                               id="customRange2">
+                      </div>
+                    </div>
+
                     <button class="song-like">
-                      <svg class="song-like__icon">
+                      <svg class="song-like__icon song-like__icon--empty">
                         <use xlink:href="../img/sprite.svg#like-icon"></use>
                       </svg>
-                      <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
+                      <svg class="song-like__icon song-like__icon--fill hide">
                         <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
                       </svg>
                     </button>
-
                     <button class="song-list" data-bs-toggle="modal" data-bs-target="#listModal">
-                      <svg class="song-like__icon">
+                      <svg class="song-list__icon">
                         <use xlink:href="../img/sprite.svg#list-icon"></use>
                       </svg>
                     </button>
@@ -201,16 +228,22 @@
                         <span class="list-item__number">1</span>
                         <img src="../img/song/song-11.jpg" alt="" class="song-item__img">
                         <div class="d-flex flex-column">
-                          <p class="song-box__title">FLCL</p>
-                          <p class="song-box__subtitle">Little Busters</p>
+                          <a href="#" class="song-box__title">FLCL</a>
+                          <a href="#" class="song-box__subtitle">Little Busters</a>
                         </div>
                       </div>
                       <div class="song-vote">
-                        <span class="song-vote__active"></span>
-                        <a href="#" class="song-vote__author">Arri</a>
-                        <button class="song-vote__plus">
-                          <svg class="song-vote__icon">
+                        <div class="song-wrap">
+                          <span class="song-vote__active"></span>
+                          <a href="#" class="song-vote__author">Arri</a>
+                        </div>
+                        <button class="song-sign">
+                          <span class="mask-block"></span>
+                          <svg class="song-sign__icon song-sign__icon--plus">
                             <use xlink:href="../img/sprite.svg#plus-icon"></use>
+                          </svg>
+                          <svg class="song-sign__icon song-sign__icon--minus hide">
+                            <use xlink:href="../img/sprite.svg#minus-icon"></use>
                           </svg>
                         </button>
                         <div class="d-flex flex-column">
@@ -224,15 +257,19 @@
                         <span class="list-item__number">2</span>
                         <img src="../img/song/song-12.jpg" alt="" class="song-item__img">
                         <div class="d-flex flex-column">
-                          <p class="song-box__title">AJIN</p>
-                          <p class="song-box__subtitle">Yoru wa Nemureru kai</p>
+                          <a href="#" class="song-box__title">AJIN</a>
+                          <a href="#" class="song-box__subtitle">Yoru wa Nemureru kai</a>
                         </div>
                       </div>
                       <div class="song-vote">
                         <a href="#" class="song-vote__author">UsagiChiba</a>
-                        <button class="song-vote__plus">
-                          <svg class="song-vote__icon">
+                        <button class="song-sign">
+                          <span class="mask-block"></span>
+                          <svg class="song-sign__icon song-sign__icon--plus">
                             <use xlink:href="../img/sprite.svg#plus-icon"></use>
+                          </svg>
+                          <svg class="song-sign__icon song-sign__icon--minus hide">
+                            <use xlink:href="../img/sprite.svg#minus-icon"></use>
                           </svg>
                         </button>
                         <div class="d-flex flex-column">
@@ -246,15 +283,19 @@
                         <span class="list-item__number">3</span>
                         <img src="../img/song/song-13.jpg" alt="" class="song-item__img">
                         <div class="d-flex flex-column">
-                          <p class="song-box__title">Uta no Prince-sama</p>
-                          <p class="song-box__subtitle">Up-Down-Up!</p>
+                          <a href="#" class="song-box__title">Uta no Prince-sama</a>
+                          <a href="#" class="song-box__subtitle">Up-Down-Up!</a>
                         </div>
                       </div>
                       <div class="song-vote">
                         <a href="#" class="song-vote__author">WeebsVeteran</a>
-                        <button class="song-vote__plus">
-                          <svg class="song-vote__icon">
+                        <button class="song-sign">
+                          <span class="mask-block"></span>
+                          <svg class="song-sign__icon song-sign__icon--plus">
                             <use xlink:href="../img/sprite.svg#plus-icon"></use>
+                          </svg>
+                          <svg class="song-sign__icon song-sign__icon--minus hide">
+                            <use xlink:href="../img/sprite.svg#minus-icon"></use>
                           </svg>
                         </button>
                         <div class="d-flex flex-column">
@@ -268,15 +309,19 @@
                         <span class="list-item__number">4</span>
                         <img src="../img/song/song-14.jpg" alt="" class="song-item__img">
                         <div class="d-flex flex-column">
-                          <p class="song-box__title">Rakudai Kishi no Cavalry</p>
-                          <p class="song-box__subtitle">Rakudai Kishi no Cavalry/p>
+                          <a href="#" class="song-box__title">Rakudai Kishi no Cavalry</a>
+                          <a href="#" class="song-box__subtitle">Rakudai Kishi no Cavalry</a>
                         </div>
                       </div>
                       <div class="song-vote">
                         <a href="#" class="song-vote__author">MrGo</a>
-                        <button class="song-vote__plus">
-                          <svg class="song-vote__icon">
+                        <button class="song-sign">
+                          <span class="mask-block"></span>
+                          <svg class="song-sign__icon song-sign__icon--plus">
                             <use xlink:href="../img/sprite.svg#plus-icon"></use>
+                          </svg>
+                          <svg class="song-sign__icon song-sign__icon--minus hide">
+                            <use xlink:href="../img/sprite.svg#minus-icon"></use>
                           </svg>
                         </button>
                         <div class="d-flex flex-column">
@@ -290,15 +335,19 @@
                         <span class="list-item__number">5</span>
                         <img src="../img/song/song-15.jpg" alt="" class="song-item__img">
                         <div class="d-flex flex-column">
-                          <p class="song-box__title">Slayers</p>
-                          <p class="song-box__subtitle">Get Along</p>
+                          <a href="#" class="song-box__title">Slayers</a>
+                          <a href="#" class="song-box__subtitle">Get Along</a>
                         </div>
                       </div>
                       <div class="song-vote">
                         <a href="#" class="song-vote__author">Dead_Waifu</a>
-                        <button class="song-vote__plus">
-                          <svg class="song-vote__icon">
+                        <button class="song-sign">
+                          <span class="mask-block"></span>
+                          <svg class="song-sign__icon song-sign__icon--plus">
                             <use xlink:href="../img/sprite.svg#plus-icon"></use>
+                          </svg>
+                          <svg class="song-sign__icon song-sign__icon--minus hide">
+                            <use xlink:href="../img/sprite.svg#minus-icon"></use>
                           </svg>
                         </button>
                         <div class="d-flex flex-column">
@@ -307,12 +356,13 @@
                         </div>
                       </div>
                     </div>
-                    <a href="#" class="radio-link radio-link--dropdown">
+                    <button class="radio-link radio-link--dropdown" data-bs-toggle="modal"
+                            data-bs-target="#listModal">
                       <p class="radio-link__text">Вся очередь заказов</p>
                       <svg class="radio-link__icon">
                         <use xlink:href="../img/sprite.svg#arrow-icon"></use>
                       </svg>
-                    </a>
+                    </button>
                   </div>
 
                 </div>
@@ -329,6 +379,7 @@
                 <a href="#" class="search-link">B</a>
                 <a href="#" class="search-link">C</a>
                 <a href="#" class="search-link">D</a>
+                <a href="#" class="search-link">E</a>
                 <a href="#" class="search-link">F</a>
                 <a href="#" class="search-link">G</a>
                 <a href="#" class="search-link">H</a>
@@ -350,25 +401,82 @@
                 <a href="#" class="search-link">Y</a>
                 <a href="#" class="search-link">Z</a>
               </div>
-              <fieldset class="search-form">
+              <form action="#" class="search-form">
                 <label class="search-box">
                   <svg class="search-box__icon">
                     <use xlink:href="../img/sprite.svg#search-icon"></use>
                   </svg>
                   <input type="search" placeholder="Няшный поиск" class="search-box__input">
                 </label>
-                <div class="dropdown search-dropdown">
-                  <button class=" dropdown-toggle" type="button" id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                    Аниме
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <div class="search-dropdown">
+                  <button class="search-dropdown__title">Аниме</button>
+                  <ul class="search-list hide">
+                    <li class="search-item search-item--active">
+                      Аниме
+                    </li>
+                    <li class="search-item">
+                      Трек
+                    </li>
+                    <li class="search-item">
+                      Артист
+                    </li>
                   </ul>
                 </div>
-              </fieldset>
+                <div class="search-validation hide">
+                  <a href="#" class="validation-item">
+                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
+                    <div class="d-flex flex-column">
+                      <p class="validation-item__title">Full Metal Panic!</p>
+                      <p class="validation-item__subtitle">Стальная тревога!</p>
+                    </div>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
+                    <div class="d-flex flex-column">
+                      <p class="validation-item__title">Hanage no Renkinjutsushi</p>
+                      <p class="validation-item__subtitle">Стальной алхимик</p>
+                    </div>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
+                    <div class="d-flex flex-column">
+                      <p class="validation-item__title">Koutetsu Sangokushi</p>
+                      <p class="validation-item__subtitle">Стальные Хроники Царств</p>
+                    </div>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
+                    <div class="d-flex flex-column">
+                      <p class="validation-item__title">Kurogane no Linebarrels</p>
+                      <p class="validation-item__subtitle">Стальные Лайнбаррели</p>
+                    </div>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
+                    <div class="d-flex flex-column">
+                      <p class="validation-item__title">M3: Sono Kuroki Hagane</p>
+                      <p class="validation-item__subtitle">М3: Эта Чёрная Сталь</p>
+                    </div>
+                  </a>
+                </div>
+                <div class=" search-validation search-validation--text hide">
+                  <a href="#" class="validation-item">
+                    <p class="validation-item__title">Nanase Hikaru</p>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <p class="validation-item__title">Nana Mizuki</p>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <p class="validation-item__title">Nanairo Namida</p>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <p class="validation-item__title">Hazel Fernandes</p>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <p class="validation-item__title">Shiho Nanba</p>
+                  </a>
+                </div>
+              </form>
             </div>
           </div>
 
@@ -381,65 +489,123 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="song-grid song-grid--mobile">
-            <div class="song-item">
-              <div class="song-box">
-                <div class="d-flex">
-                  <img src="../img/song/song-1.jpg" alt="" class="song-item__img">
+          <div class="mobile-grid">
+            <div class="mobile-grid-item">
+              <div class="mobile-box">
+                <div class="d-flex align-items-center">
+                  <img src="../img/song/song-1.jpg" alt="" class="mobile-box__img">
                   <div class="d-flex flex-column">
-                    <p class="song-box__title">Hagane no Renkinjutsushi</p>
-                    <p class="song-box__subtitle">Rain</p>
+                    <p class="mobile-box__title">Maria Holic</p>
+                    <p class="mobile-box__subtitle">Rurun Riru Ranran Rara</p>
                   </div>
                 </div>
-                <p class="song-item__time">17:58</p>
+                <p class="mobile-box__time">17:58</p>
               </div>
               <div class="song-group">
                 <button class="song-like">
-                  <svg class="song-like__icon">
+                  <svg class="song-like__icon song-like__icon--empty">
                     <use xlink:href="../img/sprite.svg#like-icon"></use>
                   </svg>
-                  <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
+                  <svg class="song-like__icon song-like__icon--fill hide">
                     <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
                   </svg>
                 </button>
                 <button class="song-start">
-                  <svg class="song-start__icon">
+                  <span class="mask-block"></span>
+                  <svg class="song-start__icon song-start__icon--start">
                     <use xlink:href="../img/sprite.svg#play-icon"></use>
                   </svg>
-                  <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
+                  <svg class="song-start__icon song-start__icon--stop hide">
                     <use xlink:href="../img/sprite.svg#stop-icon"></use>
                   </svg>
                 </button>
-                <a href="#" class="song-list">
-                  <svg class="song-like__icon">
+                <button class="song-list" data-bs-toggle="modal" data-bs-target="#listModal">
+                  <svg class="song-list__icon">
                     <use xlink:href="../img/sprite.svg#list-icon"></use>
                   </svg>
-                </a>
+                </button>
+
+
               </div>
             </div>
-            <div class="modal-login modal-login--normal">
-              <a href="#" class="modal-btn mb-0">Заказать трек</a>
-            </div>
+            <a href="#" class="mobile-btn">Заказать трек</a>
             <div class="search-wrapper search-wrapper--mobile">
-              <fieldset class="search-form">
+              <form action="#" class="search-form">
                 <label class="search-box">
                   <svg class="search-box__icon">
                     <use xlink:href="../img/sprite.svg#search-icon"></use>
                   </svg>
                   <input type="search" placeholder="Няшный поиск" class="search-box__input">
                 </label>
-                <div class="dropdown search-dropdown">
-                  <button class=" dropdown-toggle" type="button" id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                    Аниме
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <div class="search-dropdown">
+                  <button class="search-dropdown__title search-dropdown__title--active">Аниме</button>
+                  <ul class="search-list hide">
+                    <li class="search-item search-item--active">
+                      Аниме
+                    </li>
+                    <li class="search-item">
+                      Трек
+                    </li>
+                    <li class="search-item">
+                      Артист
+                    </li>
                   </ul>
                 </div>
-              </fieldset>
+                <div class="search-validation hide">
+                  <a href="#" class="validation-item">
+                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
+                    <div class="d-flex flex-column">
+                      <p class="validation-item__title">Full Metal Panic!</p>
+                      <p class="validation-item__subtitle">Стальная тревога!</p>
+                    </div>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
+                    <div class="d-flex flex-column">
+                      <p class="validation-item__title">Hanage no Renkinjutsushi</p>
+                      <p class="validation-item__subtitle">Стальной алхимик</p>
+                    </div>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
+                    <div class="d-flex flex-column">
+                      <p class="validation-item__title">Koutetsu Sangokushi</p>
+                      <p class="validation-item__subtitle">Стальные Хроники Царств</p>
+                    </div>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
+                    <div class="d-flex flex-column">
+                      <p class="validation-item__title">Kurogane no Linebarrels</p>
+                      <p class="validation-item__subtitle">Стальные Лайнбаррели</p>
+                    </div>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <img src="../img/song/song-1.jpg" alt="" class="validation-item__img">
+                    <div class="d-flex flex-column">
+                      <p class="validation-item__title">M3: Sono Kuroki Hagane</p>
+                      <p class="validation-item__subtitle">М3: Эта Чёрная Сталь</p>
+                    </div>
+                  </a>
+                </div>
+                <div class=" search-validation search-validation--text hide">
+                  <a href="#" class="validation-item">
+                    <p class="validation-item__title">Nanase Hikaru</p>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <p class="validation-item__title">Nana Mizuki</p>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <p class="validation-item__title">Nanairo Namida</p>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <p class="validation-item__title">Hazel Fernandes</p>
+                  </a>
+                  <a href="#" class="validation-item">
+                    <p class="validation-item__title">Shiho Nanba</p>
+                  </a>
+                </div>
+              </form>
             </div>
           </div>
 
@@ -508,10 +674,10 @@
           <div class="music-wrapper">
             <div class="song-wrapper">
               <h2 class="song-wrapper__title">Последние песни</h2>
-              <div class="song-grid">
-                <div class="song-item">
+              <div class="song-grid buttonCheck">
+                <div class="song-item ">
                   <div class="song-box">
-                    <img src="../img/song/song-1.jpg" alt="" class="song-item__img">
+                    <img src="./img/song/song-1.jpg" alt="" class="song-item__img">
                     <div class="d-flex flex-column">
                       <p class="song-box__title">Hagane no Renkinjutsushi</p>
                       <p class="song-box__subtitle">Rain</p>
@@ -520,26 +686,28 @@
                   <div class="song-group">
                     <p class="song-item__time">17:58</p>
                     <button class="song-like">
-                      <svg class="song-like__icon">
-                        <use xlink:href="../img/sprite.svg#like-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-like__icon song-like__icon--empty">
+                        <use xlink:href="./img/sprite.svg#like-icon"></use>
                       </svg>
-                      <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
-                        <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
+                      <svg class="song-like__icon song-like__icon--fill hide">
+                        <use xlink:href="./img/sprite.svg#like-fill-icon"></use>
                       </svg>
                     </button>
                     <button class="song-start">
-                      <svg class="song-start__icon">
-                        <use xlink:href="../img/sprite.svg#play-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-start__icon song-start__icon--start">
+                        <use xlink:href="./img/sprite.svg#play-icon"></use>
                       </svg>
-                      <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
-                        <use xlink:href="../img/sprite.svg#stop-icon"></use>
+                      <svg class="song-start__icon song-start__icon--stop hide">
+                        <use xlink:href="./img/sprite.svg#stop-icon"></use>
                       </svg>
                     </button>
                   </div>
                 </div>
                 <div class="song-item">
                   <div class="song-box">
-                    <img src="../img/song/song-2.jpg" alt="" class="song-item__img">
+                    <img src="./img/song/song-2.jpg" alt="" class="song-item__img">
                     <div class="d-flex flex-column">
                       <p class="song-box__title">Dorohedoro</p>
                       <p class="song-box__subtitle">D.D.D.D.</p>
@@ -548,26 +716,28 @@
                   <div class="song-group">
                     <p class="song-item__time">17:58</p>
                     <button class="song-like">
-                      <svg class="song-like__icon">
-                        <use xlink:href="../img/sprite.svg#like-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-like__icon song-like__icon--empty">
+                        <use xlink:href="./img/sprite.svg#like-icon"></use>
                       </svg>
-                      <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
-                        <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
+                      <svg class="song-like__icon song-like__icon--fill hide">
+                        <use xlink:href="./img/sprite.svg#like-fill-icon"></use>
                       </svg>
                     </button>
                     <button class="song-start">
-                      <svg class="song-start__icon">
-                        <use xlink:href="../img/sprite.svg#play-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-start__icon song-start__icon--start">
+                        <use xlink:href="./img/sprite.svg#play-icon"></use>
                       </svg>
-                      <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
-                        <use xlink:href="../img/sprite.svg#stop-icon"></use>
+                      <svg class="song-start__icon song-start__icon--stop hide">
+                        <use xlink:href="./img/sprite.svg#stop-icon"></use>
                       </svg>
                     </button>
                   </div>
                 </div>
                 <div class="song-item">
                   <div class="song-box">
-                    <img src="../img/song/song-3.jpg" alt="" class="song-item__img">
+                    <img src="./img/song/song-3.jpg" alt="" class="song-item__img">
                     <div class="d-flex flex-column">
                       <p class="song-box__title">Shigatsu wa kimi no uso</p>
                       <p class="song-box__subtitle">Orange</p>
@@ -576,19 +746,21 @@
                   <div class="song-group">
                     <p class="song-item__time">17:58</p>
                     <button class="song-like">
-                      <svg class="song-like__icon">
-                        <use xlink:href="../img/sprite.svg#like-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-like__icon song-like__icon--empty">
+                        <use xlink:href="./img/sprite.svg#like-icon"></use>
                       </svg>
-                      <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
-                        <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
+                      <svg class="song-like__icon song-like__icon--fill hide">
+                        <use xlink:href="./img/sprite.svg#like-fill-icon"></use>
                       </svg>
                     </button>
                     <button class="song-start">
-                      <svg class="song-start__icon">
-                        <use xlink:href="../img/sprite.svg#play-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-start__icon song-start__icon--start">
+                        <use xlink:href="./img/sprite.svg#play-icon"></use>
                       </svg>
-                      <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
-                        <use xlink:href="../img/sprite.svg#stop-icon"></use>
+                      <svg class="song-start__icon song-start__icon--stop hide">
+                        <use xlink:href="./img/sprite.svg#stop-icon"></use>
                       </svg>
                     </button>
                   </div>
@@ -596,7 +768,7 @@
                 <div class="song-item">
 
                   <div class="song-box">
-                    <img src="../img/song/song-5.jpg" alt="" class="song-item__img">
+                    <img src="./img/song/song-5.jpg" alt="" class="song-item__img">
                     <div class="d-flex flex-column">
                       <p class="song-box__title">Build Divide</p>
                       <p class="song-box__subtitle">BANG!!!</p>
@@ -605,19 +777,21 @@
                   <div class="song-group">
                     <p class="song-item__time">17:58</p>
                     <button class="song-like">
-                      <svg class="song-like__icon">
-                        <use xlink:href="../img/sprite.svg#like-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-like__icon song-like__icon--empty">
+                        <use xlink:href="./img/sprite.svg#like-icon"></use>
                       </svg>
-                      <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
-                        <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
+                      <svg class="song-like__icon song-like__icon--fill hide">
+                        <use xlink:href="./img/sprite.svg#like-fill-icon"></use>
                       </svg>
                     </button>
                     <button class="song-start">
-                      <svg class="song-start__icon">
-                        <use xlink:href="../img/sprite.svg#play-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-start__icon song-start__icon--start">
+                        <use xlink:href="./img/sprite.svg#play-icon"></use>
                       </svg>
-                      <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
-                        <use xlink:href="../img/sprite.svg#stop-icon"></use>
+                      <svg class="song-start__icon song-start__icon--stop hide">
+                        <use xlink:href="./img/sprite.svg#stop-icon"></use>
                       </svg>
                     </button>
                   </div>
@@ -625,7 +799,7 @@
                 <div class="song-item">
 
                   <div class="song-box">
-                    <img src="../img/song/song-6.jpg" alt="" class="song-item__img">
+                    <img src="./img/song/song-6.jpg" alt="" class="song-item__img">
                     <div class="d-flex flex-column">
                       <p class="song-box__title">Tian Guan Ci Fu</p>
                       <p class="song-box__subtitle">Jiu no Kuchizuke</p>
@@ -634,26 +808,28 @@
                   <div class="song-group">
                     <p class="song-item__time">17:58</p>
                     <button class="song-like">
-                      <svg class="song-like__icon">
-                        <use xlink:href="../img/sprite.svg#like-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-like__icon song-like__icon--empty">
+                        <use xlink:href="./img/sprite.svg#like-icon"></use>
                       </svg>
-                      <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
-                        <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
+                      <svg class="song-like__icon song-like__icon--fill hide">
+                        <use xlink:href="./img/sprite.svg#like-fill-icon"></use>
                       </svg>
                     </button>
                     <button class="song-start">
-                      <svg class="song-start__icon">
-                        <use xlink:href="../img/sprite.svg#play-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-start__icon song-start__icon--start">
+                        <use xlink:href="./img/sprite.svg#play-icon"></use>
                       </svg>
-                      <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
-                        <use xlink:href="../img/sprite.svg#stop-icon"></use>
+                      <svg class="song-start__icon song-start__icon--stop hide">
+                        <use xlink:href="./img/sprite.svg#stop-icon"></use>
                       </svg>
                     </button>
                   </div>
                 </div>
                 <div class="song-item">
                   <div class="song-box">
-                    <img src="../img/song/song-7.jpg" alt="" class="song-item__img">
+                    <img src="./img/song/song-7.jpg" alt="" class="song-item__img">
                     <div class="d-flex flex-column">
                       <p class="song-box__title">Kamisama Hajimemashita</p>
                       <p class="song-box__subtitle">Kamisamano Kamisama</p>
@@ -662,26 +838,28 @@
                   <div class="song-group">
                     <p class="song-item__time">17:58</p>
                     <button class="song-like">
-                      <svg class="song-like__icon">
-                        <use xlink:href="../img/sprite.svg#like-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-like__icon song-like__icon--empty">
+                        <use xlink:href="./img/sprite.svg#like-icon"></use>
                       </svg>
-                      <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
-                        <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
+                      <svg class="song-like__icon song-like__icon--fill hide">
+                        <use xlink:href="./img/sprite.svg#like-fill-icon"></use>
                       </svg>
                     </button>
                     <button class="song-start">
-                      <svg class="song-start__icon">
-                        <use xlink:href="../img/sprite.svg#play-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-start__icon song-start__icon--start">
+                        <use xlink:href="./img/sprite.svg#play-icon"></use>
                       </svg>
-                      <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
-                        <use xlink:href="../img/sprite.svg#stop-icon"></use>
+                      <svg class="song-start__icon song-start__icon--stop hide">
+                        <use xlink:href="./img/sprite.svg#stop-icon"></use>
                       </svg>
                     </button>
                   </div>
                 </div>
                 <div class="song-item">
                   <div class="song-box">
-                    <img src="../img/song/song-8.jpg" alt="" class="song-item__img">
+                    <img src="./img/song/song-8.jpg" alt="" class="song-item__img">
                     <div class="d-flex flex-column">
                       <p class="song-box__title">Asobi ni Iku Yo</p>
                       <p class="song-box__subtitle">Now Loading... Sky!!</p>
@@ -690,26 +868,28 @@
                   <div class="song-group">
                     <p class="song-item__time">17:58</p>
                     <button class="song-like">
-                      <svg class="song-like__icon">
-                        <use xlink:href="../img/sprite.svg#like-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-like__icon song-like__icon--empty">
+                        <use xlink:href="./img/sprite.svg#like-icon"></use>
                       </svg>
-                      <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
-                        <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
+                      <svg class="song-like__icon song-like__icon--fill hide">
+                        <use xlink:href="./img/sprite.svg#like-fill-icon"></use>
                       </svg>
                     </button>
                     <button class="song-start">
-                      <svg class="song-start__icon">
-                        <use xlink:href="../img/sprite.svg#play-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-start__icon song-start__icon--start">
+                        <use xlink:href="./img/sprite.svg#play-icon"></use>
                       </svg>
-                      <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
-                        <use xlink:href="../img/sprite.svg#stop-icon"></use>
+                      <svg class="song-start__icon song-start__icon--stop hide">
+                        <use xlink:href="./img/sprite.svg#stop-icon"></use>
                       </svg>
                     </button>
                   </div>
                 </div>
                 <div class="song-item">
                   <div class="song-box">
-                    <img src="../img/song/song-9.jpg" alt="" class="song-item__img">
+                    <img src="./img/song/song-9.jpg" alt="" class="song-item__img">
                     <div class="d-flex flex-column">
                       <p class="song-box__title">Hack Sign</p>
                       <p class="song-box__subtitle">Obsession</p>
@@ -718,26 +898,28 @@
                   <div class="song-group">
                     <p class="song-item__time">17:58</p>
                     <button class="song-like">
-                      <svg class="song-like__icon">
-                        <use xlink:href="../img/sprite.svg#like-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-like__icon song-like__icon--empty">
+                        <use xlink:href="./img/sprite.svg#like-icon"></use>
                       </svg>
-                      <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
-                        <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
+                      <svg class="song-like__icon song-like__icon--fill hide">
+                        <use xlink:href="./img/sprite.svg#like-fill-icon"></use>
                       </svg>
                     </button>
                     <button class="song-start">
-                      <svg class="song-start__icon">
-                        <use xlink:href="../img/sprite.svg#play-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-start__icon song-start__icon--start">
+                        <use xlink:href="./img/sprite.svg#play-icon"></use>
                       </svg>
-                      <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
-                        <use xlink:href="../img/sprite.svg#stop-icon"></use>
+                      <svg class="song-start__icon song-start__icon--stop hide">
+                        <use xlink:href="./img/sprite.svg#stop-icon"></use>
                       </svg>
                     </button>
                   </div>
                 </div>
                 <div class="song-item">
                   <div class="song-box">
-                    <img src="../img/song/song-4.jpg" alt="" class="song-item__img">
+                    <img src="./img/song/song-4.jpg" alt="" class="song-item__img">
                     <div class="d-flex flex-column">
                       <p class="song-box__title">Uchi no Ko no Tame Narabararar</p>
                       <p class="song-box__subtitle">Title Nante Jibun De Kangaenasai</p>
@@ -746,26 +928,28 @@
                   <div class="song-group">
                     <p class="song-item__time">17:58</p>
                     <button class="song-like">
-                      <svg class="song-like__icon">
-                        <use xlink:href="../img/sprite.svg#like-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-like__icon song-like__icon--empty">
+                        <use xlink:href="./img/sprite.svg#like-icon"></use>
                       </svg>
-                      <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
-                        <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
+                      <svg class="song-like__icon song-like__icon--fill hide">
+                        <use xlink:href="./img/sprite.svg#like-fill-icon"></use>
                       </svg>
                     </button>
                     <button class="song-start">
-                      <svg class="song-start__icon">
-                        <use xlink:href="../img/sprite.svg#play-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-start__icon song-start__icon--start">
+                        <use xlink:href="./img/sprite.svg#play-icon"></use>
                       </svg>
-                      <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
-                        <use xlink:href="../img/sprite.svg#stop-icon"></use>
+                      <svg class="song-start__icon song-start__icon--stop hide">
+                        <use xlink:href="./img/sprite.svg#stop-icon"></use>
                       </svg>
                     </button>
                   </div>
                 </div>
                 <div class="song-item">
                   <div class="song-box">
-                    <img src="../img/song/song-10.jpg" alt="" class="song-item__img">
+                    <img src="./img/song/song-10.jpg" alt="" class="song-item__img">
                     <div class="d-flex flex-column">
                       <p class="song-box__title">Eureka 7</p>
                       <p class="song-box__subtitle">Shounen Heart</p>
@@ -774,19 +958,21 @@
                   <div class="song-group">
                     <p class="song-item__time">17:58</p>
                     <button class="song-like">
-                      <svg class="song-like__icon">
-                        <use xlink:href="../img/sprite.svg#like-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-like__icon song-like__icon--empty">
+                        <use xlink:href="./img/sprite.svg#like-icon"></use>
                       </svg>
-                      <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
-                        <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
+                      <svg class="song-like__icon song-like__icon--fill hide">
+                        <use xlink:href="./img/sprite.svg#like-fill-icon"></use>
                       </svg>
                     </button>
                     <button class="song-start">
-                      <svg class="song-start__icon">
-                        <use xlink:href="../img/sprite.svg#play-icon"></use>
+                      <span class="mask-block"></span>
+                      <svg class="song-start__icon song-start__icon--start">
+                        <use xlink:href="./img/sprite.svg#play-icon"></use>
                       </svg>
-                      <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
-                        <use xlink:href="../img/sprite.svg#stop-icon"></use>
+                      <svg class="song-start__icon song-start__icon--stop hide">
+                        <use xlink:href="./img/sprite.svg#stop-icon"></use>
                       </svg>
                     </button>
                   </div>
@@ -799,13 +985,15 @@
                 <a href="#" class="radio-link">
                   <p class="radio-link__text">Все новости</p>
                   <svg class="radio-link__icon">
-                    <use xlink:href="../img/sprite.svg#arrow-icon"></use>
+                    <use xlink:href="./img/sprite.svg#arrow-icon"></use>
                   </svg>
                 </a>
               </div>
               <div class="radio-grid">
                 <a href="#" class="radio-item">
-                  <img src="../img/song/radio-1.jpg" alt="" class="radio-item__img">
+                  <div class="radio-item__img-wrapper">
+                    <img src="./img/song/radio-1.png" alt="" class="radio-item__img">
+                  </div>
                   <div class="date-block">
                     <span class="date-block__number">08</span>
                     <p class="date-block__month">сентября</p>
@@ -819,7 +1007,7 @@
                         скайп в профиле, то можете...</p>
                       <div class="radio-bg">
                         <svg class="radio-icon">
-                          <use xlink:href="../img/sprite.svg#arrow-icon"></use>
+                          <use xlink:href="./img/sprite.svg#arrow-icon"></use>
                         </svg>
                       </div>
                     </div>
@@ -827,43 +1015,42 @@
                   <span class="radio-new">Новое!</span>
                 </a>
                 <a href="#" class="radio-item">
-                  <img src="../img/song/radio-2.jpg" alt="" class="radio-item__img">
+                  <div class="radio-item__img-wrapper">
+                    <img src="./img/song/radio-2.png" alt="" class="radio-item__img">
+                  </div>
                   <div class="date-block">
                     <span class="date-block__number">08</span>
                     <p class="date-block__month">сентября</p>
                   </div>
                   <div class="radio-info">
-                    <p class="radio-info__title">Обновление ссылок</p>
+                    <p class="radio-info__title">Последние добавленные треки</p>
                     <div class="radio-box">
-                      <p class="radio-box__subtitle">Анисоновцы! Сегодня сделали небольшой
-                        апгрейд!
-                        — На сайте мы полностью заменили Skype на Discord. Если у кого-то указан
-                        скайп в профиле, то можете...</p>
+                      <p class="radio-box__subtitle">Добавленные треки в период с 17 марта по 20
+                        апреля. Найти сп…</p>
                       <div class="radio-bg">
                         <svg class="radio-icon">
-                          <use xlink:href="../img/sprite.svg#arrow-icon"></use>
+                          <use xlink:href="./img/sprite.svg#arrow-icon"></use>
                         </svg>
                       </div>
                     </div>
                   </div>
                 </a>
                 <a href="#" class="radio-item">
-                  <img src="../img/song/radio-3.jpg" alt="" class="radio-item__img">
+                  <div class="radio-item__img-wrapper">
+                    <img src="./img/song/radio-3.png" alt="" class="radio-item__img">
+                  </div>
                   <div class="date-block">
                     <span class="date-block__number">08</span>
                     <p class="date-block__month">сентября</p>
                   </div>
                   <div class="radio-info">
-                    <p class="radio-info__title">Обновление ссылок</p>
+                    <p class="radio-info__title">Anison.fm в Discord</p>
                     <div class="radio-box">
-                      <p class="radio-box__subtitle">Анисоновцы! Сегодня сделали небольшой
-                        апгрейд!
-                        — На сайте мы полностью заменили Skype на Discord. Если у кого-то
-                        указан
-                        скайп в профиле, то можете...</p>
+                      <p class="radio-box__subtitle">Наш дискорд-канал долгое время был закрыт для
+                        слушателей, Мы вернулись</p>
                       <div class="radio-bg">
                         <svg class="radio-icon">
-                          <use xlink:href="../img/sprite.svg#arrow-icon"></use>
+                          <use xlink:href="./img/sprite.svg#arrow-icon"></use>
                         </svg>
                       </div>
                     </div>
@@ -874,7 +1061,7 @@
               <a href="#" class="radio-link radio-link--mobile">
                 <p class="radio-link__text">Все новости</p>
                 <svg class="radio-link__icon">
-                  <use xlink:href="../img/sprite.svg#arrow-icon"></use>
+                  <use xlink:href="./img/sprite.svg#arrow-icon"></use>
                 </svg>
               </a>
             </div>
@@ -889,38 +1076,45 @@
             <div class="updates-grid">
               <a href="#" class="updates-item">
                 <div class="updates-group">
-                  <img src="../img/updates/updates-1.jpg" alt="" class="updates-item__img">
+                  <img src="./img/updates/updates-1.jpg" alt="" class="updates-item__img">
                 </div>
-                <p class="updates-item__title">Fantasy Bishoujo Juniku Ojisan to</p>
+                <p class="updates-item__title" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                   data-bs-title="Fantasy Bishoujo Juniku Ojisan to">Fantasy Bishoujo Juniku Ojisan
+                  to</p>
                 <p class="updates-item__subtitle">В другом мире с мужчиной, обратившимся
                   красоткой</p>
               </a>
               <a href="#" class="updates-item">
                 <div class="updates-group">
-                  <img src="../img/updates/updates-2.jpg" alt="" class="updates-item__img">
+                  <img src="./img/updates/updates-2.jpg" alt="" class="updates-item__img">
                 </div>
-                <p class="updates-item__title">Sabikui Busco</p>
+                <p class="updates-item__title" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                   data-bs-title="Sabikui Busco">Sabikui Busco</p>
                 <p class="updates-item__subtitle">Биско-ржавоед</p>
               </a>
               <a href="#" class="updates-item">
                 <div class="updates-group">
-                  <img src="../img/updates/updates-3.jpg" alt="" class="updates-item__img">
+                  <img src="./img/updates/updates-3.jpg" alt="" class="updates-item__img">
                 </div>
-                <p class="updates-item__title">Heike Monogatari</p>
+                <p class="updates-item__title" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                   data-bs-title="Heike Monogatari">Heike Monogatari</p>
                 <p class="updates-item__subtitle">Повесть о доме Тайра</p>
               </a>
               <a href="#" class="updates-item">
                 <div class="updates-group">
-                  <img src="../img/updates/updates-4.jpg" alt="" class="updates-item__img">
+                  <img src="./img/updates/updates-4.jpg" alt="" class="updates-item__img">
                 </div>
-                <p class="updates-item__title">Kenja no Deshi wo Nanoru Kenja</p>
+                <p class="updates-item__title" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                   data-bs-title="Kenja no Deshi wo Nanoru Kenja">Kenja no Deshi wo Nanoru Kenja</p>
                 <p class="updates-item__subtitle">Она представилась как ученик мудреца</p>
               </a>
               <a href="#" class="updates-item">
                 <div class="updates-group">
-                  <img src="../img/updates/updates-5.jpg" alt="" class="updates-item__img">
+                  <img src="./img/updates/updates-5.jpg" alt="" class="updates-item__img">
                 </div>
-                <p class="updates-item__title">Tensai Ouji no Akaji Kokka Saisei Jutsu</p>
+                <p class="updates-item__title" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                   data-bs-title="Tensai Ouji no Akaji Kokka Saisei Jutsu">Tensai Ouji no Akaji Kokka
+                  Saisei Jutsu</p>
                 <p class="updates-item__subtitle">Руководство гениального принца по вызволению
                   страны
                   путешественников</p>
@@ -967,15 +1161,15 @@
               <h2 class="partners-wrapper__title">Наши партнёры</h2>
               <div class="partners-grid">
                 <a href="#" class="partners-item">
-                  <img src="../img/partners/partners-1.png" alt="" class="partners-item__img">
+                  <img src="./img/partners/partners-1.png" alt="" class="partners-item__img">
                   <p class="partners-item__text">animeonline.su</p>
                 </a>
                 <a href="#" class="partners-item">
-                  <img src="../img/partners/partners-2.png" alt="" class="partners-item__img">
+                  <img src="./img/partners/partners-2.png" alt="" class="partners-item__img">
                   <p class="partners-item__text">amvnews.ru</p>
                 </a>
                 <a href="#" class="partners-item">
-                  <img src="../img/partners/partners-3.png" alt="" class="partners-item__img">
+                  <img src="./img/partners/partners-3.png" alt="" class="partners-item__img">
                   <p class="partners-item__text">narutoplanet.ru</p>
                 </a>
               </div>
@@ -988,7 +1182,7 @@
                     плеер на компьютере</p>
                   <span class="playlist-bg">
                                         <svg class="playlist-icon">
-                                            <use xlink:href="../img/sprite.svg#download-icon"></use>
+                                            <use xlink:href="./img/sprite.svg#download-icon"></use>
                                         </svg>
                                     </span>
                 </a>
@@ -1104,166 +1298,36 @@
 
   </div>
 </div>
-<!-- login-modal-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-login modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <h2 class="modal-body__title">Вход</h2>
-        <form action="#" class="login-form">
-          <label class="login-nick">
-            Никнейм
-            <input type="text" class="login-nick__input form-control" placeholder="Никнейм">
-          </label>
-          <div class="form-password">
-            <label class="form-label" for="password">Текущий пароль</label>
-            <input type="password" id="password" class="form-control form-password-input" name="" value=""
-                   placeholder="Введите данные" aria-required="true" aria-invalid="true">
-            <button type="submit" class="input-group-icon form-password-btn"></button>
-          </div>
-          <button class="modal-btn">Войти</button>
-          <div class="modal-links">
-            <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#exampleModal2">Регистрация</a>
-            <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#exampleModal3">Забыли
-              пароль?</a>
-          </div>
-        </form>
-
-      </div>
-    </div>
-  </div>
-</div>
-<!-- registration-modal-->
-<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-  <div class="modal-dialog modal-login modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <h2 class="modal-body__title">Регистрация</h2>
-        <form action="#" class="login-form">
-          <label class="login-nick">
-            Никнейм
-            <input type="text" class="login-nick__input form-control mb-0" placeholder="Никнейм" disabled>
-          </label>
-          <p class="login-nick__subtitle">От 3 до 14 символов (a-Z, 0-9, -_)</p>
-          <div class="form-password mb-0">
-            <label class="form-label" for="password">Текущий пароль</label>
-            <input type="password" id="password" class="form-control form-password-input" name="" value=""
-                   placeholder="Введите данные" aria-required="true" aria-invalid="true">
-            <button type="submit" class="input-group-icon form-password-btn"></button>
-          </div>
-          <p class="login-nick__subtitle ">От 6 символов</p>
-          <label class="login-nick">
-            Электронная почта
-            <input type="email" class="login-nick__input form-control mb-0" placeholder="Электронная почта">
-          </label>
-          <p class="login-nick__subtitle ">Будет отправлено письмо для активации</p>
-          <label class="login-nick mb-2">
-            Уж не зомби ли вы?
-          </label>
-          <button class="modal-btn">Зарегистрироваться</button>
-          <div class="modal-links">
-            <p class="modal-link modal-link--text">Уже есть аккаунт?</p>
-            <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Войти</a>
-          </div>
-        </form>
-
-      </div>
-    </div>
-  </div>
-</div>
-<!-- reboot-password-->
-<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
-  <div class="modal-dialog modal-login modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <h2 class="modal-body__title mb-1">Восстановление пароля</h2>
-        <p class="modal-body__subtitle">Пожалуйста, укажите логин или электронную почту вашей учётной записи</p>
-        <form action="#" class="login-form">
-          <label class="login-nick">
-            Никнейм / Электронная почта
-            <input type="text" class="login-nick__input form-control"
-                   placeholder=" Никнейм / Электронная почта">
-          </label>
-          <button class="modal-btn" data-bs-toggle="modal" data-bs-target="#exampleModal4">Далее</button>
-        </form>
-
-      </div>
-    </div>
-  </div>
-</div>
-<!-- mail-send-->
-<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
-  <div class="modal-dialog modal-login modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="login-form">
-          <h2 class="modal-body__title mb-1">Восстановление пароля</h2>
-          <p class="modal-body__subtitle">Получилось! Новый пароль отправлен на вашу электронную почту</p>
-          <button class="modal-btn" data-bs-toggle="modal" data-bs-target="#exampleModal5">Понятно!</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- password-send-->
-<div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
-  <div class="modal-dialog modal-login modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="login-form">
-          <h2 class="modal-body__title mb-1">Восстановление пароля</h2>
-          <p class="modal-body__subtitle">Получилось! Новый пароль отправлен на вашу электронную почту</p>
-          <button class="modal-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Перейти к
-            авторизации
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <!-- Modal -->
-<div class="modal fade" id="listModal" tabindex="-1" aria-labelledby="listModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-list modal-dialog--bottom" >
+<div class="modal fade modal-list" id="listModal" tabindex="-1" aria-labelledby="listModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
         <div class="d-flex align-items-center justify-content-between w-100">
           <p class="modal-title">Сейчас в эфире</p>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="song-item song-item--modal">
-          <div class="song-box">
-            <img src="../img/song/song-1.jpg" alt="" class="song-item__img">
+        <div class="modal-live-item">
+          <div class="live-box">
+            <img src="../img/song/song-1.jpg" alt="" class="modal-live-item__img">
             <div class="d-flex flex-column">
-              <p class="song-box__title">Hagane no Renkinjutsushi</p>
-              <p class="song-box__subtitle">Rain</p>
+              <a href="#" class="modal-live-item__title">Maria Holic</a>
+              <a href="#" class="modal-live-item__subtitle">Rurun Riru Ranran Rara</a>
             </div>
           </div>
           <div class="song-group">
-
-            <button class="song-like">
-              <svg class="song-like__icon">
-                <use xlink:href="../img/sprite.svg#like-icon"></use>
-              </svg>
-              <svg class="song-like__icon song-like__icon--fill song-like__icon--hide">
-                <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
-              </svg>
-            </button>
-            <p class="song-item__time">0:14 / 3:58</p>
+            <div class="song-group">
+              <button class="song-like">
+                <span class="mask-block"></span>
+                <svg class="song-like__icon song-like__icon--empty">
+                  <use xlink:href="../img/sprite.svg#like-icon"></use>
+                </svg>
+                <svg class="song-like__icon song-like__icon--fill hide">
+                  <use xlink:href="../img/sprite.svg#like-fill-icon"></use>
+                </svg>
+              </button>
+            </div>
+            <p class="modal-live-item__time">0:14 / 3:58</p>
           </div>
         </div>
       </div>
@@ -1276,394 +1340,365 @@
                 <use xlink:href="../img/sprite.svg#tracks-icon"></use>
               </svg>
             </button>
-            <button class="modal-live-bg modal-live-bg--show">
+            <button class="modal-live-bg">
               <svg class="modal-live__icon modal-live__icon--active">
                 <use xlink:href="../img/sprite.svg#time-icon"></use>
               </svg>
-              <svg class="modal-live__icon modal-live__icon--active modal-live__icon--hidden modal-live__icon--hide">
+              <svg class="modal-live__icon  modal-live__icon--hidden hide">
                 <use xlink:href="../img/sprite.svg#time-active-icon"></use>
               </svg>
             </button>
           </div>
         </div>
-        <div class="song-list song-list--modal song-list--short">
-          <div class="song-item">
-            <div class="song-box">
-              <span class="list-item__number">1</span>
-              <img src="../img/song/song-11.jpg" alt="" class="song-item__img">
+        <div class="music-grid music-grid--short">
+          <div class="music-item music-item--active">
+            <div class="music-box">
+              <span class="music-box__number">1</span>
+              <img src="../img/song/song-11.jpg" alt="" class="music-box__img">
               <div class="d-flex flex-column">
-                <p class="song-box__title">FLCL</p>
-                <p class="song-box__subtitle">Little Busters</p>
-                <div class="modals-author">
-
-                </div>
+                <a href="#" class="music-box__title">FLCL</a>
+                <p class="music-box__subtitle">Little Busters</p>
               </div>
             </div>
             <div class="song-vote">
-              <span class="song-vote__active"></span>
-              <a href="#" class="song-vote__author">Arri</a>
-              <p class="song-box__subtitle">17:15:32</p>
+              <div class="modals-author">
+                <span class="song-vote__active"></span>
+                <a href="#" class="song-vote__author">Arri</a>
+                <p class="song-box__subtitle">17:15:32</p>
+              </div>
               <button class="song-start">
-                <svg class="song-start__icon">
+                <span class="mask-block"></span>
+                <svg class="song-start__icon song-start__icon--start">
                   <use xlink:href="../img/sprite.svg#play-icon"></use>
                 </svg>
-                <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
+                <svg class="song-start__icon song-start__icon--stop hide">
                   <use xlink:href="../img/sprite.svg#stop-icon"></use>
                 </svg>
               </button>
-              <button class="song-vote__plus">
-                <svg class="song-vote__icon">
+              <button class="song-sign">
+                <span class="mask-block"></span>
+                <svg class="song-sign__icon song-sign__icon--plus">
                   <use xlink:href="../img/sprite.svg#plus-icon"></use>
                 </svg>
-                <svg class="song-vote__icon song-vote__icon--minus song-vote__icon--hide">
+                <svg class="song-sign__icon song-sign__icon--minus hide">
                   <use xlink:href="../img/sprite.svg#minus-icon"></use>
                 </svg>
               </button>
-              <div class="d-flex flex-column">
-                <span class="song-vote__votes">110</span>
-                <p class="song-vote__subtitle">голосов</p>
+              <div class="d-flex flex-column align-items-center">
+                <span class="music-box__votes">110</span>
+                <p class="music-box__votes-title">голосов</p>
               </div>
             </div>
           </div>
-          <div class="song-item">
-            <div class="song-box">
-              <span class="list-item__number">1</span>
-              <img src="../img/song/song-11.jpg" alt="" class="song-item__img">
+          <div class="music-item">
+            <div class="music-box">
+              <span class="music-box__number">2</span>
+              <img src="../img/song/song-11.jpg" alt="" class="music-box__img">
               <div class="d-flex flex-column">
-                <p class="song-box__title">FLCL</p>
-                <p class="song-box__subtitle">Little Busters</p>
-                <div class="modals-author">
-
-                </div>
+                <a href="#" class="music-box__title">FLCL</a>
+                <p class="music-box__subtitle">Little Busters</p>
               </div>
             </div>
             <div class="song-vote">
-              <span class="song-vote__active"></span>
-              <a href="#" class="song-vote__author">Arri</a>
-              <p class="song-box__subtitle">17:15:32</p>
+              <div class="modals-author">
+                <span class="song-vote__active"></span>
+                <a href="#" class="song-vote__author">Arri</a>
+                <p class="song-box__subtitle">17:15:32</p>
+              </div>
               <button class="song-start">
-                <svg class="song-start__icon">
+                <span class="mask-block"></span>
+                <svg class="song-start__icon song-start__icon--start">
                   <use xlink:href="../img/sprite.svg#play-icon"></use>
                 </svg>
-                <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
+                <svg class="song-start__icon song-start__icon--stop hide">
                   <use xlink:href="../img/sprite.svg#stop-icon"></use>
                 </svg>
               </button>
-              <button class="song-vote__plus">
-                <svg class="song-vote__icon">
+              <button class="song-sign">
+                <span class="mask-block"></span>
+                <svg class="song-sign__icon song-sign__icon--plus">
                   <use xlink:href="../img/sprite.svg#plus-icon"></use>
                 </svg>
-                <svg class="song-vote__icon song-vote__icon--minus song-vote__icon--hide">
+                <svg class="song-sign__icon song-sign__icon--minus hide">
                   <use xlink:href="../img/sprite.svg#minus-icon"></use>
                 </svg>
               </button>
-              <div class="d-flex flex-column">
-                <span class="song-vote__votes">110</span>
-                <p class="song-vote__subtitle">голосов</p>
+              <div class="d-flex flex-column align-items-center">
+                <span class="music-box__votes">110</span>
+                <p class="music-box__votes-title">голосов</p>
               </div>
             </div>
           </div>
-          <div class="song-item">
-            <div class="song-box">
-              <span class="list-item__number">1</span>
-              <img src="../img/song/song-11.jpg" alt="" class="song-item__img">
+          <div class="music-item">
+            <div class="music-box">
+              <span class="music-box__number">3</span>
+              <img src="../img/song/song-11.jpg" alt="" class="music-box__img">
               <div class="d-flex flex-column">
-                <p class="song-box__title">FLCL</p>
-                <p class="song-box__subtitle">Little Busters</p>
-                <div class="modals-author">
-
-                </div>
+                <a href="#" class="music-box__title">FLCL</a>
+                <p class="music-box__subtitle">Little Busters</p>
               </div>
             </div>
             <div class="song-vote">
-              <span class="song-vote__active"></span>
-              <a href="#" class="song-vote__author">Arri</a>
-              <p class="song-box__subtitle">17:15:32</p>
+              <div class="modals-author">
+                <span class="song-vote__active"></span>
+                <a href="#" class="song-vote__author">Arri</a>
+                <p class="song-box__subtitle">17:15:32</p>
+              </div>
               <button class="song-start">
-                <svg class="song-start__icon">
+                <span class="mask-block"></span>
+                <svg class="song-start__icon song-start__icon--start">
                   <use xlink:href="../img/sprite.svg#play-icon"></use>
                 </svg>
-                <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
+                <svg class="song-start__icon song-start__icon--stop hide">
                   <use xlink:href="../img/sprite.svg#stop-icon"></use>
                 </svg>
               </button>
-              <button class="song-vote__plus">
-                <svg class="song-vote__icon">
+              <button class="song-sign">
+                <span class="mask-block"></span>
+                <svg class="song-sign__icon song-sign__icon--plus">
                   <use xlink:href="../img/sprite.svg#plus-icon"></use>
                 </svg>
-                <svg class="song-vote__icon song-vote__icon--minus song-vote__icon--hide">
+                <svg class="song-sign__icon song-sign__icon--minus hide">
                   <use xlink:href="../img/sprite.svg#minus-icon"></use>
                 </svg>
               </button>
-              <div class="d-flex flex-column">
-                <span class="song-vote__votes">110</span>
-                <p class="song-vote__subtitle">голосов</p>
+              <div class="d-flex flex-column align-items-center">
+                <span class="music-box__votes">110</span>
+                <p class="music-box__votes-title">голосов</p>
               </div>
             </div>
           </div>
-          <div class="song-item">
-            <div class="song-box">
-              <span class="list-item__number">1</span>
-              <img src="../img/song/song-11.jpg" alt="" class="song-item__img">
+          <div class="music-item">
+            <div class="music-box">
+              <span class="music-box__number">4</span>
+              <img src="../img/song/song-11.jpg" alt="" class="music-box__img">
               <div class="d-flex flex-column">
-                <p class="song-box__title">FLCL</p>
-                <p class="song-box__subtitle">Little Busters</p>
-                <div class="modals-author">
-
-                </div>
+                <a href="#" class="music-box__title">FLCL</a>
+                <p class="music-box__subtitle">Little Busters</p>
               </div>
             </div>
             <div class="song-vote">
-              <span class="song-vote__active"></span>
-              <a href="#" class="song-vote__author">Arri</a>
-              <p class="song-box__subtitle">17:15:32</p>
+              <div class="modals-author">
+                <span class="song-vote__active"></span>
+                <a href="#" class="song-vote__author">Arri</a>
+                <p class="song-box__subtitle">17:15:32</p>
+              </div>
               <button class="song-start">
-                <svg class="song-start__icon">
+                <span class="mask-block"></span>
+                <svg class="song-start__icon song-start__icon--start">
                   <use xlink:href="../img/sprite.svg#play-icon"></use>
                 </svg>
-                <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
+                <svg class="song-start__icon song-start__icon--stop hide">
                   <use xlink:href="../img/sprite.svg#stop-icon"></use>
                 </svg>
               </button>
-              <button class="song-vote__plus">
-                <svg class="song-vote__icon">
+              <button class="song-sign">
+                <span class="mask-block"></span>
+                <svg class="song-sign__icon song-sign__icon--plus">
                   <use xlink:href="../img/sprite.svg#plus-icon"></use>
                 </svg>
-                <svg class="song-vote__icon song-vote__icon--minus song-vote__icon--hide">
+                <svg class="song-sign__icon song-sign__icon--minus hide">
                   <use xlink:href="../img/sprite.svg#minus-icon"></use>
                 </svg>
               </button>
-              <div class="d-flex flex-column">
-                <span class="song-vote__votes">110</span>
-                <p class="song-vote__subtitle">голосов</p>
+              <div class="d-flex flex-column align-items-center">
+                <span class="music-box__votes">110</span>
+                <p class="music-box__votes-title">голосов</p>
               </div>
             </div>
           </div>
-          <div class="song-item">
-            <div class="song-box">
-              <span class="list-item__number">1</span>
-              <img src="../img/song/song-11.jpg" alt="" class="song-item__img">
+          <div class="music-item">
+            <div class="music-box">
+              <span class="music-box__number">5</span>
+              <img src="../img/song/song-11.jpg" alt="" class="music-box__img">
               <div class="d-flex flex-column">
-                <p class="song-box__title">FLCL</p>
-                <p class="song-box__subtitle">Little Busters</p>
-                <div class="modals-author">
-
-                </div>
+                <a href="#" class="music-box__title">FLCL</a>
+                <p class="music-box__subtitle">Little Busters</p>
               </div>
             </div>
             <div class="song-vote">
-              <span class="song-vote__active"></span>
-              <a href="#" class="song-vote__author">Arri</a>
-              <p class="song-box__subtitle">17:15:32</p>
+              <div class="modals-author">
+                <span class="song-vote__active"></span>
+                <a href="#" class="song-vote__author">Arri</a>
+                <p class="song-box__subtitle">17:15:32</p>
+              </div>
               <button class="song-start">
-                <svg class="song-start__icon">
+                <span class="mask-block"></span>
+                <svg class="song-start__icon song-start__icon--start">
                   <use xlink:href="../img/sprite.svg#play-icon"></use>
                 </svg>
-                <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
+                <svg class="song-start__icon song-start__icon--stop hide">
                   <use xlink:href="../img/sprite.svg#stop-icon"></use>
                 </svg>
               </button>
-              <button class="song-vote__plus">
-                <svg class="song-vote__icon">
+              <button class="song-sign">
+                <span class="mask-block"></span>
+                <svg class="song-sign__icon song-sign__icon--plus">
                   <use xlink:href="../img/sprite.svg#plus-icon"></use>
                 </svg>
-                <svg class="song-vote__icon song-vote__icon--minus song-vote__icon--hide">
+                <svg class="song-sign__icon song-sign__icon--minus hide">
                   <use xlink:href="../img/sprite.svg#minus-icon"></use>
                 </svg>
               </button>
-              <div class="d-flex flex-column">
-                <span class="song-vote__votes">110</span>
-                <p class="song-vote__subtitle">голосов</p>
+              <div class="d-flex flex-column align-items-center">
+                <span class="music-box__votes">110</span>
+                <p class="music-box__votes-title">голосов</p>
               </div>
             </div>
           </div>
-          <div class="song-item">
-            <div class="song-box">
-              <span class="list-item__number">1</span>
-              <img src="../img/song/song-11.jpg" alt="" class="song-item__img">
+          <div class="music-item">
+            <div class="music-box">
+              <span class="music-box__number">6</span>
+              <img src="../img/song/song-11.jpg" alt="" class="music-box__img">
               <div class="d-flex flex-column">
-                <p class="song-box__title">FLCL</p>
-                <p class="song-box__subtitle">Little Busters</p>
-                <div class="modals-author">
-
-                </div>
+                <a href="#" class="music-box__title">FLCL</a>
+                <p class="music-box__subtitle">Little Busters</p>
               </div>
             </div>
             <div class="song-vote">
-              <span class="song-vote__active"></span>
-              <a href="#" class="song-vote__author">Arri</a>
-              <p class="song-box__subtitle">17:15:32</p>
+              <div class="modals-author">
+                <span class="song-vote__active"></span>
+                <a href="#" class="song-vote__author">Arri</a>
+                <p class="song-box__subtitle">17:15:32</p>
+              </div>
               <button class="song-start">
-                <svg class="song-start__icon">
+                <span class="mask-block"></span>
+                <svg class="song-start__icon song-start__icon--start">
                   <use xlink:href="../img/sprite.svg#play-icon"></use>
                 </svg>
-                <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
+                <svg class="song-start__icon song-start__icon--stop hide">
                   <use xlink:href="../img/sprite.svg#stop-icon"></use>
                 </svg>
               </button>
-              <button class="song-vote__plus">
-                <svg class="song-vote__icon">
+              <button class="song-sign">
+                <span class="mask-block"></span>
+                <svg class="song-sign__icon song-sign__icon--plus">
                   <use xlink:href="../img/sprite.svg#plus-icon"></use>
                 </svg>
-                <svg class="song-vote__icon song-vote__icon--minus song-vote__icon--hide">
+                <svg class="song-sign__icon song-sign__icon--minus hide">
                   <use xlink:href="../img/sprite.svg#minus-icon"></use>
                 </svg>
               </button>
-              <div class="d-flex flex-column">
-                <span class="song-vote__votes">110</span>
-                <p class="song-vote__subtitle">голосов</p>
+              <div class="d-flex flex-column align-items-center">
+                <span class="music-box__votes">110</span>
+                <p class="music-box__votes-title">голосов</p>
               </div>
             </div>
           </div>
-          <div class="song-item">
-            <div class="song-box">
-              <span class="list-item__number">1</span>
-              <img src="../img/song/song-11.jpg" alt="" class="song-item__img">
+          <div class="music-item">
+            <div class="music-box">
+              <span class="music-box__number">7</span>
+              <img src="../img/song/song-11.jpg" alt="" class="music-box__img">
               <div class="d-flex flex-column">
-                <p class="song-box__title">FLCL</p>
-                <p class="song-box__subtitle">Little Busters</p>
-                <div class="modals-author">
-
-                </div>
+                <a href="#" class="music-box__title">FLCL</a>
+                <p class="music-box__subtitle">Little Busters</p>
               </div>
             </div>
             <div class="song-vote">
-              <span class="song-vote__active"></span>
-              <a href="#" class="song-vote__author">Arri</a>
-              <p class="song-box__subtitle">17:15:32</p>
+              <div class="modals-author">
+                <span class="song-vote__active"></span>
+                <a href="#" class="song-vote__author">Arri</a>
+                <p class="song-box__subtitle">17:15:32</p>
+              </div>
               <button class="song-start">
-                <svg class="song-start__icon">
+                <span class="mask-block"></span>
+                <svg class="song-start__icon song-start__icon--start">
                   <use xlink:href="../img/sprite.svg#play-icon"></use>
                 </svg>
-                <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
+                <svg class="song-start__icon song-start__icon--stop hide">
                   <use xlink:href="../img/sprite.svg#stop-icon"></use>
                 </svg>
               </button>
-              <button class="song-vote__plus">
-                <svg class="song-vote__icon">
+              <button class="song-sign">
+                <span class="mask-block"></span>
+                <svg class="song-sign__icon song-sign__icon--plus">
                   <use xlink:href="../img/sprite.svg#plus-icon"></use>
                 </svg>
-                <svg class="song-vote__icon song-vote__icon--minus song-vote__icon--hide">
+                <svg class="song-sign__icon song-sign__icon--minus hide">
                   <use xlink:href="../img/sprite.svg#minus-icon"></use>
                 </svg>
               </button>
-              <div class="d-flex flex-column">
-                <span class="song-vote__votes">110</span>
-                <p class="song-vote__subtitle">голосов</p>
+              <div class="d-flex flex-column align-items-center">
+                <span class="music-box__votes">110</span>
+                <p class="music-box__votes-title">голосов</p>
               </div>
             </div>
           </div>
-          <div class="song-item">
-            <div class="song-box">
-              <span class="list-item__number">1</span>
-              <img src="../img/song/song-11.jpg" alt="" class="song-item__img">
+          <div class="music-item">
+            <div class="music-box">
+              <span class="music-box__number">8</span>
+              <img src="../img/song/song-11.jpg" alt="" class="music-box__img">
               <div class="d-flex flex-column">
-                <p class="song-box__title">FLCL</p>
-                <p class="song-box__subtitle">Little Busters</p>
-                <div class="modals-author">
-
-                </div>
+                <a href="#" class="music-box__title">FLCL</a>
+                <p class="music-box__subtitle">Little Busters</p>
               </div>
             </div>
             <div class="song-vote">
-              <span class="song-vote__active"></span>
-              <a href="#" class="song-vote__author">Arri</a>
-              <p class="song-box__subtitle">17:15:32</p>
+              <div class="modals-author">
+                <span class="song-vote__active"></span>
+                <a href="#" class="song-vote__author">Arri</a>
+                <p class="song-box__subtitle">17:15:32</p>
+              </div>
               <button class="song-start">
-                <svg class="song-start__icon">
+                <span class="mask-block"></span>
+                <svg class="song-start__icon song-start__icon--start">
                   <use xlink:href="../img/sprite.svg#play-icon"></use>
                 </svg>
-                <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
+                <svg class="song-start__icon song-start__icon--stop hide">
                   <use xlink:href="../img/sprite.svg#stop-icon"></use>
                 </svg>
               </button>
-              <button class="song-vote__plus">
-                <svg class="song-vote__icon">
+              <button class="song-sign">
+                <span class="mask-block"></span>
+                <svg class="song-sign__icon song-sign__icon--plus">
                   <use xlink:href="../img/sprite.svg#plus-icon"></use>
                 </svg>
-                <svg class="song-vote__icon song-vote__icon--minus song-vote__icon--hide">
+                <svg class="song-sign__icon song-sign__icon--minus hide">
                   <use xlink:href="../img/sprite.svg#minus-icon"></use>
                 </svg>
               </button>
-              <div class="d-flex flex-column">
-                <span class="song-vote__votes">110</span>
-                <p class="song-vote__subtitle">голосов</p>
+              <div class="d-flex flex-column align-items-center">
+                <span class="music-box__votes">110</span>
+                <p class="music-box__votes-title">голосов</p>
               </div>
             </div>
           </div>
-          <div class="song-item">
-            <div class="song-box">
-              <span class="list-item__number">1</span>
-              <img src="../img/song/song-11.jpg" alt="" class="song-item__img">
+          <div class="music-item">
+            <div class="music-box">
+              <span class="music-box__number">9</span>
+              <img src="../img/song/song-11.jpg" alt="" class="music-box__img">
               <div class="d-flex flex-column">
-                <p class="song-box__title">FLCL</p>
-                <p class="song-box__subtitle">Little Busters</p>
-                <div class="modals-author">
-
-                </div>
+                <a href="#" class="music-box__title">FLCL</a>
+                <p class="music-box__subtitle">Little Busters</p>
               </div>
             </div>
             <div class="song-vote">
-              <span class="song-vote__active"></span>
-              <a href="#" class="song-vote__author">Arri</a>
-              <p class="song-box__subtitle">17:15:32</p>
+              <div class="modals-author">
+                <span class="song-vote__active"></span>
+                <a href="#" class="song-vote__author">Arri</a>
+                <p class="song-box__subtitle">17:15:32</p>
+              </div>
               <button class="song-start">
-                <svg class="song-start__icon">
+                <span class="mask-block"></span>
+                <svg class="song-start__icon song-start__icon--start">
                   <use xlink:href="../img/sprite.svg#play-icon"></use>
                 </svg>
-                <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
+                <svg class="song-start__icon song-start__icon--stop hide">
                   <use xlink:href="../img/sprite.svg#stop-icon"></use>
                 </svg>
               </button>
-              <button class="song-vote__plus">
-                <svg class="song-vote__icon">
+              <button class="song-sign">
+                <span class="mask-block"></span>
+                <svg class="song-sign__icon song-sign__icon--plus">
                   <use xlink:href="../img/sprite.svg#plus-icon"></use>
                 </svg>
-                <svg class="song-vote__icon song-vote__icon--minus song-vote__icon--hide">
+                <svg class="song-sign__icon song-sign__icon--minus hide">
                   <use xlink:href="../img/sprite.svg#minus-icon"></use>
                 </svg>
               </button>
-              <div class="d-flex flex-column">
-                <span class="song-vote__votes">110</span>
-                <p class="song-vote__subtitle">голосов</p>
-              </div>
-            </div>
-          </div>
-          <div class="song-item">
-            <div class="song-box">
-              <span class="list-item__number">1</span>
-              <img src="../img/song/song-11.jpg" alt="" class="song-item__img">
-              <div class="d-flex flex-column">
-                <p class="song-box__title">FLCL</p>
-                <p class="song-box__subtitle">Little Busters</p>
-                <div class="modals-author">
-
-                </div>
-              </div>
-            </div>
-            <div class="song-vote">
-              <span class="song-vote__active"></span>
-              <a href="#" class="song-vote__author">Arri</a>
-              <p class="song-box__subtitle">17:15:32</p>
-              <button class="song-start">
-                <svg class="song-start__icon">
-                  <use xlink:href="../img/sprite.svg#play-icon"></use>
-                </svg>
-                <svg class="song-start__icon song-start__icon--stop song-start__icon--hide">
-                  <use xlink:href="../img/sprite.svg#stop-icon"></use>
-                </svg>
-              </button>
-              <button class="song-vote__plus">
-                <svg class="song-vote__icon">
-                  <use xlink:href="../img/sprite.svg#plus-icon"></use>
-                </svg>
-                <svg class="song-vote__icon song-vote__icon--minus song-vote__icon--hide">
-                  <use xlink:href="../img/sprite.svg#minus-icon"></use>
-                </svg>
-              </button>
-              <div class="d-flex flex-column">
-                <span class="song-vote__votes">110</span>
-                <p class="song-vote__subtitle">голосов</p>
+              <div class="d-flex flex-column align-items-center">
+                <span class="music-box__votes">110</span>
+                <p class="music-box__votes-title">голосов</p>
               </div>
             </div>
           </div>
