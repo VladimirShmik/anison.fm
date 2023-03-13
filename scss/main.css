@@ -4868,6 +4868,7 @@ input[type=search]::-ms-clear {
 .swiper-list {
   max-width: 300px;
   max-height: 810px;
+  height: 100vh;
   position: relative;
   margin-bottom: 60px;
 }
