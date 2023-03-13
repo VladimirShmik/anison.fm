@@ -6,6 +6,21 @@ trackInfo.forEach(e => {
         e.removeAttribute("data-bs-toggle");
     }
 });
+function formatState(opt) {
+    if (!opt.id) {
+        return opt.text.toUpperCase();
+    }
+
+    var optimage = $(opt.element).attr('data-image');
+    if (!optimage) {
+        return opt.text.toUpperCase();
+    } else {
+        var $opt = $(
+            '<span class="select-item"><img src="' + optimage + '" width="30px" /> ' + opt.text.toUpperCase() + '</span>'
+        );
+        return $opt;
+    }
+};
 new Swiper('.swiperList', {
     slidesPerView: 'auto',
     direction: "vertical",
@@ -49,7 +64,7 @@ const foundValid = document.querySelector(".search-validation");
 
 foundBtn.addEventListener("click", e => {
     foundBtn.classList.toggle("search-dropdown__title--active");
-    foundList.classList.toggle('hide');
+    foundList.classList.toggle('search-list--active');
 
 });
 
@@ -178,21 +193,7 @@ $(".simple-select").select2({
     templateSelection: formatState
 });
 
-function formatState(opt) {
-    if (!opt.id) {
-        return opt.text.toUpperCase();
-    }
 
-    var optimage = $(opt.element).attr('data-image');
-    if (!optimage) {
-        return opt.text.toUpperCase();
-    } else {
-        var $opt = $(
-            '<span class="select-item"><img src="' + optimage + '" width="30px" /> ' + opt.text.toUpperCase() + '</span>'
-        );
-        return $opt;
-    }
-};
 
 
 function attentionAdd(item) {

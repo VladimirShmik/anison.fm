@@ -5,6 +5,9 @@
   position: relative;
 }
 .header-login{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   @media (min-width: 320px) and (max-width: 1023px){
     display: none;
   }
@@ -216,10 +219,15 @@ justify-content: flex-start;
   }
 }
 .profile-block{
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
-  margin-bottom: 25px;
+  grid-gap: 10px;
+  @media (min-width: 320px) and (max-width: 1023px){
+ grid-auto-flow: row;
+    margin-bottom: 25px;
+
+  }
   &__title{
     font-weight: 400;
     font-size: 17px;
@@ -234,6 +242,7 @@ justify-content: flex-start;
     border-radius: 50%;
     border: 1px solid #E5E2EC;
     margin-bottom: 5px;
+
 
   }
 }

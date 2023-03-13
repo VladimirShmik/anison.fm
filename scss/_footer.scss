@@ -55,7 +55,7 @@
   grid-auto-flow: column;
   align-items: center;
   justify-content: center;
-grid-gap: 10px;
+  grid-gap: 10px;
   margin-right: 40px;
   @media(min-width: 320px) and (max-width: 1200px) {
     display: none;
@@ -196,7 +196,6 @@ grid-gap: 10px;
 }
 .select2-dropdown{
   border-radius: 6px!important;
-  overflow: hidden;
 }
 .select2-selection{
   border-radius: 6px;

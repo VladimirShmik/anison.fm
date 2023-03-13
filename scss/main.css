@@ -435,11 +435,11 @@ input[type=search]::-ms-clear {
   position: absolute;
   width: 16px;
   height: 16px;
-  top: 6px;
-  right: 9px;
+  top: 3px;
+  right: 8px;
   transition: 0.3s;
   background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.83337 8.33334L10 11.6667L14.1667 8.33334' stroke='white' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.83337 8.33334L10 11.6667L14.1667 8.33334' stroke='white' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 .search-dropdown__title--active {
   border-radius: 4px 4px 0 0;
@@ -455,8 +455,20 @@ input[type=search]::-ms-clear {
   display: flex;
   position: absolute;
   width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease 0.5s;
   background: #F0EEF2;
   flex-direction: column;
+  border-radius: 0px 0px 6px 6px;
+}
+.search-list--active {
+  opacity: 1;
+  transition: all ease 0.5s;
+  pointer-events: auto;
+}
+
+.search-list > .search-item:last-child {
   border-radius: 0px 0px 6px 6px;
 }
 
@@ -707,7 +719,7 @@ input[type=search]::-ms-clear {
   width: 1px;
   height: 75px;
   border-radius: 100px;
-  background: linear-gradient(90.16deg, #5A2E98 0%, #4F268A 100%);
+  background: linear-gradient(180deg, #5A2E98 0%, #4F268A 100%);
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .live-date {
@@ -880,7 +892,7 @@ input[type=search]::-ms-clear {
   height: 100%;
   filter: drop-shadow(0px 0px 20px rgba(183, 168, 199, 0.15));
   border-radius: 6px;
-  padding: 18px 0;
+  padding: 16px 0;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
   .song-grid {
@@ -941,11 +953,17 @@ input[type=search]::-ms-clear {
 .song-dropdown {
   width: 100%;
   position: absolute;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
   z-index: 4;
+  transition: all ease 0.5s;
 }
 .song-dropdown--show {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  height: 310px;
+  transition: all ease 0.5s;
 }
 .song-dropdown__title {
   font-weight: 600;
@@ -1158,6 +1176,7 @@ input[type=search]::-ms-clear {
 
 .song-group {
   display: grid;
+  justify-content: start;
   grid-auto-flow: column;
   align-items: center;
   grid-gap: 14px;
@@ -1611,13 +1630,13 @@ input[type=search]::-ms-clear {
 }
 
 .radio-new {
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: 700;
+  font-size: 11px;
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 7px 10px;
   position: absolute;
-  top: 10px;
+  top: 8px;
   right: 10px;
   background: linear-gradient(90.16deg, #5A2E98 0%, #4F268A 100%);
   border-radius: 4px;
@@ -2150,7 +2169,6 @@ input[type=search]::-ms-clear {
   color: #FFFFFF;
   letter-spacing: -0.1em;
   border-radius: 4px;
-  margin-top: -4px;
 }
 .info-btn--orange {
   background: #D5990C;
@@ -2298,6 +2316,11 @@ input[type=search]::-ms-clear {
   position: relative;
 }
 
+.header-login {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 @media (min-width: 320px) and (max-width: 1023px) {
   .header-login {
     display: none;
@@ -2536,10 +2559,16 @@ input[type=search]::-ms-clear {
 }
 
 .profile-block {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
-  margin-bottom: 25px;
+  grid-gap: 10px;
+}
+@media (min-width: 320px) and (max-width: 1023px) {
+  .profile-block {
+    grid-auto-flow: row;
+    margin-bottom: 25px;
+  }
 }
 .profile-block__title {
   font-weight: 400;
@@ -2754,7 +2783,6 @@ input[type=search]::-ms-clear {
 
 .select2-dropdown {
   border-radius: 6px !important;
-  overflow: hidden;
 }
 
 .select2-selection {
@@ -3075,7 +3103,7 @@ input[type=search]::-ms-clear {
 }
 
 .modal-backdrop {
-  background: rgba(91, 56, 142, 0.7);
+  background: linear-gradient(0deg, rgba(91, 56, 142, 0.7), rgba(91, 56, 142, 0.7));
 }
 
 .modal-list .btn-close {
@@ -3283,6 +3311,7 @@ input[type=search]::-ms-clear {
 .modal-anime .modal-track {
   width: 100%;
   display: grid;
+  grid-auto-flow: column;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;
@@ -3530,6 +3559,7 @@ input[type=search]::-ms-clear {
   background-color: #242228;
   padding: 10px 0 10px;
   height: 670px;
+  margin-bottom: -2px;
   position: relative;
 }
 @media (min-width: 320px) and (max-width: 1200px) {
@@ -4887,7 +4917,7 @@ input[type=search]::-ms-clear {
   width: 12px;
   height: 6px;
   background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 5L6 1L0.999999 5' stroke='%238F8B96' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 5L6 1L0.999999 5' stroke='%23B7B4BD' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 .swiper-list .swiper-arrows .swiper-button-next::after {
   content: "";
@@ -4895,7 +4925,7 @@ input[type=search]::-ms-clear {
   height: 6px;
   background-repeat: no-repeat;
   transform: rotate(180deg);
-  background-image: url("data:image/svg+xml,%3Csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 5L6 1L0.999999 5' stroke='%238F8B96' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 5L6 1L0.999999 5' stroke='%23B7B4BD' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 .swiper-list .swiper-scrollbar-drag {
   background: rgba(140, 97, 199, 0.15);

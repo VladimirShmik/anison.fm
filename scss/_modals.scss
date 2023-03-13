@@ -273,7 +273,7 @@
   }
 }
 .modal-backdrop {
-  background: rgba(91, 56, 142, 0.7);
+  background: linear-gradient(0deg, rgba(91, 56, 142, 0.7), rgba(91, 56, 142, 0.7))
 
 }
 
@@ -487,6 +487,7 @@
   .modal-track {
     width: 100%;
     display: grid;
+    grid-auto-flow: column;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 15px;
@@ -731,6 +732,7 @@
   background-color: #242228 ;
   padding: 10px 0 10px;
   height: 670px;
+  margin-bottom: -2px;
   position: relative;
   @media(min-width: 320px) and (max-width: 1200px) {
     padding: 0;
